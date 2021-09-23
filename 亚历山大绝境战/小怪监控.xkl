@@ -1,0 +1,552 @@
+<?xml version="1.0"?>
+<TriggernometryExport Version="1">
+  <ExportedFolder Id="9d118382-d50e-4c28-a8c2-47a136f22484" Name="小怪监控" Enabled="true">
+    <Folders>
+      <Folder Id="f31daa96-ea61-4098-ae26-bc832a032afc" Name="初始化" Enabled="true">
+        <Folders>
+          <Folder Id="ce0e475f-75de-4092-b168-e17b1ae5c4a4" Name="小怪出现" Enabled="true">
+            <Folders />
+            <Triggers>
+              <Trigger Enabled="true" Sequential="True" Name="小怪3" Id="1f134d72-e304-4f56-bc3a-987038ca8edf" RegularExpression="^.{14} 03:(?&lt;sid&gt;40[0-9A-Fa-f]{6}):Added new combatant 狩猎人偶\.  Job: N/A Level: 80 Max HP: 167240 Max MP: 10000 Pos: \(93\.53284\,102\.6788\,0\)" Description="[22:38:17.501] 03:4000E987:Added new combatant 狩猎人偶.  Job: N/A Level: 80 Max HP: 167240 Max MP: 10000 Pos: (93.53284,102.6788,0) (92140000011338).">
+                <Actions>
+                  <Action OrderNumber="1" LogLevel="-1" MouseX="" MouseY="" VariableOp="SetString" VariableName="绝亚_小怪3_ID" VariableExpression="${sid}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
+                    <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
+                  </Action>
+                  <Action OrderNumber="2" LogLevel="-1" MouseX="" MouseY="" VariableOp="SetString" VariableName="绝亚_小怪3_目标名" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
+                    <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
+                  </Action>
+                  <Action OrderNumber="3" LogLevel="-1" MouseX="" MouseY="" VariableOp="SetString" VariableName="绝亚_小怪3_承伤" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
+                    <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
+                  </Action>
+                  <Action OrderNumber="4" LogLevel="-1" TextAuraFontSize="12.10084" TextAuraForeground="White" TextAuraBackground="Black" TextAuraName="绝亚_小怪3_悬浮窗_背景板" TextAuraXIniExpression="360" TextAuraYIniExpression="61" TextAuraWIniExpression="280" TextAuraHIniExpression="30" TextAuraOIniExpression="60" TextAuraFontName="微软雅黑" ActionType="TextAura" Asynchronous="False">
+                    <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
+                  </Action>
+                  <Action OrderNumber="5" LogLevel="-1" TextAuraFontSize="12.10084" TextAuraForeground="White" TextAuraName="绝亚_小怪3_悬浮窗_文本栏" TextAuraExpression=" 怪3血: ${numeric:round(${_ffxiventity[${var:绝亚_小怪3_ID}].currenthp}/${_ffxiventity[${var:绝亚_小怪3_ID}].maxhp}*100,2)}% 目标: &lt;${var:绝亚_小怪3_目标名}&gt;" TextAuraXIniExpression="360" TextAuraYIniExpression="61" TextAuraWIniExpression="280" TextAuraHIniExpression="30" TextAuraOIniExpression="100" TextAuraFontName="微软雅黑" ActionType="TextAura" Asynchronous="False">
+                    <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
+                  </Action>
+                </Actions>
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Trigger>
+              <Trigger Enabled="true" Sequential="True" Name="小怪2" Id="4e860f34-859d-49ef-b49b-a7ee031963b3" RegularExpression="^.{14} 03:(?&lt;sid&gt;40[0-9A-Fa-f]{6}):Added new combatant 狩猎人偶\.  Job: N/A Level: 80 Max HP: 167240 Max MP: 10000 Pos: \(102\.6788\,106\.4672\,0\)" Description="[22:38:17.501] 03:4000E988:Added new combatant 狩猎人偶.  Job: N/A Level: 80 Max HP: 167240 Max MP: 10000 Pos: (102.6788,106.4672,0) (92140000011338).">
+                <Actions>
+                  <Action OrderNumber="1" LogLevel="-1" MouseX="" MouseY="" VariableOp="SetString" VariableName="绝亚_小怪2_ID" VariableExpression="${sid}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
+                    <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
+                  </Action>
+                  <Action OrderNumber="2" LogLevel="-1" MouseX="" MouseY="" VariableOp="SetString" VariableName="绝亚_小怪2_目标名" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
+                    <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
+                  </Action>
+                  <Action OrderNumber="3" LogLevel="-1" MouseX="" MouseY="" VariableOp="SetString" VariableName="绝亚_小怪2_承伤" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
+                    <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
+                  </Action>
+                  <Action OrderNumber="4" LogLevel="-1" TextAuraFontSize="12.10084" TextAuraForeground="White" TextAuraBackground="Black" TextAuraName="绝亚_小怪2_悬浮窗_背景板" TextAuraXIniExpression="360" TextAuraYIniExpression="31" TextAuraWIniExpression="280" TextAuraHIniExpression="30" TextAuraOIniExpression="60" TextAuraUseOutline="True" TextAuraFontName="微软雅黑" ActionType="TextAura" Asynchronous="False">
+                    <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
+                  </Action>
+                  <Action OrderNumber="5" LogLevel="-1" TextAuraFontSize="12.10084" TextAuraForeground="White" TextAuraName="绝亚_小怪2_悬浮窗_文本栏" TextAuraExpression=" 怪2血: ${numeric:round(${_ffxiventity[${var:绝亚_小怪2_ID}].currenthp}/${_ffxiventity[${var:绝亚_小怪2_ID}].maxhp}*100,2)}% 目标: &lt;${var:绝亚_小怪2_目标名}&gt;" TextAuraXIniExpression="360" TextAuraYIniExpression="31" TextAuraWIniExpression="280" TextAuraHIniExpression="30" TextAuraOIniExpression="100" TextAuraFontName="微软雅黑" ActionType="TextAura" Asynchronous="False">
+                    <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
+                  </Action>
+                </Actions>
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Trigger>
+              <Trigger Enabled="true" Sequential="True" Name="小怪1" Id="c7aaecbd-85af-4295-8641-bf52ae2a1534" RegularExpression="^.{14} 03:(?&lt;sid&gt;40[0-9A-Fa-f]{6}):Added new combatant 狩猎人偶\.  Job: N/A Level: 80 Max HP: 167240 Max MP: 10000 Pos: \(106\.4672\,97\.32121\,0\)" Description="[22:38:17.501] 03:4000E989:Added new combatant 狩猎人偶.  Job: N/A Level: 80 Max HP: 167240 Max MP: 10000 Pos: (106.4672,97.32121,0) (92140000011338).">
+                <Actions>
+                  <Action OrderNumber="1" LogLevel="-1" MouseX="" MouseY="" VariableOp="SetString" VariableName="绝亚_小怪1_ID" VariableExpression="${sid}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
+                    <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
+                  </Action>
+                  <Action OrderNumber="2" LogLevel="-1" MouseX="" MouseY="" VariableOp="SetString" VariableName="绝亚_小怪1_目标名" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
+                    <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
+                  </Action>
+                  <Action OrderNumber="3" LogLevel="-1" MouseX="" MouseY="" VariableOp="SetString" VariableName="绝亚_小怪1_承伤" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
+                    <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
+                  </Action>
+                  <Action OrderNumber="4" LogLevel="-1" TextAuraFontSize="12.10084" TextAuraForeground="White" TextAuraBackground="Black" TextAuraName="绝亚_小怪1_悬浮窗_背景板" TextAuraXIniExpression="360" TextAuraYIniExpression="0" TextAuraWIniExpression="280" TextAuraHIniExpression="30" TextAuraOIniExpression="60" TextAuraUseOutline="True" TextAuraFontName="微软雅黑" ActionType="TextAura" Asynchronous="False">
+                    <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
+                  </Action>
+                  <Action OrderNumber="5" LogLevel="-1" TextAuraFontSize="12.10084" TextAuraForeground="White" TextAuraName="绝亚_小怪1_悬浮窗_文本栏" TextAuraExpression=" 怪1血: ${numeric:round(${_ffxiventity[${var:绝亚_小怪1_ID}].currenthp}/${_ffxiventity[${var:绝亚_小怪1_ID}].maxhp}*100,2)}% 目标: &lt;${var:绝亚_小怪1_目标名}&gt;" TextAuraXIniExpression="360" TextAuraYIniExpression="0" TextAuraWIniExpression="280" TextAuraHIniExpression="30" TextAuraOIniExpression="100" TextAuraFontName="微软雅黑" ActionType="TextAura" Asynchronous="False">
+                    <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
+                  </Action>
+                </Actions>
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Trigger>
+              <Trigger Enabled="true" Sequential="True" Name="小怪4" Id="c405f0d8-4069-4678-9988-01c6a8b1f797" RegularExpression="^.{14} 03:(?&lt;sid&gt;40[0-9A-Fa-f]{6}):Added new combatant 狩猎人偶\.  Job: N/A Level: 80 Max HP: 167240 Max MP: 10000 Pos: \(97\.32121\,93\.53284\,0\)" Description="[22:38:17.501] 03:4000E986:Added new combatant 狩猎人偶.  Job: N/A Level: 80 Max HP: 167240 Max MP: 10000 Pos: (97.32121,93.53284,0) (92140000011338).">
+                <Actions>
+                  <Action OrderNumber="1" LogLevel="-1" MouseX="" MouseY="" VariableOp="SetString" VariableName="绝亚_小怪4_ID" VariableExpression="${sid}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
+                    <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
+                  </Action>
+                  <Action OrderNumber="2" LogLevel="-1" MouseX="" MouseY="" VariableOp="SetString" VariableName="绝亚_小怪4_目标名" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
+                    <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
+                  </Action>
+                  <Action OrderNumber="3" LogLevel="-1" MouseX="" MouseY="" VariableOp="SetString" VariableName="绝亚_小怪4_承伤" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
+                    <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
+                  </Action>
+                  <Action OrderNumber="4" LogLevel="-1" TextAuraFontSize="12.10084" TextAuraForeground="White" TextAuraBackground="Black" TextAuraName="绝亚_小怪4_悬浮窗_背景板" TextAuraXIniExpression="360" TextAuraYIniExpression="91" TextAuraWIniExpression="280" TextAuraHIniExpression="30" TextAuraOIniExpression="60" TextAuraFontName="微软雅黑" ActionType="TextAura" Asynchronous="False">
+                    <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
+                  </Action>
+                  <Action OrderNumber="5" LogLevel="-1" TextAuraFontSize="12.10084" TextAuraForeground="White" TextAuraName="绝亚_小怪4_悬浮窗_文本栏" TextAuraExpression=" 怪4血: ${numeric:round(${_ffxiventity[${var:绝亚_小怪4_ID}].currenthp}/${_ffxiventity[${var:绝亚_小怪4_ID}].maxhp}*100,2)}% 目标: &lt;${var:绝亚_小怪4_目标名}&gt;" TextAuraXIniExpression="360" TextAuraYIniExpression="91" TextAuraWIniExpression="280" TextAuraHIniExpression="30" TextAuraOIniExpression="100" TextAuraFontName="微软雅黑" ActionType="TextAura" Asynchronous="False">
+                    <Condition Enabled="false" Grouping="Or" />
+                    <Conditions />
+                  </Action>
+                </Actions>
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Trigger>
+            </Triggers>
+          </Folder>
+          <Folder Id="7b1231cc-ccc2-4f50-8ae9-17790f98ce0f" Name="小怪连线" Enabled="true">
+            <Folders />
+            <Triggers>
+              <Trigger Enabled="true" Name="喂掉了" Id="88e68ff8-7d9f-431f-998c-1e41b0779724" RegularExpression="^.{14} 23:(?&lt;sid&gt;40[0-9A-Fa-f]{6}):狩猎人偶:(?&lt;tid&gt;40[0-9A-Fa-f]{6}):(?&lt;tname&gt;活水之手|有生命活水):" Description="[22:38:22.428] 23:4000E989:狩猎人偶:102B25DC:冯霍因海姆:8FDB:0000:0011:102B25DC:000F:7FA9:">
+                <Actions>
+                  <Action OrderNumber="1" LogLevel="-1" MouseX="" MouseY="" VariableOp="SetString" VariableName="绝亚_小怪1_目标ID" VariableExpression="${tid}" TextAuraOp="DeactivateAuraRegex" TextAuraFontSize="9" TextAuraName="绝亚_小怪1_悬浮窗.+" TextAuraFontName="宋体" ActionType="TextAura">
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="${sid}" ExpressionTypeL="String" ExpressionR="${var:绝亚_小怪1_ID}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                    </Condition>
+                    <Conditions />
+                  </Action>
+                  <Action OrderNumber="2" LogLevel="-1" MouseX="" MouseY="" VariableOp="SetString" VariableName="绝亚_小怪1_目标ID" VariableExpression="${tid}" TextAuraOp="DeactivateAuraRegex" TextAuraFontSize="9" TextAuraName="绝亚_小怪2_悬浮窗.+" TextAuraFontName="宋体" ActionType="TextAura">
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="${sid}" ExpressionTypeL="String" ExpressionR="${var:绝亚_小怪2_ID}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                    </Condition>
+                    <Conditions />
+                  </Action>
+                  <Action OrderNumber="3" LogLevel="-1" MouseX="" MouseY="" VariableOp="SetString" VariableName="绝亚_小怪1_目标ID" VariableExpression="${tid}" TextAuraOp="DeactivateAuraRegex" TextAuraFontSize="9" TextAuraName="绝亚_小怪3_悬浮窗.+" TextAuraFontName="宋体" ActionType="TextAura">
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="${sid}" ExpressionTypeL="String" ExpressionR="${var:绝亚_小怪3_ID}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                    </Condition>
+                    <Conditions />
+                  </Action>
+                  <Action OrderNumber="4" LogLevel="-1" MouseX="" MouseY="" VariableOp="SetString" VariableName="绝亚_小怪1_目标ID" VariableExpression="${tid}" TextAuraOp="DeactivateAuraRegex" TextAuraFontSize="9" TextAuraName="绝亚_小怪4_悬浮窗.+" TextAuraFontName="宋体" ActionType="TextAura">
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="${sid}" ExpressionTypeL="String" ExpressionR="${var:绝亚_小怪4_ID}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                    </Condition>
+                    <Conditions />
+                  </Action>
+                  <Action OrderNumber="5" JsonEndpointExpression="http://127.0.0.1:2222/command" JsonPayloadExpression="/cwl1 怪1血: ${numeric:round(${_ffxiventity[${var:绝亚_小怪1_ID}].currenthp}/${_ffxiventity[${var:绝亚_小怪1_ID}].maxhp}*100,2)}% 目标: &lt;${var:绝亚_小怪1_目标名}&gt; 承伤: ${var:绝亚_小怪1_承伤}" LogMessageText="喂掉：怪1血: ${numeric:round(${_ffxiventity[${var:绝亚_小怪1_ID}].currenthp}/${_ffxiventity[${var:绝亚_小怪1_ID}].maxhp}*100,2)}% 目标: &lt;${var:绝亚_小怪1_目标名}&gt; 承伤: ${var:绝亚_小怪1_承伤}" LogLevel="Warning" MouseX="" MouseY="" VariableOp="SetString" VariableName="绝亚_小怪1_目标ID" VariableExpression="${tid}" TextAuraOp="DeactivateAuraRegex" TextAuraFontSize="9" TextAuraName="绝亚_小怪1_悬浮窗.+" TextAuraFontName="宋体" ActionType="LogMessage">
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="${sid}" ExpressionTypeL="String" ExpressionR="${var:绝亚_小怪1_ID}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                    </Condition>
+                    <Conditions />
+                  </Action>
+                  <Action OrderNumber="6" JsonEndpointExpression="http://127.0.0.1:2222/command" JsonPayloadExpression="/cwl1 怪1血: ${numeric:round(${_ffxiventity[${var:绝亚_小怪1_ID}].currenthp}/${_ffxiventity[${var:绝亚_小怪1_ID}].maxhp}*100,2)}% 目标: &lt;${var:绝亚_小怪1_目标名}&gt; 承伤: ${var:绝亚_小怪1_承伤}" LogMessageText="喂掉：怪2血: ${numeric:round(${_ffxiventity[${var:绝亚_小怪2_ID}].currenthp}/${_ffxiventity[${var:绝亚_小怪2_ID}].maxhp}*100,2)}% 目标: &lt;${var:绝亚_小怪2_目标名}&gt; 承伤: ${var:绝亚_小怪2_承伤}" LogLevel="Warning" MouseX="" MouseY="" VariableOp="SetString" VariableName="绝亚_小怪1_目标ID" VariableExpression="${tid}" TextAuraOp="DeactivateAuraRegex" TextAuraFontSize="9" TextAuraName="绝亚_小怪1_悬浮窗.+" TextAuraFontName="宋体" ActionType="LogMessage">
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="${sid}" ExpressionTypeL="String" ExpressionR="${var:绝亚_小怪2_ID}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                    </Condition>
+                    <Conditions />
+                  </Action>
+                  <Action OrderNumber="7" JsonEndpointExpression="http://127.0.0.1:2222/command" JsonPayloadExpression="/cwl1 怪1血: ${numeric:round(${_ffxiventity[${var:绝亚_小怪1_ID}].currenthp}/${_ffxiventity[${var:绝亚_小怪1_ID}].maxhp}*100,2)}% 目标: &lt;${var:绝亚_小怪1_目标名}&gt; 承伤: ${var:绝亚_小怪1_承伤}" LogMessageText="喂掉：怪3血: ${numeric:round(${_ffxiventity[${var:绝亚_小怪3_ID}].currenthp}/${_ffxiventity[${var:绝亚_小怪3_ID}].maxhp}*100,2)}% 目标: &lt;${var:绝亚_小怪3_目标名}&gt; 承伤: ${var:绝亚_小怪3_承伤}" LogLevel="Warning" MouseX="" MouseY="" VariableOp="SetString" VariableName="绝亚_小怪1_目标ID" VariableExpression="${tid}" TextAuraOp="DeactivateAuraRegex" TextAuraFontSize="9" TextAuraName="绝亚_小怪1_悬浮窗.+" TextAuraFontName="宋体" ActionType="LogMessage">
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="${sid}" ExpressionTypeL="String" ExpressionR="${var:绝亚_小怪3_ID}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                    </Condition>
+                    <Conditions />
+                  </Action>
+                  <Action OrderNumber="8" JsonEndpointExpression="http://127.0.0.1:2222/command" JsonPayloadExpression="/cwl1 怪1血: ${numeric:round(${_ffxiventity[${var:绝亚_小怪1_ID}].currenthp}/${_ffxiventity[${var:绝亚_小怪1_ID}].maxhp}*100,2)}% 目标: &lt;${var:绝亚_小怪1_目标名}&gt; 承伤: ${var:绝亚_小怪1_承伤}" LogMessageText="喂掉：怪4血: ${numeric:round(${_ffxiventity[${var:绝亚_小怪4_ID}].currenthp}/${_ffxiventity[${var:绝亚_小怪4_ID}].maxhp}*100,2)}% 目标: &lt;${var:绝亚_小怪4_目标名}&gt; 承伤: ${var:绝亚_小怪4_承伤}" LogLevel="Warning" MouseX="" MouseY="" VariableOp="SetString" VariableName="绝亚_小怪1_目标ID" VariableExpression="${tid}" TextAuraOp="DeactivateAuraRegex" TextAuraFontSize="9" TextAuraName="绝亚_小怪1_悬浮窗.+" TextAuraFontName="宋体" ActionType="LogMessage">
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="${sid}" ExpressionTypeL="String" ExpressionR="${var:绝亚_小怪4_ID}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                    </Condition>
+                    <Conditions />
+                  </Action>
+                </Actions>
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Trigger>
+              <Trigger Enabled="true" Name="连线到玩家" Id="63c43dab-0f42-46b6-8d99-c5fc18e750f0" RegularExpression="^.{14} 23:(?&lt;sid&gt;40[0-9A-Fa-f]{6}):狩猎人偶:(?&lt;tid&gt;10[0-9A-Fa-f]{6}):(?&lt;tname&gt;.+?):" Description="[22:38:22.428] 23:4000E989:狩猎人偶:102B25DC:冯霍因海姆:8FDB:0000:0011:102B25DC:000F:7FA9:">
+                <Actions>
+                  <Action OrderNumber="1" LogLevel="-1" MouseX="" MouseY="" VariableOp="SetString" VariableName="绝亚_小怪1_目标ID" VariableExpression="${tid}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="${sid}" ExpressionTypeL="String" ExpressionR="${var:绝亚_小怪1_ID}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                    </Condition>
+                    <Conditions />
+                  </Action>
+                  <Action OrderNumber="2" LogLevel="-1" MouseX="" MouseY="" VariableOp="SetString" VariableName="绝亚_小怪1_目标名" VariableExpression="${tname}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="${sid}" ExpressionTypeL="String" ExpressionR="${var:绝亚_小怪1_ID}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                    </Condition>
+                    <Conditions />
+                  </Action>
+                  <Action OrderNumber="3" LogLevel="-1" MouseX="" MouseY="" VariableOp="SetString" VariableName="绝亚_小怪2_目标ID" VariableExpression="${tid}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="${sid}" ExpressionTypeL="String" ExpressionR="${var:绝亚_小怪2_ID}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                    </Condition>
+                    <Conditions />
+                  </Action>
+                  <Action OrderNumber="4" LogLevel="-1" MouseX="" MouseY="" VariableOp="SetString" VariableName="绝亚_小怪2_目标名" VariableExpression="${tname}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="${sid}" ExpressionTypeL="String" ExpressionR="${var:绝亚_小怪2_ID}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                    </Condition>
+                    <Conditions />
+                  </Action>
+                  <Action OrderNumber="5" LogLevel="-1" MouseX="" MouseY="" VariableOp="SetString" VariableName="绝亚_小怪3_目标ID" VariableExpression="${tid}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="${sid}" ExpressionTypeL="String" ExpressionR="${var:绝亚_小怪3_ID}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                    </Condition>
+                    <Conditions />
+                  </Action>
+                  <Action OrderNumber="6" LogLevel="-1" MouseX="" MouseY="" VariableOp="SetString" VariableName="绝亚_小怪3_目标名" VariableExpression="${tname}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="${sid}" ExpressionTypeL="String" ExpressionR="${var:绝亚_小怪3_ID}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                    </Condition>
+                    <Conditions />
+                  </Action>
+                  <Action OrderNumber="7" LogLevel="-1" MouseX="" MouseY="" VariableOp="SetString" VariableName="绝亚_小怪4_目标ID" VariableExpression="${tid}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="${sid}" ExpressionTypeL="String" ExpressionR="${var:绝亚_小怪4_ID}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                    </Condition>
+                    <Conditions />
+                  </Action>
+                  <Action OrderNumber="8" LogLevel="-1" MouseX="" MouseY="" VariableOp="SetString" VariableName="绝亚_小怪4_目标名" VariableExpression="${tname}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="${sid}" ExpressionTypeL="String" ExpressionR="${var:绝亚_小怪4_ID}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                    </Condition>
+                    <Conditions />
+                  </Action>
+                </Actions>
+                <Condition Enabled="false" Grouping="Or" />
+                <Conditions />
+              </Trigger>
+            </Triggers>
+          </Folder>
+        </Folders>
+        <Triggers>
+          <Trigger Enabled="true" Name="小怪移除" Id="6bcab38e-090a-4782-824a-8459ed4b28d1" RegularExpression="^.{14} 04:(?&lt;sid&gt;40[0-9A-Fa-f]{6}):Removing combatant 狩猎人偶\." Description="[16:02:45.686] 04:4000986C:Removing combatant 狩猎人偶.  Max HP: 167240. Pos: (109.9106,97.15417,0).&#xA;">
+            <Actions>
+              <Action OrderNumber="1" JsonEndpointExpression="http://127.0.0.1:2222/command" JsonPayloadExpression="/cwl1 怪1血: ${numeric:round(${_ffxiventity[${var:绝亚_小怪1_ID}].currenthp}/${_ffxiventity[${var:绝亚_小怪1_ID}].maxhp}*100,2)}% 目标: &lt;${var:绝亚_小怪1_目标名}&gt; 承伤: ${var:绝亚_小怪1_承伤}" LogMessageText="小怪4移除，目标: &lt;${var:绝亚_小怪4_目标名}&gt; 承伤: ${var:绝亚_小怪4_承伤}" LogLevel="Warning" MouseX="" MouseY="" VariableOp="SetString" VariableName="绝亚_小怪1_目标ID" VariableExpression="${tid}" TextAuraOp="DeactivateAuraRegex" TextAuraFontSize="9" TextAuraName="绝亚_小怪1_悬浮窗_.+" TextAuraFontName="宋体" ActionType="TextAura">
+                <Condition Enabled="true" Grouping="And">
+                  <ConditionSingle Enabled="true" ExpressionL="${sid}" ExpressionTypeL="String" ExpressionR="${var:绝亚_小怪1_ID}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                </Condition>
+                <Conditions />
+              </Action>
+              <Action OrderNumber="2" JsonEndpointExpression="http://127.0.0.1:2222/command" JsonPayloadExpression="/cwl1 怪1血: ${numeric:round(${_ffxiventity[${var:绝亚_小怪1_ID}].currenthp}/${_ffxiventity[${var:绝亚_小怪1_ID}].maxhp}*100,2)}% 目标: &lt;${var:绝亚_小怪1_目标名}&gt; 承伤: ${var:绝亚_小怪1_承伤}" LogMessageText="小怪4移除，目标: &lt;${var:绝亚_小怪4_目标名}&gt; 承伤: ${var:绝亚_小怪4_承伤}" LogLevel="Warning" MouseX="" MouseY="" VariableOp="SetString" VariableName="绝亚_小怪1_目标ID" VariableExpression="${tid}" TextAuraOp="DeactivateAuraRegex" TextAuraFontSize="9" TextAuraName="绝亚_小怪2_悬浮窗_.+" TextAuraFontName="宋体" ActionType="TextAura">
+                <Condition Enabled="true" Grouping="And">
+                  <ConditionSingle Enabled="true" ExpressionL="${sid}" ExpressionTypeL="String" ExpressionR="${var:绝亚_小怪2_ID}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                </Condition>
+                <Conditions />
+              </Action>
+              <Action OrderNumber="3" JsonEndpointExpression="http://127.0.0.1:2222/command" JsonPayloadExpression="/cwl1 怪1血: ${numeric:round(${_ffxiventity[${var:绝亚_小怪1_ID}].currenthp}/${_ffxiventity[${var:绝亚_小怪1_ID}].maxhp}*100,2)}% 目标: &lt;${var:绝亚_小怪1_目标名}&gt; 承伤: ${var:绝亚_小怪1_承伤}" LogMessageText="小怪4移除，目标: &lt;${var:绝亚_小怪4_目标名}&gt; 承伤: ${var:绝亚_小怪4_承伤}" LogLevel="Warning" MouseX="" MouseY="" VariableOp="SetString" VariableName="绝亚_小怪1_目标ID" VariableExpression="${tid}" TextAuraOp="DeactivateAuraRegex" TextAuraFontSize="9" TextAuraName="绝亚_小怪3_悬浮窗_.+" TextAuraFontName="宋体" ActionType="TextAura">
+                <Condition Enabled="true" Grouping="And">
+                  <ConditionSingle Enabled="true" ExpressionL="${sid}" ExpressionTypeL="String" ExpressionR="${var:绝亚_小怪3_ID}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                </Condition>
+                <Conditions />
+              </Action>
+              <Action OrderNumber="4" JsonEndpointExpression="http://127.0.0.1:2222/command" JsonPayloadExpression="/cwl1 怪1血: ${numeric:round(${_ffxiventity[${var:绝亚_小怪1_ID}].currenthp}/${_ffxiventity[${var:绝亚_小怪1_ID}].maxhp}*100,2)}% 目标: &lt;${var:绝亚_小怪1_目标名}&gt; 承伤: ${var:绝亚_小怪1_承伤}" LogMessageText="小怪4移除，目标: &lt;${var:绝亚_小怪4_目标名}&gt; 承伤: ${var:绝亚_小怪4_承伤}" LogLevel="Warning" MouseX="" MouseY="" VariableOp="SetString" VariableName="绝亚_小怪1_目标ID" VariableExpression="${tid}" TextAuraOp="DeactivateAuraRegex" TextAuraFontSize="9" TextAuraName="绝亚_小怪4_悬浮窗_.+" TextAuraFontName="宋体" ActionType="TextAura">
+                <Condition Enabled="true" Grouping="And">
+                  <ConditionSingle Enabled="true" ExpressionL="${sid}" ExpressionTypeL="String" ExpressionR="${var:绝亚_小怪4_ID}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                </Condition>
+                <Conditions />
+              </Action>
+              <Action OrderNumber="5" JsonEndpointExpression="http://127.0.0.1:2222/command" JsonPayloadExpression="/cwl1 怪1血: ${numeric:round(${_ffxiventity[${var:绝亚_小怪1_ID}].currenthp}/${_ffxiventity[${var:绝亚_小怪1_ID}].maxhp}*100,2)}% 目标: &lt;${var:绝亚_小怪1_目标名}&gt; 承伤: ${var:绝亚_小怪1_承伤}" LogMessageText="小怪1移除，目标: &lt;${var:绝亚_小怪1_目标名}&gt; 承伤: ${var:绝亚_小怪1_承伤}" LogLevel="Warning" MouseX="" MouseY="" VariableOp="SetString" VariableName="绝亚_小怪1_目标ID" VariableExpression="${tid}" TextAuraOp="DeactivateAuraRegex" TextAuraFontSize="9" TextAuraName="绝亚_小怪1_悬浮窗.+" TextAuraFontName="宋体" ActionType="LogMessage">
+                <Condition Enabled="true" Grouping="And">
+                  <ConditionSingle Enabled="true" ExpressionL="${sid}" ExpressionTypeL="String" ExpressionR="${var:绝亚_小怪1_ID}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                </Condition>
+                <Conditions />
+              </Action>
+              <Action OrderNumber="6" JsonEndpointExpression="http://127.0.0.1:2222/command" JsonPayloadExpression="/cwl1 怪1血: ${numeric:round(${_ffxiventity[${var:绝亚_小怪1_ID}].currenthp}/${_ffxiventity[${var:绝亚_小怪1_ID}].maxhp}*100,2)}% 目标: &lt;${var:绝亚_小怪1_目标名}&gt; 承伤: ${var:绝亚_小怪1_承伤}" LogMessageText="小怪2移除，目标: &lt;${var:绝亚_小怪2_目标名}&gt; 承伤: ${var:绝亚_小怪2_承伤}" LogLevel="Warning" MouseX="" MouseY="" VariableOp="SetString" VariableName="绝亚_小怪1_目标ID" VariableExpression="${tid}" TextAuraOp="DeactivateAuraRegex" TextAuraFontSize="9" TextAuraName="绝亚_小怪1_悬浮窗.+" TextAuraFontName="宋体" ActionType="LogMessage">
+                <Condition Enabled="true" Grouping="And">
+                  <ConditionSingle Enabled="true" ExpressionL="${sid}" ExpressionTypeL="String" ExpressionR="${var:绝亚_小怪2_ID}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                </Condition>
+                <Conditions />
+              </Action>
+              <Action OrderNumber="7" JsonEndpointExpression="http://127.0.0.1:2222/command" JsonPayloadExpression="/cwl1 怪1血: ${numeric:round(${_ffxiventity[${var:绝亚_小怪1_ID}].currenthp}/${_ffxiventity[${var:绝亚_小怪1_ID}].maxhp}*100,2)}% 目标: &lt;${var:绝亚_小怪1_目标名}&gt; 承伤: ${var:绝亚_小怪1_承伤}" LogMessageText="小怪3移除，目标: &lt;${var:绝亚_小怪3_目标名}&gt; 承伤: ${var:绝亚_小怪3_承伤}" LogLevel="Warning" MouseX="" MouseY="" VariableOp="SetString" VariableName="绝亚_小怪1_目标ID" VariableExpression="${tid}" TextAuraOp="DeactivateAuraRegex" TextAuraFontSize="9" TextAuraName="绝亚_小怪1_悬浮窗.+" TextAuraFontName="宋体" ActionType="LogMessage">
+                <Condition Enabled="true" Grouping="And">
+                  <ConditionSingle Enabled="true" ExpressionL="${sid}" ExpressionTypeL="String" ExpressionR="${var:绝亚_小怪3_ID}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                </Condition>
+                <Conditions />
+              </Action>
+              <Action OrderNumber="8" JsonEndpointExpression="http://127.0.0.1:2222/command" JsonPayloadExpression="/cwl1 怪1血: ${numeric:round(${_ffxiventity[${var:绝亚_小怪1_ID}].currenthp}/${_ffxiventity[${var:绝亚_小怪1_ID}].maxhp}*100,2)}% 目标: &lt;${var:绝亚_小怪1_目标名}&gt; 承伤: ${var:绝亚_小怪1_承伤}" LogMessageText="小怪4移除，目标: &lt;${var:绝亚_小怪4_目标名}&gt; 承伤: ${var:绝亚_小怪4_承伤}" LogLevel="Warning" MouseX="" MouseY="" VariableOp="SetString" VariableName="绝亚_小怪1_目标ID" VariableExpression="${tid}" TextAuraOp="DeactivateAuraRegex" TextAuraFontSize="9" TextAuraName="绝亚_小怪1_悬浮窗.+" TextAuraFontName="宋体" ActionType="LogMessage">
+                <Condition Enabled="true" Grouping="And">
+                  <ConditionSingle Enabled="true" ExpressionL="${sid}" ExpressionTypeL="String" ExpressionR="${var:绝亚_小怪4_ID}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                </Condition>
+                <Conditions />
+              </Action>
+            </Actions>
+            <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
+          </Trigger>
+        </Triggers>
+      </Folder>
+      <Folder Id="9e01139d-a498-46f1-aca4-d153d827c82a" Name="承伤监听" Enabled="true">
+        <Folders />
+        <Triggers>
+          <Trigger Enabled="true" Name="小怪被打炸（哥哥直爆打我）" Id="0eb539e2-9acd-4395-8ad6-44dcb0636485" RegularExpression="^(?&lt;time&gt;.{14}) 1(5|6):(?&lt;sid&gt;40[0-9A-Fa-f]{6}):狩猎人偶:4821:复杂性还原:(?&lt;tid&gt;10[0-9A-Fa-f]{6}):(?&lt;tname&gt;[^:]+):3:(?&lt;js1&gt;[0-9A-Fa-f]+):(?&lt;jstate2&gt;[0-9A-Fa-f]+):(?&lt;js2&gt;[0-9A-Fa-f]+):" PeriodRefire="Deny" RefirePeriodExpression="500" Description="[16:02:34.209] 16:4000986C:狩猎人偶:4820:复杂性还原:103CE1D8:依琳娜:750003:1E6D0400:1B:48208000:0:0:0:0:0:0:0:0:0:0:0:0:96069:96069:8130:10000:0:1000:104.6921:96.19363:0:1.157663:33846:167240:10000:10000:0:1000:109.9106:97.15417:0:1.486786:00005142:0&#xA;">
+            <Actions>
+              <Action OrderNumber="1" JsonEndpointExpression="http://127.0.0.1:2222/command" JsonPayloadExpression="/cwl1 怪1血: ${numeric:round(${_ffxiventity[${var:绝亚_小怪1_ID}].currenthp}/${_ffxiventity[${var:绝亚_小怪1_ID}].maxhp}*100,2)}% 目标: &lt;${var:绝亚_小怪1_目标名}&gt; 承伤: ${var:绝亚_小怪1_承伤}" LogMessageText="怪1炸 目标: &lt;${var:绝亚_小怪1_目标名}&gt; 承伤: ${var:绝亚_小怪1_承伤}" LogLevel="Warning" MouseX="" MouseY="" VariableOp="SetString" VariableName="绝亚_小怪1_目标ID" VariableExpression="${tid}" TextAuraOp="DeactivateAuraRegex" TextAuraFontSize="9" TextAuraName="绝亚_小怪1_悬浮窗.+" TextAuraFontName="宋体" ActionType="LogMessage">
+                <Condition Enabled="true" Grouping="And">
+                  <ConditionSingle Enabled="true" ExpressionL="${sid}" ExpressionTypeL="String" ExpressionR="${var:绝亚_小怪1_ID}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                  <ConditionSingle Enabled="false" ExpressionL="${numeric:${var:承伤计算_${sid}_${tid}}}" ExpressionTypeL="Numeric" ExpressionR="10*10000" ExpressionTypeR="Numeric" ConditionType="NumericGreaterEqual" />
+                </Condition>
+                <Conditions />
+              </Action>
+              <Action OrderNumber="2" JsonEndpointExpression="http://127.0.0.1:2222/command" JsonPayloadExpression="/cwl1 怪1血: ${numeric:round(${_ffxiventity[${var:绝亚_小怪1_ID}].currenthp}/${_ffxiventity[${var:绝亚_小怪1_ID}].maxhp}*100,2)}% 目标: &lt;${var:绝亚_小怪1_目标名}&gt; 承伤: ${var:绝亚_小怪1_承伤}" LogMessageText="怪2炸 目标: &lt;${var:绝亚_小怪2_目标名}&gt; 承伤: ${var:绝亚_小怪2_承伤}" LogLevel="Warning" MouseX="" MouseY="" VariableOp="SetString" VariableName="绝亚_小怪1_目标ID" VariableExpression="${tid}" TextAuraOp="DeactivateAuraRegex" TextAuraFontSize="9" TextAuraName="绝亚_小怪1_悬浮窗.+" TextAuraFontName="宋体" ActionType="LogMessage">
+                <Condition Enabled="true" Grouping="And">
+                  <ConditionSingle Enabled="true" ExpressionL="${sid}" ExpressionTypeL="String" ExpressionR="${var:绝亚_小怪2_ID}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                  <ConditionSingle Enabled="false" ExpressionL="${numeric:${var:承伤计算_${sid}_${tid}}}" ExpressionTypeL="Numeric" ExpressionR="10*10000" ExpressionTypeR="Numeric" ConditionType="NumericGreaterEqual" />
+                </Condition>
+                <Conditions />
+              </Action>
+              <Action OrderNumber="3" JsonEndpointExpression="http://127.0.0.1:2222/command" JsonPayloadExpression="/cwl1 怪1血: ${numeric:round(${_ffxiventity[${var:绝亚_小怪1_ID}].currenthp}/${_ffxiventity[${var:绝亚_小怪1_ID}].maxhp}*100,2)}% 目标: &lt;${var:绝亚_小怪1_目标名}&gt; 承伤: ${var:绝亚_小怪1_承伤}" LogMessageText="怪3炸 目标: &lt;${var:绝亚_小怪3_目标名}&gt; 承伤: ${var:绝亚_小怪3_承伤}" LogLevel="Warning" MouseX="" MouseY="" VariableOp="SetString" VariableName="绝亚_小怪1_目标ID" VariableExpression="${tid}" TextAuraOp="DeactivateAuraRegex" TextAuraFontSize="9" TextAuraName="绝亚_小怪1_悬浮窗.+" TextAuraFontName="宋体" ActionType="LogMessage">
+                <Condition Enabled="true" Grouping="And">
+                  <ConditionSingle Enabled="true" ExpressionL="${sid}" ExpressionTypeL="String" ExpressionR="${var:绝亚_小怪3_ID}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                  <ConditionSingle Enabled="false" ExpressionL="${numeric:${var:承伤计算_${sid}_${tid}}}" ExpressionTypeL="Numeric" ExpressionR="10*10000" ExpressionTypeR="Numeric" ConditionType="NumericGreaterEqual" />
+                </Condition>
+                <Conditions />
+              </Action>
+              <Action OrderNumber="4" JsonEndpointExpression="http://127.0.0.1:2222/command" JsonPayloadExpression="/cwl1 怪1血: ${numeric:round(${_ffxiventity[${var:绝亚_小怪1_ID}].currenthp}/${_ffxiventity[${var:绝亚_小怪1_ID}].maxhp}*100,2)}% 目标: &lt;${var:绝亚_小怪1_目标名}&gt; 承伤: ${var:绝亚_小怪1_承伤}" LogMessageText="怪4炸 目标: &lt;${var:绝亚_小怪4_目标名}&gt; 承伤: ${var:绝亚_小怪4_承伤}" LogLevel="Warning" MouseX="" MouseY="" VariableOp="SetString" VariableName="绝亚_小怪1_目标ID" VariableExpression="${tid}" TextAuraOp="DeactivateAuraRegex" TextAuraFontSize="9" TextAuraName="绝亚_小怪1_悬浮窗.+" TextAuraFontName="宋体" ActionType="LogMessage">
+                <Condition Enabled="true" Grouping="And">
+                  <ConditionSingle Enabled="true" ExpressionL="${sid}" ExpressionTypeL="String" ExpressionR="${var:绝亚_小怪4_ID}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                  <ConditionSingle Enabled="false" ExpressionL="${numeric:${var:承伤计算_${sid}_${tid}}}" ExpressionTypeL="Numeric" ExpressionR="10*10000" ExpressionTypeR="Numeric" ConditionType="NumericGreaterEqual" />
+                </Condition>
+                <Conditions />
+              </Action>
+              <Action OrderNumber="5" LogLevel="-1" MouseX="" MouseY="" NamedCallbackName="command" NamedCallbackParam="怪1炸 连线目标: &lt;${var:绝亚_小怪1_目标名}&gt; 承伤: ${var:绝亚_小怪1_承伤}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="NamedCallback">
+                <Condition Enabled="true" Grouping="And">
+                  <ConditionSingle Enabled="true" ExpressionL="${sid}" ExpressionTypeL="String" ExpressionR="${var:绝亚_小怪1_ID}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                </Condition>
+                <Conditions />
+              </Action>
+              <Action OrderNumber="6" LogLevel="-1" MouseX="" MouseY="" NamedCallbackName="command" NamedCallbackParam="怪2炸 连线目标: &lt;${var:绝亚_小怪2_目标名}&gt; 承伤: ${var:绝亚_小怪2_承伤}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="NamedCallback">
+                <Condition Enabled="true" Grouping="And">
+                  <ConditionSingle Enabled="true" ExpressionL="${sid}" ExpressionTypeL="String" ExpressionR="${var:绝亚_小怪2_ID}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                </Condition>
+                <Conditions />
+              </Action>
+              <Action OrderNumber="7" LogLevel="-1" MouseX="" MouseY="" NamedCallbackName="command" NamedCallbackParam="怪3炸 连线目标: &lt;${var:绝亚_小怪3_目标名}&gt; 承伤: ${var:绝亚_小怪3_承伤}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="NamedCallback">
+                <Condition Enabled="true" Grouping="And">
+                  <ConditionSingle Enabled="true" ExpressionL="${sid}" ExpressionTypeL="String" ExpressionR="${var:绝亚_小怪3_ID}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                </Condition>
+                <Conditions />
+              </Action>
+              <Action OrderNumber="8" LogLevel="-1" MouseX="" MouseY="" NamedCallbackName="command" NamedCallbackParam="怪4炸 连线目标: &lt;${var:绝亚_小怪4_目标名}&gt; 承伤: ${var:绝亚_小怪4_承伤}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="NamedCallback">
+                <Condition Enabled="true" Grouping="And">
+                  <ConditionSingle Enabled="true" ExpressionL="${sid}" ExpressionTypeL="String" ExpressionR="${var:绝亚_小怪4_ID}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                </Condition>
+                <Conditions />
+              </Action>
+              <Action OrderNumber="9" JsonEndpointExpression="http://127.0.0.1:2222/command" JsonPayloadExpression="/cwl1 怪4血: ${_ffxiventity[${sid}].currenthp}/${_ffxiventity[${sid}].maxhp}[${numeric:round(${_ffxiventity[${sid}].currenthp}/${_ffxiventity[${sid}].maxhp}*100,2)}%] 复杂性还原: ${var:承伤计算_${sid}_${tid}} 目标: &lt;${var:绝亚_小怪4_目标名}&gt; 承伤: ${var:绝亚_小怪4_承伤}" LogMessageText="怪1血: ${_ffxiventity[${var:绝亚_小怪1_ID}].currenthp}/${_ffxiventity[${var:绝亚_小怪1_ID}].maxhp}[${numeric:round(${_ffxiventity[${var:绝亚_小怪1_ID}].currenthp}/${_ffxiventity[${var:绝亚_小怪1_ID}].maxhp}*100,2)}%] 目标: &lt;${var:绝亚_小怪1_目标名}&gt; 复杂性还原: ${var:承伤计算_${sid}_${tid}} 承伤: ${var:绝亚_小怪1_承伤}" LogLevel="Warning" MouseX="" MouseY="" PlaySpeechMyself="True" UseTTSTextExpression="${var:绝亚_小怪1_目标名}炸了" UseTTSVolumeExpression="80" VariableOp="SetString" VariableName="绝亚_小怪1_目标ID" VariableExpression="${tid}" TextAuraOp="DeactivateAuraRegex" TextAuraFontSize="9" TextAuraName="绝亚_小怪1_悬浮窗.+" TextAuraFontName="宋体" ActionType="UseTTS">
+                <Condition Enabled="true" Grouping="And">
+                  <ConditionSingle Enabled="true" ExpressionL="${sid}" ExpressionTypeL="String" ExpressionR="${var:绝亚_小怪1_ID}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                  <ConditionSingle Enabled="false" ExpressionL="${numeric:${var:承伤计算_${sid}_${tid}}}" ExpressionTypeL="Numeric" ExpressionR="10*10000" ExpressionTypeR="Numeric" ConditionType="NumericGreaterEqual" />
+                </Condition>
+                <Conditions />
+              </Action>
+              <Action OrderNumber="10" JsonEndpointExpression="http://127.0.0.1:2222/command" JsonPayloadExpression="/cwl1 怪4血: ${_ffxiventity[${sid}].currenthp}/${_ffxiventity[${sid}].maxhp}[${numeric:round(${_ffxiventity[${sid}].currenthp}/${_ffxiventity[${sid}].maxhp}*100,2)}%] 复杂性还原: ${var:承伤计算_${sid}_${tid}} 目标: &lt;${var:绝亚_小怪4_目标名}&gt; 承伤: ${var:绝亚_小怪4_承伤}" LogMessageText="怪1血: ${_ffxiventity[${var:绝亚_小怪1_ID}].currenthp}/${_ffxiventity[${var:绝亚_小怪1_ID}].maxhp}[${numeric:round(${_ffxiventity[${var:绝亚_小怪1_ID}].currenthp}/${_ffxiventity[${var:绝亚_小怪1_ID}].maxhp}*100,2)}%] 目标: &lt;${var:绝亚_小怪1_目标名}&gt; 复杂性还原: ${var:承伤计算_${sid}_${tid}} 承伤: ${var:绝亚_小怪1_承伤}" LogLevel="Warning" MouseX="" MouseY="" PlaySpeechMyself="True" UseTTSTextExpression="${var:绝亚_小怪2_目标名}炸了" UseTTSVolumeExpression="80" VariableOp="SetString" VariableName="绝亚_小怪1_目标ID" VariableExpression="${tid}" TextAuraOp="DeactivateAuraRegex" TextAuraFontSize="9" TextAuraName="绝亚_小怪1_悬浮窗.+" TextAuraFontName="宋体" ActionType="UseTTS">
+                <Condition Enabled="true" Grouping="And">
+                  <ConditionSingle Enabled="true" ExpressionL="${sid}" ExpressionTypeL="String" ExpressionR="${var:绝亚_小怪2_ID}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                  <ConditionSingle Enabled="false" ExpressionL="${numeric:${var:承伤计算_${sid}_${tid}}}" ExpressionTypeL="Numeric" ExpressionR="10*10000" ExpressionTypeR="Numeric" ConditionType="NumericGreaterEqual" />
+                </Condition>
+                <Conditions />
+              </Action>
+              <Action OrderNumber="11" JsonEndpointExpression="http://127.0.0.1:2222/command" JsonPayloadExpression="/cwl1 怪4血: ${_ffxiventity[${sid}].currenthp}/${_ffxiventity[${sid}].maxhp}[${numeric:round(${_ffxiventity[${sid}].currenthp}/${_ffxiventity[${sid}].maxhp}*100,2)}%] 复杂性还原: ${var:承伤计算_${sid}_${tid}} 目标: &lt;${var:绝亚_小怪4_目标名}&gt; 承伤: ${var:绝亚_小怪4_承伤}" LogMessageText="怪1血: ${_ffxiventity[${var:绝亚_小怪1_ID}].currenthp}/${_ffxiventity[${var:绝亚_小怪1_ID}].maxhp}[${numeric:round(${_ffxiventity[${var:绝亚_小怪1_ID}].currenthp}/${_ffxiventity[${var:绝亚_小怪1_ID}].maxhp}*100,2)}%] 目标: &lt;${var:绝亚_小怪1_目标名}&gt; 复杂性还原: ${var:承伤计算_${sid}_${tid}} 承伤: ${var:绝亚_小怪1_承伤}" LogLevel="Warning" MouseX="" MouseY="" PlaySpeechMyself="True" UseTTSTextExpression="${var:绝亚_小怪3_目标名}炸了" UseTTSVolumeExpression="80" VariableOp="SetString" VariableName="绝亚_小怪1_目标ID" VariableExpression="${tid}" TextAuraOp="DeactivateAuraRegex" TextAuraFontSize="9" TextAuraName="绝亚_小怪1_悬浮窗.+" TextAuraFontName="宋体" ActionType="UseTTS">
+                <Condition Enabled="true" Grouping="And">
+                  <ConditionSingle Enabled="true" ExpressionL="${sid}" ExpressionTypeL="String" ExpressionR="${var:绝亚_小怪3_ID}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                  <ConditionSingle Enabled="false" ExpressionL="${numeric:${var:承伤计算_${sid}_${tid}}}" ExpressionTypeL="Numeric" ExpressionR="10*10000" ExpressionTypeR="Numeric" ConditionType="NumericGreaterEqual" />
+                </Condition>
+                <Conditions />
+              </Action>
+              <Action OrderNumber="12" JsonEndpointExpression="http://127.0.0.1:2222/command" JsonPayloadExpression="/cwl1 怪4血: ${_ffxiventity[${sid}].currenthp}/${_ffxiventity[${sid}].maxhp}[${numeric:round(${_ffxiventity[${sid}].currenthp}/${_ffxiventity[${sid}].maxhp}*100,2)}%] 复杂性还原: ${var:承伤计算_${sid}_${tid}} 目标: &lt;${var:绝亚_小怪4_目标名}&gt; 承伤: ${var:绝亚_小怪4_承伤}" LogMessageText="怪1血: ${_ffxiventity[${var:绝亚_小怪1_ID}].currenthp}/${_ffxiventity[${var:绝亚_小怪1_ID}].maxhp}[${numeric:round(${_ffxiventity[${var:绝亚_小怪1_ID}].currenthp}/${_ffxiventity[${var:绝亚_小怪1_ID}].maxhp}*100,2)}%] 目标: &lt;${var:绝亚_小怪1_目标名}&gt; 复杂性还原: ${var:承伤计算_${sid}_${tid}} 承伤: ${var:绝亚_小怪1_承伤}" LogLevel="Warning" MouseX="" MouseY="" PlaySpeechMyself="True" UseTTSTextExpression="${var:绝亚_小怪4_目标名}炸了" UseTTSVolumeExpression="80" VariableOp="SetString" VariableName="绝亚_小怪1_目标ID" VariableExpression="${tid}" TextAuraOp="DeactivateAuraRegex" TextAuraFontSize="9" TextAuraName="绝亚_小怪1_悬浮窗.+" TextAuraFontName="宋体" ActionType="UseTTS">
+                <Condition Enabled="true" Grouping="And">
+                  <ConditionSingle Enabled="true" ExpressionL="${sid}" ExpressionTypeL="String" ExpressionR="${var:绝亚_小怪4_ID}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                  <ConditionSingle Enabled="false" ExpressionL="${numeric:${var:承伤计算_${sid}_${tid}}}" ExpressionTypeL="Numeric" ExpressionR="10*10000" ExpressionTypeR="Numeric" ConditionType="NumericGreaterEqual" />
+                </Condition>
+                <Conditions />
+              </Action>
+            </Actions>
+            <Condition Enabled="false" Grouping="And">
+              <ConditionSingle Enabled="false" ExpressionL="${func:index(${func:toupper:${tid}}):${var:小队列表_ID}}" ExpressionTypeL="Numeric" ExpressionR="-1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+              <ConditionSingle Enabled="true" ExpressionL="${tid}" ExpressionTypeL="String" ExpressionR="${_ffxivparty[1].id}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+            </Condition>
+            <Conditions />
+          </Trigger>
+          <Trigger Enabled="true" Name="小怪承伤监听只有技能名" Id="7edbbcfd-0d1e-44c5-82ae-edf49f3ccc04" RegularExpression="^(?&lt;time&gt;.{14}) 1(5|6):(?&lt;sid&gt;10[0-9A-Fa-f]{6}):(?&lt;sname&gt;.+?):(?&lt;jid&gt;[0-9A-Fa-f]{1,10}):(?&lt;jname&gt;.+?):(?&lt;tid&gt;40[0-9A-Fa-f]{6}):(?&lt;tname&gt;狩猎人偶):(?&lt;jstate1&gt;[0-9A-Fa-f]+):(?&lt;js1&gt;[0-9A-Fa-f]+):(?&lt;jstate2&gt;[0-9A-Fa-f]+):(?&lt;js2&gt;[0-9A-Fa-f]+):">
+            <Actions>
+              <Action OrderNumber="1" LogLevel="-1" MouseX="" MouseY="" VariableOp="SetString" VariableName="绝亚_小怪1_承伤" VariableExpression="${var:绝亚_小怪1_承伤} | ${sname}[${jname}]" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
+                <Condition Enabled="true" Grouping="And">
+                  <ConditionSingle Enabled="true" ExpressionL="${tid}" ExpressionTypeL="String" ExpressionR="${var:绝亚_小怪1_ID}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                  <ConditionGroup Enabled="true" Grouping="Or">
+                    <ConditionSingle Enabled="true" ExpressionL="${jstate1}" ExpressionTypeL="String" ExpressionR="0\d{2}$" ExpressionTypeR="String" ConditionType="RegexMatch" />
+                    <ConditionSingle Enabled="true" ExpressionL="${jstate2}" ExpressionTypeL="String" ExpressionR="0\d{2}$" ExpressionTypeR="String" ConditionType="RegexMatch" />
+                  </ConditionGroup>
+                </Condition>
+                <Conditions />
+              </Action>
+              <Action OrderNumber="2" LogLevel="-1" MouseX="" MouseY="" VariableOp="SetString" VariableName="绝亚_小怪1_承伤" VariableExpression="${var:绝亚_小怪1_承伤} | ${sname}[暴击-${jname}]" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
+                <Condition Enabled="true" Grouping="And">
+                  <ConditionSingle Enabled="true" ExpressionL="${tid}" ExpressionTypeL="String" ExpressionR="${var:绝亚_小怪1_ID}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                  <ConditionGroup Enabled="true" Grouping="Or">
+                    <ConditionSingle Enabled="true" ExpressionL="${jstate1}" ExpressionTypeL="String" ExpressionR="1\d{2}$" ExpressionTypeR="String" ConditionType="RegexMatch" />
+                    <ConditionSingle Enabled="true" ExpressionL="${jstate2}" ExpressionTypeL="String" ExpressionR="1\d{2}$" ExpressionTypeR="String" ConditionType="RegexMatch" />
+                  </ConditionGroup>
+                </Condition>
+                <Conditions />
+              </Action>
+              <Action OrderNumber="3" LogLevel="-1" MouseX="" MouseY="" VariableOp="SetString" VariableName="绝亚_小怪1_承伤" VariableExpression="${var:绝亚_小怪1_承伤} | ${sname}[直击-${jname}]" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
+                <Condition Enabled="true" Grouping="And">
+                  <ConditionSingle Enabled="true" ExpressionL="${tid}" ExpressionTypeL="String" ExpressionR="${var:绝亚_小怪1_ID}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                  <ConditionGroup Enabled="true" Grouping="Or">
+                    <ConditionSingle Enabled="true" ExpressionL="${jstate1}" ExpressionTypeL="String" ExpressionR="2\d{2}$" ExpressionTypeR="String" ConditionType="RegexMatch" />
+                    <ConditionSingle Enabled="true" ExpressionL="${jstate2}" ExpressionTypeL="String" ExpressionR="2\d{2}$" ExpressionTypeR="String" ConditionType="RegexMatch" />
+                  </ConditionGroup>
+                </Condition>
+                <Conditions />
+              </Action>
+              <Action OrderNumber="4" LogLevel="-1" MouseX="" MouseY="" VariableOp="SetString" VariableName="绝亚_小怪1_承伤" VariableExpression="${var:绝亚_小怪1_承伤} | ${sname}[直爆-${jname}]" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
+                <Condition Enabled="true" Grouping="And">
+                  <ConditionSingle Enabled="true" ExpressionL="${tid}" ExpressionTypeL="String" ExpressionR="${var:绝亚_小怪1_ID}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                  <ConditionGroup Enabled="true" Grouping="Or">
+                    <ConditionSingle Enabled="true" ExpressionL="${jstate1}" ExpressionTypeL="String" ExpressionR="3\d{2}$" ExpressionTypeR="String" ConditionType="RegexMatch" />
+                    <ConditionSingle Enabled="true" ExpressionL="${jstate2}" ExpressionTypeL="String" ExpressionR="3\d{2}$" ExpressionTypeR="String" ConditionType="RegexMatch" />
+                  </ConditionGroup>
+                </Condition>
+                <Conditions />
+              </Action>
+              <Action OrderNumber="5" LogLevel="-1" MouseX="" MouseY="" VariableOp="SetString" VariableName="绝亚_小怪2_承伤" VariableExpression="${var:绝亚_小怪2_承伤} | ${sname}[${jname}]" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
+                <Condition Enabled="true" Grouping="And">
+                  <ConditionSingle Enabled="true" ExpressionL="${tid}" ExpressionTypeL="String" ExpressionR="${var:绝亚_小怪2_ID}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                  <ConditionGroup Enabled="true" Grouping="Or">
+                    <ConditionSingle Enabled="true" ExpressionL="${jstate1}" ExpressionTypeL="String" ExpressionR="0\d{2}$" ExpressionTypeR="String" ConditionType="RegexMatch" />
+                    <ConditionSingle Enabled="true" ExpressionL="${jstate2}" ExpressionTypeL="String" ExpressionR="0\d{2}$" ExpressionTypeR="String" ConditionType="RegexMatch" />
+                  </ConditionGroup>
+                </Condition>
+                <Conditions />
+              </Action>
+              <Action OrderNumber="6" LogLevel="-1" MouseX="" MouseY="" VariableOp="SetString" VariableName="绝亚_小怪2_承伤" VariableExpression="${var:绝亚_小怪2_承伤} | ${sname}[暴击-${jname}]" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
+                <Condition Enabled="true" Grouping="And">
+                  <ConditionSingle Enabled="true" ExpressionL="${tid}" ExpressionTypeL="String" ExpressionR="${var:绝亚_小怪2_ID}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                  <ConditionGroup Enabled="true" Grouping="Or">
+                    <ConditionSingle Enabled="true" ExpressionL="${jstate1}" ExpressionTypeL="String" ExpressionR="1\d{2}$" ExpressionTypeR="String" ConditionType="RegexMatch" />
+                    <ConditionSingle Enabled="true" ExpressionL="${jstate2}" ExpressionTypeL="String" ExpressionR="1\d{2}$" ExpressionTypeR="String" ConditionType="RegexMatch" />
+                  </ConditionGroup>
+                </Condition>
+                <Conditions />
+              </Action>
+              <Action OrderNumber="7" LogLevel="-1" MouseX="" MouseY="" VariableOp="SetString" VariableName="绝亚_小怪2_承伤" VariableExpression="${var:绝亚_小怪2_承伤} | ${sname}[直击-${jname}]" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
+                <Condition Enabled="true" Grouping="And">
+                  <ConditionSingle Enabled="true" ExpressionL="${tid}" ExpressionTypeL="String" ExpressionR="${var:绝亚_小怪2_ID}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                  <ConditionGroup Enabled="true" Grouping="Or">
+                    <ConditionSingle Enabled="true" ExpressionL="${jstate1}" ExpressionTypeL="String" ExpressionR="2\d{2}$" ExpressionTypeR="String" ConditionType="RegexMatch" />
+                    <ConditionSingle Enabled="true" ExpressionL="${jstate2}" ExpressionTypeL="String" ExpressionR="2\d{2}$" ExpressionTypeR="String" ConditionType="RegexMatch" />
+                  </ConditionGroup>
+                </Condition>
+                <Conditions />
+              </Action>
+              <Action OrderNumber="8" LogLevel="-1" MouseX="" MouseY="" VariableOp="SetString" VariableName="绝亚_小怪2_承伤" VariableExpression="${var:绝亚_小怪2_承伤} | ${sname}[直爆-${jname}]" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
+                <Condition Enabled="true" Grouping="And">
+                  <ConditionSingle Enabled="true" ExpressionL="${tid}" ExpressionTypeL="String" ExpressionR="${var:绝亚_小怪2_ID}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                  <ConditionGroup Enabled="true" Grouping="Or">
+                    <ConditionSingle Enabled="true" ExpressionL="${jstate1}" ExpressionTypeL="String" ExpressionR="3\d{2}$" ExpressionTypeR="String" ConditionType="RegexMatch" />
+                    <ConditionSingle Enabled="true" ExpressionL="${jstate2}" ExpressionTypeL="String" ExpressionR="3\d{2}$" ExpressionTypeR="String" ConditionType="RegexMatch" />
+                  </ConditionGroup>
+                </Condition>
+                <Conditions />
+              </Action>
+              <Action OrderNumber="9" LogLevel="-1" MouseX="" MouseY="" VariableOp="SetString" VariableName="绝亚_小怪3_承伤" VariableExpression="${var:绝亚_小怪3_承伤} | ${sname}[${jname}]" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
+                <Condition Enabled="true" Grouping="And">
+                  <ConditionSingle Enabled="true" ExpressionL="${tid}" ExpressionTypeL="String" ExpressionR="${var:绝亚_小怪3_ID}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                  <ConditionGroup Enabled="true" Grouping="Or">
+                    <ConditionSingle Enabled="true" ExpressionL="${jstate1}" ExpressionTypeL="String" ExpressionR="0\d{2}$" ExpressionTypeR="String" ConditionType="RegexMatch" />
+                    <ConditionSingle Enabled="true" ExpressionL="${jstate2}" ExpressionTypeL="String" ExpressionR="0\d{2}$" ExpressionTypeR="String" ConditionType="RegexMatch" />
+                  </ConditionGroup>
+                </Condition>
+                <Conditions />
+              </Action>
+              <Action OrderNumber="10" LogLevel="-1" MouseX="" MouseY="" VariableOp="SetString" VariableName="绝亚_小怪3_承伤" VariableExpression="${var:绝亚_小怪3_承伤} | ${sname}[暴击-${jname}]" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
+                <Condition Enabled="true" Grouping="And">
+                  <ConditionSingle Enabled="true" ExpressionL="${tid}" ExpressionTypeL="String" ExpressionR="${var:绝亚_小怪3_ID}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                  <ConditionGroup Enabled="true" Grouping="Or">
+                    <ConditionSingle Enabled="true" ExpressionL="${jstate1}" ExpressionTypeL="String" ExpressionR="1\d{2}$" ExpressionTypeR="String" ConditionType="RegexMatch" />
+                    <ConditionSingle Enabled="true" ExpressionL="${jstate2}" ExpressionTypeL="String" ExpressionR="1\d{2}$" ExpressionTypeR="String" ConditionType="RegexMatch" />
+                  </ConditionGroup>
+                </Condition>
+                <Conditions />
+              </Action>
+              <Action OrderNumber="11" LogLevel="-1" MouseX="" MouseY="" VariableOp="SetString" VariableName="绝亚_小怪3_承伤" VariableExpression="${var:绝亚_小怪3_承伤} | ${sname}[直击-${jname}]" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
+                <Condition Enabled="true" Grouping="And">
+                  <ConditionSingle Enabled="true" ExpressionL="${tid}" ExpressionTypeL="String" ExpressionR="${var:绝亚_小怪3_ID}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                  <ConditionGroup Enabled="true" Grouping="Or">
+                    <ConditionSingle Enabled="true" ExpressionL="${jstate1}" ExpressionTypeL="String" ExpressionR="2\d{2}$" ExpressionTypeR="String" ConditionType="RegexMatch" />
+                    <ConditionSingle Enabled="true" ExpressionL="${jstate2}" ExpressionTypeL="String" ExpressionR="2\d{2}$" ExpressionTypeR="String" ConditionType="RegexMatch" />
+                  </ConditionGroup>
+                </Condition>
+                <Conditions />
+              </Action>
+              <Action OrderNumber="12" LogLevel="-1" MouseX="" MouseY="" VariableOp="SetString" VariableName="绝亚_小怪3_承伤" VariableExpression="${var:绝亚_小怪3_承伤} | ${sname}[直爆-${jname}]" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
+                <Condition Enabled="true" Grouping="And">
+                  <ConditionSingle Enabled="true" ExpressionL="${tid}" ExpressionTypeL="String" ExpressionR="${var:绝亚_小怪3_ID}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                  <ConditionGroup Enabled="true" Grouping="Or">
+                    <ConditionSingle Enabled="true" ExpressionL="${jstate1}" ExpressionTypeL="String" ExpressionR="3\d{2}$" ExpressionTypeR="String" ConditionType="RegexMatch" />
+                    <ConditionSingle Enabled="true" ExpressionL="${jstate2}" ExpressionTypeL="String" ExpressionR="3\d{2}$" ExpressionTypeR="String" ConditionType="RegexMatch" />
+                  </ConditionGroup>
+                </Condition>
+                <Conditions />
+              </Action>
+              <Action OrderNumber="13" LogLevel="-1" MouseX="" MouseY="" VariableOp="SetString" VariableName="绝亚_小怪4_承伤" VariableExpression="${var:绝亚_小怪4_承伤} | ${sname}[${jname}]" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
+                <Condition Enabled="true" Grouping="And">
+                  <ConditionSingle Enabled="true" ExpressionL="${tid}" ExpressionTypeL="String" ExpressionR="${var:绝亚_小怪4_ID}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                  <ConditionGroup Enabled="true" Grouping="Or">
+                    <ConditionSingle Enabled="true" ExpressionL="${jstate1}" ExpressionTypeL="String" ExpressionR="0\d{2}$" ExpressionTypeR="String" ConditionType="RegexMatch" />
+                    <ConditionSingle Enabled="true" ExpressionL="${jstate2}" ExpressionTypeL="String" ExpressionR="0\d{2}$" ExpressionTypeR="String" ConditionType="RegexMatch" />
+                  </ConditionGroup>
+                </Condition>
+                <Conditions />
+              </Action>
+              <Action OrderNumber="14" LogLevel="-1" MouseX="" MouseY="" VariableOp="SetString" VariableName="绝亚_小怪4_承伤" VariableExpression="${var:绝亚_小怪4_承伤} | ${sname}[暴击-${jname}]" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
+                <Condition Enabled="true" Grouping="And">
+                  <ConditionSingle Enabled="true" ExpressionL="${tid}" ExpressionTypeL="String" ExpressionR="${var:绝亚_小怪4_ID}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                  <ConditionGroup Enabled="true" Grouping="Or">
+                    <ConditionSingle Enabled="true" ExpressionL="${jstate1}" ExpressionTypeL="String" ExpressionR="1\d{2}$" ExpressionTypeR="String" ConditionType="RegexMatch" />
+                    <ConditionSingle Enabled="true" ExpressionL="${jstate2}" ExpressionTypeL="String" ExpressionR="1\d{2}$" ExpressionTypeR="String" ConditionType="RegexMatch" />
+                  </ConditionGroup>
+                </Condition>
+                <Conditions />
+              </Action>
+              <Action OrderNumber="15" LogLevel="-1" MouseX="" MouseY="" VariableOp="SetString" VariableName="绝亚_小怪4_承伤" VariableExpression="${var:绝亚_小怪4_承伤} | ${sname}[直击-${jname}]" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
+                <Condition Enabled="true" Grouping="And">
+                  <ConditionSingle Enabled="true" ExpressionL="${tid}" ExpressionTypeL="String" ExpressionR="${var:绝亚_小怪4_ID}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                  <ConditionGroup Enabled="true" Grouping="Or">
+                    <ConditionSingle Enabled="true" ExpressionL="${jstate1}" ExpressionTypeL="String" ExpressionR="2\d{2}$" ExpressionTypeR="String" ConditionType="RegexMatch" />
+                    <ConditionSingle Enabled="true" ExpressionL="${jstate2}" ExpressionTypeL="String" ExpressionR="2\d{2}$" ExpressionTypeR="String" ConditionType="RegexMatch" />
+                  </ConditionGroup>
+                </Condition>
+                <Conditions />
+              </Action>
+              <Action OrderNumber="16" LogLevel="-1" MouseX="" MouseY="" VariableOp="SetString" VariableName="绝亚_小怪4_承伤" VariableExpression="${var:绝亚_小怪4_承伤} | ${sname}[直爆-${jname}]" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
+                <Condition Enabled="true" Grouping="And">
+                  <ConditionSingle Enabled="true" ExpressionL="${tid}" ExpressionTypeL="String" ExpressionR="${var:绝亚_小怪4_ID}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+                  <ConditionGroup Enabled="true" Grouping="Or">
+                    <ConditionSingle Enabled="true" ExpressionL="${jstate1}" ExpressionTypeL="String" ExpressionR="3\d{2}$" ExpressionTypeR="String" ConditionType="RegexMatch" />
+                    <ConditionSingle Enabled="true" ExpressionL="${jstate2}" ExpressionTypeL="String" ExpressionR="3\d{2}$" ExpressionTypeR="String" ConditionType="RegexMatch" />
+                  </ConditionGroup>
+                </Condition>
+                <Conditions />
+              </Action>
+            </Actions>
+            <Condition Enabled="false" Grouping="And">
+              <ConditionSingle Enabled="true" ExpressionL="${tname}" ExpressionTypeL="String" ExpressionR="狩猎人偶" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
+            </Condition>
+            <Conditions />
+          </Trigger>
+        </Triggers>
+      </Folder>
+    </Folders>
+    <Triggers />
+  </ExportedFolder>
+</TriggernometryExport>
