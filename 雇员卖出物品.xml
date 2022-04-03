@@ -1,36 +1,157 @@
 <?xml version="1.0"?>
 <TriggernometryExport Version="1">
-  <ExportedTrigger Enabled="true" Sequential="True" Name="雇员卖出物品" Id="226e34f9-3ef6-461a-8030-63bca4170802" RegularExpression="^.{14} 00:0047:在(?&lt;market&gt;.{1,}?)市场以(?&lt;per&gt;[\d,]+?)的价格出售的“.(?&lt;name&gt;.+?)(?&lt;HQ&gt;\)?”(×(?&lt;count&gt;\d+?))?成功售出，获得了(?&lt;all&gt;[\d,]+?)金币。" MutexToCapture="雇员卖出播报">
-    <Actions>
-      <Action OrderNumber="1" LogLevel="-1" PlaySpeechMyself="True" UseTTSTextExpression="在${market}以${per}卖出了${count}个${name}，获得${all}" UseTTSVolumeExpression="50" UseTTSRateExpression="0.5" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS" Asynchronous="False">
-        <Condition Enabled="true" Grouping="And">
-          <ConditionSingle Enabled="true" ExpressionL="${count}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericNotEqual" />
-          <ConditionSingle Enabled="true" ExpressionL="${HQ}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+  <ExportedFolder Id="5802d497-7963-44e3-8d1c-e7ed7ba60d92" Name="雇员卖出物品" Enabled="true">
+    <Folders />
+    <Triggers>
+      <Trigger Enabled="true" Source="None" Name="延时" Id="96e364aa-7f9c-49d5-92e1-8debc8a432a8" RegularExpression="^(?&lt;delay&gt;\d+)$" PrevActions="Interrupt">
+        <Actions>
+          <Action OrderNumber="1" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerId="9b9eb776-d85f-4683-b626-78f5b556804b" TriggerZone="${_zone}" TriggerForce="regexp" ActionType="Trigger" ExecutionDelayExpression="${numeric:${delay}}">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+        </Actions>
+        <Condition Enabled="false" Grouping="Or" />
+      </Trigger>
+      <Trigger Enabled="true" Source="None" Sequential="True" Name="播报" Id="9b9eb776-d85f-4683-b626-78f5b556804b" RegularExpression="" MutexToCapture="雇员出售播报" Description="在${var:雇员出售播报_&lt;${lvar:雇员出售播报[1]}&gt;_市场}以${var:雇员出售播报_&lt;${lvar:雇员出售播报[1]}&gt;_单价}卖出了${var:雇员出售播报_&lt;${lvar:雇员出售播报[1]}&gt;_数量}个${var:雇员出售播报_&lt;${lvar:雇员出售播报[1]}&gt;_物品}，获得${var:雇员出售播报_&lt;${lvar:雇员出售播报[1]}&gt;_总价}&#xD;&#xA;&#xD;&#xA;${var:雇员出售播报_&lt;${lvar:雇员出售播报[1]}&gt;_数量}&#xD;&#xA;${var:雇员出售播报_&lt;${lvar:雇员出售播报[1]}&gt;_单价}&#xD;&#xA;${var:雇员出售播报_&lt;${lvar:雇员出售播报[1]}&gt;_总价}&#xD;&#xA;${var:雇员出售播报_&lt;${lvar:雇员出售播报[1]}&gt;_市场}&#xD;&#xA;${var:雇员出售播报_&lt;${lvar:雇员出售播报[1]}&gt;_物品}&#xD;&#xA;&#xD;&#xA;${lvar:雇员出售播报[1]}">
+        <Actions>
+          <Action OrderNumber="1" UseTTSTextExpression="在${var:雇员出售播报_&lt;${lvar:雇员出售播报[1]}&gt;_市场}以${var:雇员出售播报_&lt;${lvar:雇员出售播报[1]}&gt;_单价}卖出了${var:雇员出售播报_&lt;${lvar:雇员出售播报[1]}&gt;_数量}个HQ${var:雇员出售播报_&lt;${lvar:雇员出售播报[1]}&gt;_物品}，获得${var:雇员出售播报_&lt;${lvar:雇员出售播报[1]}&gt;_总价}" UseTTSExclusive="False" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
+            <Condition Enabled="true" Grouping="Or">
+              <ConditionSingle Enabled="true" ExpressionL="${lvar:雇员出售播报[1]}" ExpressionTypeL="String" ExpressionR="HQ_\d+$" ExpressionTypeR="String" ConditionType="RegexMatch" />
+            </Condition>
+            <Conditions />
+          </Action>
+          <Action OrderNumber="2" UseTTSTextExpression="在${var:雇员出售播报_&lt;${lvar:雇员出售播报[1]}&gt;_市场}以${var:雇员出售播报_&lt;${lvar:雇员出售播报[1]}&gt;_单价}卖出了${var:雇员出售播报_&lt;${lvar:雇员出售播报[1]}&gt;_数量}个${var:雇员出售播报_&lt;${lvar:雇员出售播报[1]}&gt;_物品}，获得${var:雇员出售播报_&lt;${lvar:雇员出售播报[1]}&gt;_总价}" UseTTSExclusive="False" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
+            <Condition Enabled="true" Grouping="Or">
+              <ConditionSingle Enabled="true" ExpressionL="${lvar:雇员出售播报[1]}" ExpressionTypeL="String" ExpressionR="HQ_\d+$" ExpressionTypeR="String" ConditionType="RegexNotMatch" />
+            </Condition>
+            <Conditions />
+          </Action>
+          <Action OrderNumber="3" NamedCallbackName="command" NamedCallbackParam="/e 在${var:雇员出售播报_&lt;${lvar:雇员出售播报[1]}&gt;_市场}以${var:雇员出售播报_&lt;${lvar:雇员出售播报[1]}&gt;_单价}卖出了${var:雇员出售播报_&lt;${lvar:雇员出售播报[1]}&gt;_数量}个HQ&lt;${var:雇员出售播报_&lt;${lvar:雇员出售播报[1]}&gt;_物品}&gt;，获得${var:雇员出售播报_&lt;${lvar:雇员出售播报[1]}&gt;_总价}" UseTTSExclusive="False" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="NamedCallback">
+            <Condition Enabled="true" Grouping="Or">
+              <ConditionSingle Enabled="true" ExpressionL="${lvar:雇员出售播报[1]}" ExpressionTypeL="String" ExpressionR="HQ_\d+$" ExpressionTypeR="String" ConditionType="RegexMatch" />
+            </Condition>
+            <Conditions />
+          </Action>
+          <Action OrderNumber="4" NamedCallbackName="command" NamedCallbackParam="/e 在${var:雇员出售播报_&lt;${lvar:雇员出售播报[1]}&gt;_市场}以${var:雇员出售播报_&lt;${lvar:雇员出售播报[1]}&gt;_单价}卖出了${var:雇员出售播报_&lt;${lvar:雇员出售播报[1]}&gt;_数量}个&lt;${var:雇员出售播报_&lt;${lvar:雇员出售播报[1]}&gt;_物品}&gt;，获得${var:雇员出售播报_&lt;${lvar:雇员出售播报[1]}&gt;_总价}" UseTTSExclusive="False" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="NamedCallback">
+            <Condition Enabled="true" Grouping="Or">
+              <ConditionSingle Enabled="true" ExpressionL="${lvar:雇员出售播报[1]}" ExpressionTypeL="String" ExpressionR="HQ_\d+$" ExpressionTypeR="String" ConditionType="RegexNotMatch" />
+            </Condition>
+            <Conditions />
+          </Action>
+          <Action OrderNumber="5" VariableName="雇员出售播报_&lt;${lvar:雇员出售播报[1]}&gt;_数量" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
+            <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
+          </Action>
+          <Action OrderNumber="6" VariableName="雇员出售播报_&lt;${lvar:雇员出售播报[1]}&gt;_单价" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
+            <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
+          </Action>
+          <Action OrderNumber="7" VariableName="雇员出售播报_&lt;${lvar:雇员出售播报[1]}&gt;_总价" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
+            <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
+          </Action>
+          <Action OrderNumber="8" VariableName="雇员出售播报_&lt;${lvar:雇员出售播报[1]}&gt;_物品" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
+            <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
+          </Action>
+          <Action OrderNumber="9" VariableName="雇员出售播报_&lt;${lvar:雇员出售播报[1]}&gt;_市场" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
+            <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
+          </Action>
+          <Action OrderNumber="10" ListVariableOp="Remove" ListVariableName="雇员出售播报" ListVariableIndex="1" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="ListVariable">
+            <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
+          </Action>
+          <Action OrderNumber="11" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerId="96e364aa-7f9c-49d5-92e1-8debc8a432a8" TriggerText="1000" TriggerZone="${_zone}" ActionType="Trigger" ExecutionDelayExpression="8000">
+            <Condition Enabled="false" Grouping="Or" />
+            <Conditions />
+          </Action>
+        </Actions>
+        <Condition Enabled="true" Grouping="Or">
+          <ConditionSingle Enabled="true" ExpressionL="${lvar:雇员出售播报.size}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
         </Condition>
-        <Conditions />
-      </Action>
-      <Action OrderNumber="2" LogLevel="-1" PlaySpeechMyself="True" UseTTSTextExpression="在${market}以${per}卖出了1个${name}，获得${all}" UseTTSVolumeExpression="50" UseTTSRateExpression="0.5" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS" Asynchronous="False">
-        <Condition Enabled="true" Grouping="And">
-          <ConditionSingle Enabled="true" ExpressionL="${count}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
-          <ConditionSingle Enabled="true" ExpressionL="${HQ}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
-        </Condition>
-        <Conditions />
-      </Action>
-      <Action OrderNumber="3" LogLevel="-1" PlaySpeechMyself="True" UseTTSTextExpression="在${market}以${per}卖出了${count}个HQ ${name}，获得${all}" UseTTSVolumeExpression="50" UseTTSRateExpression="0.5" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS" Asynchronous="False">
-        <Condition Enabled="true" Grouping="And">
-          <ConditionSingle Enabled="true" ExpressionL="${count}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericNotEqual" />
-          <ConditionSingle Enabled="true" ExpressionL="${HQ}" ExpressionTypeL="String" ExpressionR="" ExpressionTypeR="String" ConditionType="StringNotEqualCase" />
-        </Condition>
-        <Conditions />
-      </Action>
-      <Action OrderNumber="4" LogLevel="-1" PlaySpeechMyself="True" UseTTSTextExpression="在${market}以${per}卖出了1个HQ ${name}，获得${all}" UseTTSVolumeExpression="50" UseTTSRateExpression="0.5" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS" Asynchronous="False">
-        <Condition Enabled="true" Grouping="And">
-          <ConditionSingle Enabled="true" ExpressionL="${count}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
-          <ConditionSingle Enabled="true" ExpressionL="${HQ}" ExpressionTypeL="String" ExpressionR="" ExpressionTypeR="String" ConditionType="StringNotEqualCase" />
-        </Condition>
-        <Conditions />
-      </Action>
-    </Actions>
-    <Condition Enabled="false" Grouping="Or" />
-  </ExportedTrigger>
+      </Trigger>
+      <Trigger Enabled="true" Sequential="True" Name="记录" Id="8fa7db89-5793-425c-bf17-ef7014d08eb6" RegularExpression="^.{14} \w+ 00:0047::在(?&lt;market&gt;.+?)市场以(?&lt;per1&gt;[\d]+)(,(?&lt;per2&gt;[\d]+))?(,(?&lt;per3&gt;[\d]+))?的价格出售的“.(?&lt;item&gt;.+?)(?&lt;HQ&gt;)?”(×(?&lt;count&gt;\d+?))?成功售出，获得了(?&lt;all1&gt;[\d]+)(,(?&lt;all2&gt;[\d]+))?(,(?&lt;all3&gt;[\d]+))?金币。" MutexToCapture="雇员出售播报" Description="雇员出售《[21:39:15.000] ChatLog 00:0047::在黄金港市场以23,000的价格出售的“雄略魔晶石拾型”成功售出，获得了21,850金币。》">
+        <Actions>
+          <Action OrderNumber="1" ListVariableOp="Remove" ListVariableName="雇员出售播报" ListVariableIndex="${lvar:雇员出售播报.indexof(${market}_${item}HQ_${per1}${per2}${per3})}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="ListVariable">
+            <Condition Enabled="true" Grouping="And">
+              <ConditionSingle Enabled="true" ExpressionL="${_event}" ExpressionTypeL="String" ExpressionR="" ExpressionTypeR="String" ConditionType="RegexMatch" />
+              <ConditionSingle Enabled="true" ExpressionL="雇员出售播报" ExpressionTypeL="String" ExpressionR="${market}_${item}HQ_${per1}${per2}${per3}" ExpressionTypeR="String" ConditionType="ListContains" />
+            </Condition>
+          </Action>
+          <Action OrderNumber="2" ListVariableOp="Remove" ListVariableName="雇员出售播报" ListVariableIndex="${lvar:雇员出售播报.indexof(${market}_${item}_${per1}${per2}${per3})}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="ListVariable">
+            <Condition Enabled="true" Grouping="And">
+              <ConditionSingle Enabled="true" ExpressionL="${_event}" ExpressionTypeL="String" ExpressionR="" ExpressionTypeR="String" ConditionType="RegexNotMatch" />
+              <ConditionSingle Enabled="true" ExpressionL="雇员出售播报" ExpressionTypeL="String" ExpressionR="${market}_${item}_${per1}${per2}${per3}" ExpressionTypeR="String" ConditionType="ListContains" />
+            </Condition>
+          </Action>
+          <Action OrderNumber="3" ListVariableOp="Push" ListVariableName="雇员出售播报" ListVariableExpression="${market}_${item}HQ_${per1}${per2}${per3}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="ListVariable">
+            <Condition Enabled="true" Grouping="And">
+              <ConditionSingle Enabled="true" ExpressionL="${_event}" ExpressionTypeL="String" ExpressionR="" ExpressionTypeR="String" ConditionType="RegexMatch" />
+            </Condition>
+          </Action>
+          <Action OrderNumber="4" ListVariableOp="Push" ListVariableName="雇员出售播报" ListVariableExpression="${market}_${item}_${per1}${per2}${per3}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="ListVariable">
+            <Condition Enabled="true" Grouping="And">
+              <ConditionSingle Enabled="true" ExpressionL="${_event}" ExpressionTypeL="String" ExpressionR="" ExpressionTypeR="String" ConditionType="RegexNotMatch" />
+            </Condition>
+          </Action>
+          <Action OrderNumber="5" VariableOp="SetNumeric" VariableName="雇员出售播报_&lt;${lvar:雇员出售播报[last]}&gt;_数量" VariableExpression="${var:雇员出售播报_&lt;${lvar:雇员出售播报[last]}&gt;_数量}+1" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
+            <Condition Enabled="true" Grouping="And">
+              <ConditionSingle Enabled="false" ExpressionL="${_event}" ExpressionTypeL="String" ExpressionR="" ExpressionTypeR="String" ConditionType="RegexMatch" />
+              <ConditionSingle Enabled="true" ExpressionL="${evar:雇员出售播报_&lt;${lvar:雇员出售播报[last]}&gt;_数量}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+              <ConditionSingle Enabled="true" ExpressionL="${count}" ExpressionTypeL="String" ExpressionR="\d" ExpressionTypeR="String" ConditionType="RegexNotMatch" />
+            </Condition>
+          </Action>
+          <Action OrderNumber="6" VariableOp="SetNumeric" VariableName="雇员出售播报_&lt;${lvar:雇员出售播报[last]}&gt;_数量" VariableExpression="1" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
+            <Condition Enabled="true" Grouping="And">
+              <ConditionSingle Enabled="false" ExpressionL="${_event}" ExpressionTypeL="String" ExpressionR="" ExpressionTypeR="String" ConditionType="RegexMatch" />
+              <ConditionSingle Enabled="true" ExpressionL="${evar:雇员出售播报_&lt;${lvar:雇员出售播报[last]}&gt;_数量}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+              <ConditionSingle Enabled="true" ExpressionL="${count}" ExpressionTypeL="String" ExpressionR="\d" ExpressionTypeR="String" ConditionType="RegexNotMatch" />
+            </Condition>
+          </Action>
+          <Action OrderNumber="7" VariableOp="SetNumeric" VariableName="雇员出售播报_&lt;${lvar:雇员出售播报[last]}&gt;_数量" VariableExpression="${var:雇员出售播报_&lt;${lvar:雇员出售播报[last]}&gt;_数量}+${count}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
+            <Condition Enabled="true" Grouping="And">
+              <ConditionSingle Enabled="false" ExpressionL="${_event}" ExpressionTypeL="String" ExpressionR="" ExpressionTypeR="String" ConditionType="RegexMatch" />
+              <ConditionSingle Enabled="true" ExpressionL="${evar:雇员出售播报_&lt;${lvar:雇员出售播报[last]}&gt;_数量}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+              <ConditionSingle Enabled="true" ExpressionL="${count}" ExpressionTypeL="String" ExpressionR="\d" ExpressionTypeR="String" ConditionType="RegexMatch" />
+            </Condition>
+          </Action>
+          <Action OrderNumber="8" VariableOp="SetNumeric" VariableName="雇员出售播报_&lt;${lvar:雇员出售播报[last]}&gt;_数量" VariableExpression="${count}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
+            <Condition Enabled="true" Grouping="And">
+              <ConditionSingle Enabled="false" ExpressionL="${_event}" ExpressionTypeL="String" ExpressionR="" ExpressionTypeR="String" ConditionType="RegexMatch" />
+              <ConditionSingle Enabled="true" ExpressionL="${evar:雇员出售播报_&lt;${lvar:雇员出售播报[last]}&gt;_数量}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+              <ConditionSingle Enabled="true" ExpressionL="${count}" ExpressionTypeL="String" ExpressionR="\d" ExpressionTypeR="String" ConditionType="RegexMatch" />
+            </Condition>
+          </Action>
+          <Action OrderNumber="9" VariableOp="SetNumeric" VariableName="雇员出售播报_&lt;${lvar:雇员出售播报[last]}&gt;_单价" VariableExpression="${per1}${per2}${per3}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
+            <Condition Enabled="true" Grouping="And">
+              <ConditionSingle Enabled="false" ExpressionL="${_event}" ExpressionTypeL="String" ExpressionR="" ExpressionTypeR="String" ConditionType="RegexMatch" />
+              <ConditionSingle Enabled="true" ExpressionL="${evar:雇员出售播报_&lt;${lvar:雇员出售播报[last]}&gt;_单价}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+            </Condition>
+          </Action>
+          <Action OrderNumber="10" VariableOp="SetNumeric" VariableName="雇员出售播报_&lt;${lvar:雇员出售播报[last]}&gt;_总价" VariableExpression="${var:雇员出售播报_&lt;${lvar:雇员出售播报[last]}&gt;_总价}+${all1}${all2}${all3}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
+            <Condition Enabled="true" Grouping="And">
+              <ConditionSingle Enabled="false" ExpressionL="${_event}" ExpressionTypeL="String" ExpressionR="" ExpressionTypeR="String" ConditionType="RegexMatch" />
+              <ConditionSingle Enabled="true" ExpressionL="${evar:雇员出售播报_&lt;${lvar:雇员出售播报[last]}&gt;_总价}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+            </Condition>
+          </Action>
+          <Action OrderNumber="11" VariableOp="SetNumeric" VariableName="雇员出售播报_&lt;${lvar:雇员出售播报[last]}&gt;_总价" VariableExpression="${all1}${all2}${all3}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
+            <Condition Enabled="true" Grouping="And">
+              <ConditionSingle Enabled="false" ExpressionL="${_event}" ExpressionTypeL="String" ExpressionR="" ExpressionTypeR="String" ConditionType="RegexMatch" />
+              <ConditionSingle Enabled="true" ExpressionL="${evar:雇员出售播报_&lt;${lvar:雇员出售播报[last]}&gt;_总价}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+            </Condition>
+          </Action>
+          <Action OrderNumber="12" VariableOp="SetString" VariableName="雇员出售播报_&lt;${lvar:雇员出售播报[last]}&gt;_市场" VariableExpression="${market}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
+            <Condition Enabled="false" Grouping="And" />
+          </Action>
+          <Action OrderNumber="13" VariableOp="SetString" VariableName="雇员出售播报_&lt;${lvar:雇员出售播报[last]}&gt;_物品" VariableExpression="${item}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
+            <Condition Enabled="false" Grouping="And" />
+          </Action>
+          <Action OrderNumber="14" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerId="96e364aa-7f9c-49d5-92e1-8debc8a432a8" TriggerText="6500" TriggerZone="${_zone}" ActionType="Trigger">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+        </Actions>
+        <Condition Enabled="false" Grouping="Or" />
+      </Trigger>
+    </Triggers>
+  </ExportedFolder>
 </TriggernometryExport>
