@@ -25,7 +25,6 @@
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="【轮椅】地火L" Id="f80cdd7d-f59a-4177-ba4c-97680cbfc433" RegularExpression="^21\|[^|]{1,33}\|40[^|]{6}\|[^|]+\|488F\|[^|]+\|E0000000\|\|.+?\|10000\|(0\|1000|\|)\|(?&lt;x&gt;92|100|108)[.\d]*\|108[.\d]*\|">
                     <Actions>
@@ -81,7 +80,6 @@
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Trigger>
                 </Triggers>
               </Folder>
@@ -104,7 +102,6 @@
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="true" Source="FFXIVNetwork" Name="【监控】有笨比死动剑" Id="24b031da-8db4-455a-afee-2326c60ed3f2" RegularExpression="^2[12]\|[^|]{1,33}\|40[^|]{6}\|[^|]+\|4880\|[^|]+\|10[^|]{6}\|(?&lt;tname&gt;[^|]+)\|3\|">
                     <Actions>
@@ -122,7 +119,6 @@
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="true" Source="FFXIVNetwork" Name="【轮椅】静剑TTS" Id="1eb74e0b-273c-42a3-9d74-d05330439b17" RegularExpression="^20\|[^|]{1,33}\|40[^|]{6}\|[^|]+\|4881\|">
                     <Actions>
@@ -131,7 +127,6 @@
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="true" Source="FFXIVNetwork" Name="【轮椅】动剑TTS" Id="7152befa-0091-4b5b-b59d-8b4a65d8a995" RegularExpression="^20\|[^|]{1,33}\|40[^|]{6}\|[^|]+\|4880\|">
                     <Actions>
@@ -140,7 +135,6 @@
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Trigger>
                 </Triggers>
               </Folder>
@@ -159,7 +153,6 @@
                           </Action>
                         </Actions>
                         <Condition Enabled="false" Grouping="Or" />
-                        <Conditions />
                       </Trigger>
                       <Trigger Enabled="true" Source="FFXIVNetwork" Name="静止命令α2" Id="6f61aa18-55aa-4a66-88fa-da97ba0b4f60" RegularExpression="^21\|[^|]{1,33}\|40[^|]{6}\|[^|]+\|489A\|" PeriodRefire="Deny" RefirePeriodExpression="500">
                         <Actions>
@@ -171,7 +164,6 @@
                           </Action>
                         </Actions>
                         <Condition Enabled="false" Grouping="Or" />
-                        <Conditions />
                       </Trigger>
                       <Trigger Enabled="true" Source="FFXIVNetwork" Name="行动命令α1" Id="574d2c98-c9aa-4cb6-bdee-1346eb81a472" RegularExpression="^21\|[^|]{1,33}\|40[^|]{6}\|[^|]+\|4B0D\|" PeriodRefire="Deny" RefirePeriodExpression="500">
                         <Actions>
@@ -183,7 +175,6 @@
                           </Action>
                         </Actions>
                         <Condition Enabled="false" Grouping="Or" />
-                        <Conditions />
                       </Trigger>
                       <Trigger Enabled="true" Source="FFXIVNetwork" Name="行动命令α2" Id="7dd8c398-487e-43fb-ace7-490d82b71e72" RegularExpression="^21\|[^|]{1,33}\|40[^|]{6}\|[^|]+\|4899\|" PeriodRefire="Deny" RefirePeriodExpression="500">
                         <Actions>
@@ -195,7 +186,6 @@
                           </Action>
                         </Actions>
                         <Condition Enabled="false" Grouping="Or" />
-                        <Conditions />
                       </Trigger>
                       <Trigger Enabled="true" Source="FFXIVNetwork" Name="1测安全区" Id="53476fdd-e1b3-4099-b20f-49f027ffad9e" RegularExpression="^2[12]\|[^|]{1,33}\|40[^|]{6}\|[^|]+\|49AA\|.+?\|10000\|(0\|1000|\|)\|(?&lt;x&gt;[^|]+)\|78.\d+\|">
                         <Actions>
@@ -221,7 +211,6 @@
                           </Action>
                         </Actions>
                         <Condition Enabled="false" Grouping="Or" />
-                        <Conditions />
                       </Trigger>
                       <Trigger Enabled="true" Source="FFXIVNetwork" Name="分身加载" Id="ca987037-ba14-4213-8517-6027dab1b2bc" RegularExpression="^35\|[^|]{1,33}\|10[^|]{6}\|(?&lt;sname&gt;[^|]+)\|(?&lt;tid&gt;40[^|]{6})\|\|">
                         <Actions>
@@ -315,7 +304,6 @@
                           </Action>
                         </Actions>
                         <Condition Enabled="false" Grouping="Or" />
-                        <Conditions />
                       </Trigger>
                     </Triggers>
                   </Folder>
@@ -339,7 +327,6 @@
                           </Action>
                         </Actions>
                         <Condition Enabled="false" Grouping="Or" />
-                        <Conditions />
                       </Trigger>
                       <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="【监控】分摊（连带神判）" Id="48803c66-915b-4806-b78c-35b28ca48abc" RegularExpression="^2[12]\|[^|]{1,33}\|40[^|]{6}\|[^|]+\|4862\|[^|]+\|10[^|]{6}\|(?&lt;tname&gt;[^|]+)\|">
                         <Actions>
@@ -425,7 +412,6 @@
                           </Action>
                         </Actions>
                         <Condition Enabled="false" Grouping="Or" />
-                        <Conditions />
                       </Trigger>
                     </Triggers>
                   </Folder>
@@ -471,7 +457,6 @@
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="true" Source="FFXIVNetwork" Name="开始观测" Id="aa27e075-27cd-4021-94a3-c3866fa515c9" RegularExpression="^21\|[^|]{1,33}\|40[^|]{6}\|[^|]+\|487B\|">
                     <Actions>
@@ -480,7 +465,6 @@
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Trigger>
                 </Triggers>
               </Folder>
@@ -499,7 +483,6 @@
                           </Action>
                         </Actions>
                         <Condition Enabled="false" Grouping="Or" />
-                        <Conditions />
                       </Trigger>
                       <Trigger Enabled="true" Source="FFXIVNetwork" Name="制导散开" Id="2b2f3e86-5e8f-4002-83df-504d52ba5062" RegularExpression="^21\|[^|]{1,33}\|40[^|]{6}\|[^|]+\|48A0\|">
                         <Actions>
@@ -511,7 +494,6 @@
                           </Action>
                         </Actions>
                         <Condition Enabled="false" Grouping="Or" />
-                        <Conditions />
                       </Trigger>
                       <Trigger Enabled="true" Source="FFXIVNetwork" Name="分身判定" Id="d86bac4f-709f-4746-bb3f-3c44ffecb7a1" RegularExpression="^35\|[^|]{1,33}\|10[^|]{6}\|(?&lt;sname&gt;[^|]+)\|(?&lt;tid&gt;40[^|]{6})\|\|">
                         <Actions>
@@ -626,7 +608,6 @@
                           </Action>
                         </Actions>
                         <Condition Enabled="false" Grouping="Or" />
-                        <Conditions />
                       </Trigger>
                       <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="【轮椅】虚影月环播报" Id="aa8f4d3a-497c-43d0-a04c-41b0c6f56797" RegularExpression="^21\|[^|]{1,33}\|(?&lt;sid&gt;40[^|]{6})\|[^|]+\|489E\|.+?\|10000\|(0\|1000|\|)\|(?&lt;x&gt;\d+\.\d+)\|(?&lt;y&gt;\d+\.\d+)\|">
                         <Actions>
@@ -662,7 +643,6 @@
                           </Action>
                         </Actions>
                         <Condition Enabled="false" Grouping="Or" />
-                        <Conditions />
                       </Trigger>
                     </Triggers>
                   </Folder>
@@ -726,7 +706,6 @@
                         <Condition Enabled="true" Grouping="Or">
                           <ConditionSingle Enabled="true" ExpressionL="${sid}" ExpressionTypeL="String" ExpressionR="${var:绝亚jc_P4_2测_月环ID}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                         </Condition>
-                        <Conditions />
                       </Trigger>
                       <Trigger Enabled="true" Source="FFXIVNetwork" Name="【监控】分摊监控" Id="dab64d03-7042-4365-86e6-8fe990168d47" RegularExpression="^2[12]\|[^|]{1,33}\|(?&lt;sid&gt;40[^|]{6})\|[^|]+\|488D\|[^|]+\|10[^|]{6}\|(?&lt;tname&gt;[^|]+)\|">
                         <Actions>
@@ -769,7 +748,6 @@
                           </Action>
                         </Actions>
                         <Condition Enabled="false" Grouping="Or" />
-                        <Conditions />
                       </Trigger>
                       <Trigger Enabled="true" Source="FFXIVNetwork" Name="【监控】超级跳未引导" Id="e4c121e3-ac45-4c77-acdb-9572b7f2fe76" RegularExpression="^2[12]\|[^|]{1,33}\|(?&lt;sid&gt;40[^|]{6})\|[^|]+\|(484A|4885)\|[^|]+\|(?&lt;tid&gt;10[^|]{6})\|(?&lt;tname&gt;[^|]+)\|">
                         <Actions>
@@ -806,7 +784,6 @@
                           </Action>
                         </Actions>
                         <Condition Enabled="false" Grouping="Or" />
-                        <Conditions />
                       </Trigger>
                     </Triggers>
                   </Folder>
@@ -819,7 +796,6 @@
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="true" Source="FFXIVNetwork" Name="结束观测" Id="ee1aa6c7-96e4-45b9-8c74-fc594672eb76" RegularExpression="^21\|[^|]{1,33}\|40[^|]{6}\|[^|]+\|4B14\|">
                     <Actions>
@@ -861,7 +837,6 @@
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Trigger>
                 </Triggers>
               </Folder>
@@ -880,7 +855,6 @@
                           </Action>
                         </Actions>
                         <Condition Enabled="false" Grouping="Or" />
-                        <Conditions />
                       </Trigger>
                       <Trigger Enabled="true" Source="FFXIVNetwork" Name="【轮椅】小暗-逃亡禁止" Id="39fbfd96-6c61-4fe6-aec2-d1e5d0769300" RegularExpression="^26\|[^|]{1,33}\|(?&lt;type&gt;86A)\|[^|]+\|[\d\.]+\|[\dA-F]{8}\|[^|]*\|(?&lt;tid&gt;10[^|]{6})\|(?&lt;tname&gt;[^|]+)\|">
                         <Actions>
@@ -901,7 +875,6 @@
                           </Action>
                         </Actions>
                         <Condition Enabled="false" Grouping="Or" />
-                        <Conditions />
                       </Trigger>
                       <Trigger Enabled="true" Source="FFXIVNetwork" Name="【轮椅】大暗-逃亡监察" Id="05f5b761-e483-457e-9a74-33810a2a1118" RegularExpression="^26\|[^|]{1,33}\|(?&lt;type&gt;86B)\|[^|]+\|[\d\.]+\|[^|]{8}\|[^|]*\|(?&lt;tid&gt;10[^|]{6})\|(?&lt;tname&gt;[^|]+)\|">
                         <Actions>
@@ -913,7 +886,6 @@
                           </Action>
                         </Actions>
                         <Condition Enabled="false" Grouping="Or" />
-                        <Conditions />
                       </Trigger>
                       <Trigger Enabled="true" Source="FFXIVNetwork" Name="【轮椅】小光-接触禁止" Id="6a85489b-457d-49ec-80e2-277fe378a194" RegularExpression="^26\|[^|]{1,33}\|(?&lt;type&gt;868)\|[^|]+\|[\d\.]+\|[\dA-F]{8}\|[^|]*\|(?&lt;tid&gt;10[^|]{6})\|(?&lt;tname&gt;[^|]+)\|">
                         <Actions>
@@ -934,7 +906,6 @@
                           </Action>
                         </Actions>
                         <Condition Enabled="false" Grouping="Or" />
-                        <Conditions />
                       </Trigger>
                       <Trigger Enabled="true" Source="FFXIVNetwork" Name="【轮椅】大光大暗头标" Id="e823b450-f80d-4aa8-b913-26c3c1c577a5" RegularExpression="^26\|[^|]{1,33}\|(?&lt;type&gt;86[9b])\|[^|]+\|[\d\.]+\|[\dA-F]{8}\|[^|]*\|(?&lt;tid&gt;10[^|]{6})\|(?&lt;tname&gt;[^|]+)\|">
                         <Actions>
@@ -953,7 +924,6 @@
                           </Action>
                         </Actions>
                         <Condition Enabled="false" Grouping="Or" />
-                        <Conditions />
                       </Trigger>
                     </Triggers>
                   </Folder>
@@ -1039,7 +1009,6 @@
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Trigger>
                 </Triggers>
               </Folder>
@@ -1061,7 +1030,6 @@
                           </Action>
                         </Actions>
                         <Condition Enabled="false" Grouping="Or" />
-                        <Conditions />
                       </Trigger>
                       <Trigger Enabled="false" Source="FFXIVNetwork" Name="11" Id="10cb945e-efb5-4e6d-b1cd-6d54e6286ddd" RegularExpression="^34\|[^|]{1,33}\|(?&lt;tid&gt;40[^|]{6})\|完美亚历山大\|\1\|完美亚历山大\|01">
                         <Actions>
@@ -1076,7 +1044,6 @@
                           </Action>
                         </Actions>
                         <Condition Enabled="false" Grouping="Or" />
-                        <Conditions />
                       </Trigger>
                       <Trigger Enabled="false" Source="FFXIVNetwork" Name="20" Id="d62b04d8-482c-4022-ae2f-5e19b16b14a0" RegularExpression="^34\|[^|]{1,33}\|(?&lt;tid&gt;40[^|]{6})\|完美亚历山大\|\1\|完美亚历山大\|00">
                         <Actions>
@@ -1091,7 +1058,6 @@
                           </Action>
                         </Actions>
                         <Condition Enabled="false" Grouping="Or" />
-                        <Conditions />
                       </Trigger>
                       <Trigger Enabled="false" Source="FFXIVNetwork" Sequential="True" Name="21" Id="c3874ea4-901c-4b1e-986d-26ae92410554" RegularExpression="^34\|[^|]{1,33}\|(?&lt;tid&gt;40[^|]{6})\|完美亚历山大\|\1\|完美亚历山大\|01">
                         <Actions>
@@ -1106,7 +1072,6 @@
                           </Action>
                         </Actions>
                         <Condition Enabled="false" Grouping="Or" />
-                        <Conditions />
                       </Trigger>
                     </Triggers>
                   </Folder>
@@ -1159,7 +1124,6 @@
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="本体ID记录" Id="7fa87f60-0037-4bab-b3db-3209cd66c505" RegularExpression="^34\|[^|]{1,33}\|(?&lt;tid&gt;40[^|]{6})\|完美亚历山大\|\1\|完美亚历山大\|01">
                     <Actions>
@@ -1215,7 +1179,6 @@
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="true" Source="FFXIVNetwork" Name="LB" Id="0b249a04-5342-41b2-bfb7-1ebb411f0d9e" RegularExpression="^2[12]\|[^|]{1,33}\|10[^|]{6}\|[^|]+\|[\dA-F]+\|[^|]+\|(?&lt;tid&gt;40[^|]{6})\|[^|]+\|780003\|(?&lt;Damage&gt;[\dA-F]{1,8})\|">
                     <Actions>
@@ -1236,7 +1199,6 @@
                     <Condition Enabled="true" Grouping="Or">
                       <ConditionSingle Enabled="true" ExpressionL="${tid}" ExpressionTypeL="String" ExpressionR="${var:绝亚jc_P4_完美亚历山大ID}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                     </Condition>
-                    <Conditions />
                   </Trigger>
                 </Triggers>
               </Folder>
@@ -1265,7 +1227,6 @@
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
-                <Conditions />
               </Trigger>
             </Triggers>
           </Folder>
@@ -1291,7 +1252,6 @@
                               </Action>
                             </Actions>
                             <Condition Enabled="false" Grouping="Or" />
-                            <Conditions />
                           </Trigger>
                           <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="结晶生成" Id="bb7cdb3e-6954-47a6-bb66-7f060031f2d2" RegularExpression="^03\|[^|]{1,33}\|(?&lt;tid&gt;40[^|]{6})\|审判结晶\|.+?\|10000\|(0\|0|\|)\|(?&lt;x&gt;[\d\.]+)\|(?&lt;y&gt;[\d\.]+)\|">
                             <Actions>
@@ -1317,7 +1277,6 @@
                               </Action>
                             </Actions>
                             <Condition Enabled="false" Grouping="Or" />
-                            <Conditions />
                           </Trigger>
                           <Trigger Enabled="true" Source="FFXIVNetwork" Name="结晶炸咯" Id="3e1260cd-5b6d-4ccb-8fd4-1639cde0c7ec" RegularExpression="^2[12]\|[^|]{1,33}\|(?&lt;tid&gt;40[^|]{6})\|[^|]+\|4A88\|[^|]+\|10[^|]{6}\|">
                             <Actions>
@@ -1348,7 +1307,6 @@
                               </Action>
                             </Actions>
                             <Condition Enabled="false" Grouping="Or" />
-                            <Conditions />
                           </Trigger>
                         </Triggers>
                       </Folder>
@@ -1391,7 +1349,6 @@
                                   </Action>
                                 </Actions>
                                 <Condition Enabled="false" Grouping="Or" />
-                                <Conditions />
                               </Trigger>
                               <Trigger Enabled="true" Source="None" Name="1.0检测球列表" Id="9d1fbbf3-5745-415f-b84c-cfd99608f966" RegularExpression="">
                                 <Actions>
@@ -1433,7 +1390,6 @@
                                   </Action>
                                 </Actions>
                                 <Condition Enabled="false" Grouping="Or" />
-                                <Conditions />
                               </Trigger>
                               <Trigger Enabled="true" Source="None" Sequential="True" Name="1.1记录球位置" Id="aae03795-d4d9-43f7-a03e-f5d12da336ad" RegularExpression="^(?&lt;id&gt;40[^|]{6})$">
                                 <Actions>
@@ -1521,7 +1477,6 @@
                                   </Action>
                                 </Actions>
                                 <Condition Enabled="false" Grouping="Or" />
-                                <Conditions />
                               </Trigger>
                             </Triggers>
                           </Folder>
@@ -1559,7 +1514,6 @@
                                   </Action>
                                 </Actions>
                                 <Condition Enabled="false" Grouping="Or" />
-                                <Conditions />
                               </Trigger>
                               <Trigger Enabled="true" Source="FFXIVNetwork" Name="球撞了，以太炸弹" Id="3553cb8a-53df-4f6b-a465-325216753aab" RegularExpression="^2[12]\|[^|]{1,33}\|(?&lt;sid&gt;40[^|]{6})\|[^|]+\|4872\|.+?\|10000\|(0\|1000|\|)\|.+?\|10000\|(0\|1000|\|)\|(?&lt;x&gt;[\d\.]+)\|(?&lt;y&gt;[\d\.]+)\|">
                                 <Actions>
@@ -1586,7 +1540,6 @@
                                   </Action>
                                 </Actions>
                                 <Condition Enabled="false" Grouping="Or" />
-                                <Conditions />
                               </Trigger>
                               <Trigger Enabled="true" Source="FFXIVNetwork" Name="炸圈" Id="b2382ff9-3610-424f-913f-e6006df1d690" RegularExpression="^2[12]\|[^|]{1,33}\|40[^|]{6}\|[^|]+\|4874\|" PeriodRefire="Deny" RefirePeriodExpression="200">
                                 <Actions>
@@ -1615,7 +1568,6 @@
                                   </Action>
                                 </Actions>
                                 <Condition Enabled="false" Grouping="Or" />
-                                <Conditions />
                               </Trigger>
                             </Triggers>
                           </Folder>
@@ -1648,7 +1600,6 @@
                                 <ConditionSingle Enabled="true" ExpressionL="${numeric:((if(${x2}&gt;${x1},radtodeg(arctan((${y1}-${y2})/(${x2}-${x1}))),radtodeg(arctan((${y1}-${y2})/(${x2}-${x1})))+180)+360)%360+360-(if(${px}&gt;${x2},radtodeg(arctan((${y2}-${py})/(${px}-${x2}))),radtodeg(arctan((${y2}-${py})/(${px}-${x2})))+180)+360)%360)%360}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericLess" />
                               </ConditionGroup>
                             </Condition>
-                            <Conditions />
                           </Trigger>
                           <Trigger Enabled="true" Source="None" Name="遍历减速圈" Id="d3a3278b-d256-4b32-8a98-851ea9a0a88a" RegularExpression="^(?&lt;index&gt;\d)$">
                             <Actions>
@@ -1674,7 +1625,6 @@
                             <Condition Enabled="true" Grouping="And">
                               <ConditionSingle Enabled="true" ExpressionL="${elvar:绝亚jc_P3_1运_减速圈}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                             </Condition>
-                            <Conditions />
                           </Trigger>
                         </Triggers>
                       </Folder>
@@ -1700,7 +1650,6 @@
                               </Action>
                             </Actions>
                             <Condition Enabled="false" Grouping="Or" />
-                            <Conditions />
                           </Trigger>
                           <Trigger Enabled="true" Source="None" Sequential="True" Name="输出" Id="8b2debb3-202a-4ac4-8a83-13875d63bc47" RegularExpression="">
                             <Actions>
@@ -1727,7 +1676,6 @@
                               </Action>
                             </Actions>
                             <Condition Enabled="false" Grouping="Or" />
-                            <Conditions />
                           </Trigger>
                         </Triggers>
                       </Folder>
@@ -1743,7 +1691,6 @@
                           </Action>
                         </Actions>
                         <Condition Enabled="false" Grouping="Or" />
-                        <Conditions />
                       </Trigger>
                     </Triggers>
                   </Folder>
@@ -1762,7 +1709,6 @@
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Trigger>
                 </Triggers>
               </Folder>
@@ -1821,7 +1767,6 @@
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="true" Source="FFXIVNetwork" Name="狂暴了吗，没有呢" Id="578bbbb3-ef9f-46dc-b162-ccfc813438b5" RegularExpression="^23\|[^|]{1,33}\|40[^|]{6}\|[^|]+\|4878\|">
                     <Actions>
@@ -1833,7 +1778,6 @@
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Trigger>
                 </Triggers>
               </Folder>
@@ -1906,7 +1850,6 @@
                               </Action>
                             </Actions>
                             <Condition Enabled="false" Grouping="Or" />
-                            <Conditions />
                           </Trigger>
                           <Trigger Enabled="true" Source="FFXIVNetwork" Name="灵泉炸了" Id="f85d0830-1598-4af2-8243-5694c0a6b735" RegularExpression="^2[12]\|[^|]{1,33}\|40[^|]{6}\|[^|]+\|486A\|[^|]+\|10[^|]{6}\|" PeriodRefire="Deny" RefirePeriodExpression="300">
                             <Actions>
@@ -1918,7 +1861,6 @@
                               </Action>
                             </Actions>
                             <Condition Enabled="false" Grouping="Or" />
-                            <Conditions />
                           </Trigger>
                         </Triggers>
                       </Folder>
@@ -1958,7 +1900,6 @@
                           </Action>
                         </Actions>
                         <Condition Enabled="false" Grouping="Or" />
-                        <Conditions />
                       </Trigger>
                       <Trigger Enabled="true" Source="FFXIVNetwork" Name="麻将被击退" Id="51dc20a3-6175-4158-a701-3c4cc83c9a46" RegularExpression="^2[12]\|[^|]{1,33}\|40[^|]{6}\|[^|]+\|(4834|49C3)\|[^|]+\|10[^|]{6}\|(?&lt;tname&gt;[^|]+)\|">
                         <Actions>
@@ -1976,7 +1917,6 @@
                           </Action>
                         </Actions>
                         <Condition Enabled="false" Grouping="Or" />
-                        <Conditions />
                       </Trigger>
                       <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="末世宣言引导" Id="f02c7a11-89c6-41ca-bc50-62b16711dc51" RegularExpression="^2[12]\|[^|]{1,33}\|40[^|]{6}\|[^|]+\|484B\|[^|]+\|40[^|]{6}\|[^|]+\|3C\|0\|.+?\|10000\|(0\|1000|\|)\|(?&lt;x&gt;[\-\d\.]+)\|(?&lt;y&gt;[\-\d\.]+)\|">
                         <Actions>
@@ -2060,7 +2000,6 @@
                           </Action>
                         </Actions>
                         <Condition Enabled="false" Grouping="Or" />
-                        <Conditions />
                       </Trigger>
                     </Triggers>
                   </Folder>
@@ -2082,7 +2021,6 @@
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Trigger>
                 </Triggers>
               </Folder>
@@ -2125,7 +2063,6 @@
                           </Action>
                         </Actions>
                         <Condition Enabled="false" Grouping="Or" />
-                        <Conditions />
                       </Trigger>
                       <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="阿尔法之剑" Id="bc35ed95-490d-4b90-9a23-a39daed3c1cd" RegularExpression="^2[12]\|[^|]{1,33}\|(?&lt;sid&gt;40[^|]{6})\|[^|]+\|486B\|[^|]+\|(?&lt;tid&gt;10[^|]{6})\|(?&lt;tname&gt;[^|]+)\|.+?\|10000\|(0\|1000|\|)\|(?&lt;tx&gt;[\d\.]+)\|(?&lt;ty&gt;[\d\.]+)\|.+?\|10000\|(0\|1000|\|)\|(?&lt;sx&gt;[\d\.]+)\|(?&lt;sy&gt;[\d\.]+)\|">
                         <Actions>
@@ -2161,7 +2098,6 @@
                           </Action>
                         </Actions>
                         <Condition Enabled="false" Grouping="Or" />
-                        <Conditions />
                       </Trigger>
                     </Triggers>
                   </Folder>
@@ -2189,7 +2125,6 @@
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Trigger>
                 </Triggers>
               </Folder>
@@ -2213,7 +2148,6 @@
                           </Action>
                         </Actions>
                         <Condition Enabled="false" Grouping="Or" />
-                        <Conditions />
                       </Trigger>
                       <Trigger Enabled="true" Source="FFXIVNetwork" Name="最终判决β" Id="07f50f98-a462-4892-be62-17be10f31ff8" RegularExpression="^26\|[^|]{1,33}\|8AF\|(?&lt;du&gt;[^|]+)\|[\d\.]+\|E0000000\|\|10[^|]{6}\|(?&lt;tname&gt;[^|]+)\|" PrevActions="Interrupt" RefirePeriodExpression="1000">
                         <Actions>
@@ -2225,7 +2159,6 @@
                           </Action>
                         </Actions>
                         <Condition Enabled="false" Grouping="Or" />
-                        <Conditions />
                       </Trigger>
                       <Trigger Enabled="true" Source="FFXIVNetwork" Name="最终判决γ" Id="38fd2c12-a665-4088-aade-347269d00fe2" RegularExpression="^26\|[^|]{1,33}\|859\|(?&lt;du&gt;[^|]+)\|[\d\.]+\|E0000000\|\|10[^|]{6}\|(?&lt;tname&gt;[^|]+)\|" PrevActions="Interrupt" RefirePeriodExpression="1000">
                         <Actions>
@@ -2237,7 +2170,6 @@
                           </Action>
                         </Actions>
                         <Condition Enabled="false" Grouping="Or" />
-                        <Conditions />
                       </Trigger>
                       <Trigger Enabled="true" Source="FFXIVNetwork" Name="最终判决δ" Id="1d709e8b-0d31-42d8-8287-0589071c5c6a" RegularExpression="^26\|[^|]{1,33}\|85A\|(?&lt;du&gt;[^|]+)\|[\d\.]+\|E0000000\|\|10[^|]{6}\|(?&lt;tname&gt;[^|]+)\|" PrevActions="Interrupt" RefirePeriodExpression="1000">
                         <Actions>
@@ -2249,7 +2181,6 @@
                           </Action>
                         </Actions>
                         <Condition Enabled="false" Grouping="Or" />
-                        <Conditions />
                       </Trigger>
                     </Triggers>
                   </Folder>
@@ -2265,7 +2196,6 @@
                               </Action>
                             </Actions>
                             <Condition Enabled="false" Grouping="Or" />
-                            <Conditions />
                           </Trigger>
                           <Trigger Enabled="true" Source="FFXIVNetwork" Name="上毒" Id="474ac9c9-9a67-47a7-93ac-4541821a2f01" RegularExpression="^26\|[^|]{1,33}\|(8A[EF]|85[9A])\|[^|]+\|[\d\.]+\|E0000000\|\|10[^|]{6}\|(?&lt;tname&gt;[^|]+)\|">
                             <Actions>
@@ -2277,7 +2207,6 @@
                               </Action>
                             </Actions>
                             <Condition Enabled="false" Grouping="Or" />
-                            <Conditions />
                           </Trigger>
                           <Trigger Enabled="false" Source="FFXIVNetwork" Name="最终掉毒" Id="763e4c19-f26c-4a18-b2f4-c956bd68f8b1" RegularExpression="^30\|[^|]{1,33}\|(8A[EF]|85[9A])\|(?&lt;du&gt;[^|]+)\|[\d\.]+\|E0000000\|\|10[^|]{6}\|(?&lt;tname&gt;[^|]+)\|">
                             <Actions>
@@ -2286,7 +2215,6 @@
                               </Action>
                             </Actions>
                             <Condition Enabled="false" Grouping="Or" />
-                            <Conditions />
                           </Trigger>
                         </Triggers>
                       </Folder>
@@ -2354,7 +2282,6 @@
                               </Action>
                             </Actions>
                             <Condition Enabled="false" Grouping="Or" />
-                            <Conditions />
                           </Trigger>
                           <Trigger Enabled="true" Source="FFXIVNetwork" Name="龙卷风" Id="ee2a0f7a-f941-4649-9253-96daddab38f5" RegularExpression="^2[12]\|[^|]{1,33}\|40[^|]{6}\|[^|]+\|4832\|" PeriodRefire="Deny" RefirePeriodExpression="100">
                             <Actions>
@@ -2363,7 +2290,6 @@
                               </Action>
                             </Actions>
                             <Condition Enabled="false" Grouping="Or" />
-                            <Conditions />
                           </Trigger>
                         </Triggers>
                       </Folder>
@@ -2380,7 +2306,6 @@
                           </Action>
                         </Actions>
                         <Condition Enabled="false" Grouping="Or" />
-                        <Conditions />
                       </Trigger>
                       <Trigger Enabled="false" Source="FFXIVNetwork" Name="错误传毒寄" Id="5040e44c-d730-49df-bbed-2b6563d5f76d" RegularExpression="^26\|[^|]{1,33}\|(8A[EF]|85[9A])\|[^|]+(?&lt;du&gt;.)\|[\d\.]+\|E0000000\|\|10[^|]{6}\|(?&lt;tname&gt;[^|]+)\|" PrevActions="Interrupt" RefirePeriodExpression="1000">
                         <Actions>
@@ -2392,7 +2317,6 @@
                           </Action>
                         </Actions>
                         <Condition Enabled="false" Grouping="Or" />
-                        <Conditions />
                       </Trigger>
                       <Trigger Enabled="true" Source="FFXIVNetwork" Name="记录毒组" Id="898e7435-c36c-4c6d-9e80-4c842da65a5d" RegularExpression="^26\|[^|]{1,33}\|(8AE|8AF|85A|859)\|[^\|]+(?&lt;du&gt;α|β|δ|γ)\|(?&lt;time&gt;[\d\.]+)\|.{8}\|[^|]*\|10[\dA-F]{6}\|(?&lt;tname&gt;[^\|]+)\|">
                         <Actions>
@@ -2419,7 +2343,6 @@
                           </Action>
                         </Actions>
                         <Condition Enabled="false" Grouping="Or" />
-                        <Conditions />
                       </Trigger>
                       <Trigger Enabled="true" Source="None" Sequential="True" Name="【轮椅】传毒计算" Id="2d9532f0-eb84-4e42-b819-6872c7a7f3a2" RegularExpression="">
                         <Actions>
@@ -2508,7 +2431,6 @@
                           </Action>
                         </Actions>
                         <Condition Enabled="false" Grouping="Or" />
-                        <Conditions />
                       </Trigger>
                     </Triggers>
                   </Folder>
@@ -2536,7 +2458,6 @@
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="true" Source="FFXIVNetwork" Name="终审开庭" Id="bf0c6d04-740c-43cc-98e4-ffafa04e9d98" RegularExpression="^21\|[^|]{1,33}\|40[^|]{6}\|[^|]+\|483B\|" RefirePeriodExpression="1000">
                     <Actions>
@@ -2557,7 +2478,6 @@
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Trigger>
                 </Triggers>
               </Folder>
@@ -2591,7 +2511,6 @@
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="true" Source="FFXIVNetwork" Name="【警察】冲击波" Id="bca8276b-5822-4f35-83d7-330b1cbdf3d7" RegularExpression="^2[12]\|[^|]{1,33}\|40[^|]{6}\|[^|]+\|4840\|[^|]+\|(?&lt;tid&gt;10[^|]{6})\|(?&lt;tname&gt;[^|]+)\|">
                     <Actions>
@@ -2626,7 +2545,6 @@
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="true" Source="FFXIVNetwork" Name="【轮椅】属性压缩+分摊前6.5秒标记水分摊为三角 雷分摊为攻击2" Id="993c6a64-dcfc-4241-b6a1-c11fa52d4b0c" RegularExpression="^26\|[^|]{1,33}\|(?&lt;type&gt;85[EF])\|(?&lt;BuffName&gt;[^|]+)\|(?&lt;time&gt;[\d\.]+)\|[\dA-F]{8}\|[^|]*\|10[^|]{6}\|(?&lt;tname&gt;[^|]+)\|">
                     <Actions>
@@ -2705,7 +2623,6 @@
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="true" Source="FFXIVNetwork" Name="别碰" Id="ebe61aff-cd7a-4a55-bdef-173afa00767a" RegularExpression="^26\|[^|]{1,33}\|(?&lt;type&gt;8(5[EF]|6[01]))\|[^|]+\|(?&lt;time&gt;[\d\.]+)\|[\dA-F]{8}\|[^|]*\|10[^|]{6}\|(?&lt;tname&gt;[^|]+)\|">
                     <Actions>
@@ -2734,7 +2651,6 @@
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Trigger>
                 </Triggers>
               </Folder>
@@ -2775,7 +2691,6 @@
                           </Action>
                         </Actions>
                         <Condition Enabled="false" Grouping="And" />
-                        <Conditions />
                       </Trigger>
                       <Trigger Enabled="true" Source="FFXIVNetwork" Name="伤害生效" Id="3f0ae486-99bd-4f1c-8db9-35b8d2e3f004" RegularExpression="^37\|[^|]{1,33}\|(?&lt;sid&gt;40[^|]{6})\|等离子护盾\|(?&lt;i&gt;[\dA-F]+)\|">
                         <Actions>
@@ -2784,7 +2699,6 @@
                           </Action>
                         </Actions>
                         <Condition Enabled="false" Grouping="Or" />
-                        <Conditions />
                       </Trigger>
                       <Trigger Enabled="true" Source="FFXIVNetwork" Name="上buff" Id="058fe660-2c18-4d93-be91-3e504eb191e8" RegularExpression="^26\|[^|]{1,33}\|[\dA-F]+\|(?&lt;buff&gt;[^|]+)\|[\d\.]+\|10[^|]{6}\|(?&lt;sname&gt;[^|]+)\|40[^|]{6}\|等离子护盾\|">
                         <Actions>
@@ -2793,7 +2707,6 @@
                           </Action>
                         </Actions>
                         <Condition Enabled="false" Grouping="Or" />
-                        <Conditions />
                       </Trigger>
                       <Trigger Enabled="true" Name="偷偷打飞机" Id="2a47db67-4490-45ee-a8ce-a902e8e0a9c9" RegularExpression="^(?&lt;time&gt;.{14}) 1[56]:(?&lt;sid&gt;[14]0[^|]{6}):(?&lt;sname&gt;.+?):(?&lt;jid&gt;[0-9A-Fa-f]{1,10}):(?&lt;jname&gt;.+?):40[^|]{6}:巡航驱逐者:(?&lt;jstate1&gt;[0-9A-Fa-f]+):(?&lt;js1&gt;[0-9A-Fa-f]+):(?&lt;jstate2&gt;[0-9A-Fa-f]+):(?&lt;js2&gt;[0-9A-Fa-f]+):">
                         <Actions>
@@ -2831,7 +2744,6 @@
                           </Action>
                         </Actions>
                         <Condition Enabled="false" Grouping="Or" />
-                        <Conditions />
                       </Trigger>
                     </Triggers>
                   </Folder>
@@ -2847,7 +2759,6 @@
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="true" Source="None" Name="打盾输出" Id="c60978dd-5cd5-4e71-ab9a-7ad9f8925fca" RegularExpression="(?&lt;index&gt;\d+)·(?&lt;string&gt;.+)">
                     <Actions>
@@ -2916,7 +2827,6 @@
                     <Condition Enabled="true" Grouping="And">
                       <ConditionSingle Enabled="true" ExpressionL="${elvar:绝亚jc_P2_打盾_承伤}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                     </Condition>
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="true" Source="FFXIVNetwork" Name="初始化打盾伤害" Id="a8521927-732d-4b29-9434-ea72ab31e389" RegularExpression="^03\|[^|]{1,33}\|40[^|]{6}\|等离子护盾\|">
                     <Actions>
@@ -2928,7 +2838,6 @@
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="true" Source="FFXIVNetwork" Name="打盾结束" Id="783541b5-b741-416c-bf5c-4fc2fd9231cb" RegularExpression="^04\|[^|]{1,33}\|40[^|]{6}\|等离子护盾\|">
                     <Actions>
@@ -2943,7 +2852,6 @@
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Trigger>
                 </Triggers>
               </Folder>
@@ -3014,7 +2922,6 @@
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="true" Source="FFXIVNetwork" Name="小飞机ID记录" Id="2467dd77-4968-4822-95c0-e53587e7dc68" RegularExpression="^2[12]\|[^|]{1,33}\|(?&lt;sid&gt;40[^|]{6})\|(?&lt;sname&gt;[^|]+)\|497A\|">
                     <Actions>
@@ -3059,7 +2966,6 @@
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Trigger>
                 </Triggers>
               </Folder>
@@ -3084,7 +2990,6 @@
                               </Action>
                             </Actions>
                             <Condition Enabled="false" Grouping="Or" />
-                            <Conditions />
                           </Trigger>
                           <Trigger Enabled="true" Source="FFXIVNetwork" Name="伤害记录" Id="5c677089-7c8a-494c-a8e6-1878bddcbbb8" RegularExpression="^2[12]\|[^\|]{1,33}\|(?&lt;sid&gt;[14]0[^|]{6})\|[^\|]+\|[\dA-F]+\|[^\|]+\|(?&lt;tid&gt;40[^|]{6})\|[^\|]+\|(?&lt;DamageState&gt;[\dA-F]+)\|(?&lt;Damage&gt;[\dA-F]{1,8})\|">
                             <Actions>
@@ -3131,7 +3036,6 @@
                               <ConditionSingle Enabled="true" ExpressionL="${evar:绝亚jc_P2_本体_ID}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                               <ConditionSingle Enabled="true" ExpressionL="${evar:绝亚jc_P2_手_ID}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                             </Condition>
-                            <Conditions />
                           </Trigger>
                           <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="击杀单体" Id="ffc08485-1857-465f-98c0-2539a6b94772" RegularExpression="^04\|[^|]{1,33}\|(?&lt;sid&gt;40[^|]{6})\|">
                             <Actions>
@@ -3224,7 +3128,6 @@
                               <ConditionSingle Enabled="true" ExpressionL="${sid}" ExpressionTypeL="String" ExpressionR="${var:绝亚jc_P2_残暴_ID}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                               <ConditionSingle Enabled="true" ExpressionL="${sid}" ExpressionTypeL="String" ExpressionR="${var:绝亚jc_P2_飞机_ID}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                             </Condition>
-                            <Conditions />
                           </Trigger>
                         </Triggers>
                       </Folder>
@@ -3237,7 +3140,6 @@
                           </Action>
                         </Actions>
                         <Condition Enabled="false" Grouping="Or" />
-                        <Conditions />
                       </Trigger>
                     </Triggers>
                   </Folder>
@@ -3259,7 +3161,6 @@
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Trigger>
                 </Triggers>
               </Folder>
@@ -3272,7 +3173,6 @@
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
-                <Conditions />
               </Trigger>
               <Trigger Enabled="true" Source="FFXIVNetwork" Name="【监控】回旋碎踢" Id="e7c61dd2-47b0-4d42-b1c3-f3e0e9835da9" RegularExpression="^2[12]\|[^|]{1,33}\|40[^|]{6}\|[^|]+\|4A72\|(?&lt;jname&gt;[^|]+)\|10[^|]{6}\|(?&lt;tname&gt;[^|]+)\|">
                 <Actions>
@@ -3284,7 +3184,6 @@
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
-                <Conditions />
               </Trigger>
               <Trigger Enabled="true" Source="FFXIVNetwork" Name="【轮椅】水雷+闭庭+双T清血提醒血量差" Id="1e0148e8-636b-429c-b5b4-faf84d63185a" RegularExpression="^2[12]\|[^|]{1,33}\|40[^|]{6}\|[^|]+\|(483C|4847|4840)\|" PeriodRefire="Deny" RefirePeriodExpression="500">
                 <Actions>
@@ -3312,7 +3211,6 @@
                 <Condition Enabled="true" Grouping="And">
                   <ConditionSingle Enabled="true" ExpressionL="abs((${_ffxiventity[${var:绝亚jc_P2_残暴_ID}].currenthp}/${_ffxiventity[${var:绝亚jc_P2_残暴_ID}].maxhp})-(${_ffxiventity[${var:绝亚jc_P2_飞机_ID}].currenthp}/${_ffxiventity[${var:绝亚jc_P2_飞机_ID}].maxhp}))" ExpressionTypeL="Numeric" ExpressionR="0.13" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
                 </Condition>
-                <Conditions />
               </Trigger>
               <Trigger Enabled="true" Source="FFXIVNetwork" Name="【监控】强力污染" Id="01ec59aa-0cc5-4f05-9feb-8133c440e474" RegularExpression="^2[12]\|[^|]{1,33}\|40[^|]{6}\|[^|]+\|49CB\|" PeriodRefire="Deny" RefirePeriodExpression="200">
                 <Actions>
@@ -3324,7 +3222,6 @@
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
-                <Conditions />
               </Trigger>
               <Trigger Enabled="true" Source="FFXIVNetwork" Name="【监控】冰圈" Id="e6c94d69-e1e4-424f-a67d-4610329d29b1" RegularExpression="^26\|[^|]{1,33}\|11d\|[^|]+\|9999.00\|[\dA-F]{8}\|\|10[^|]{6}\|(?&lt;tname&gt;[^|]+)\|">
                 <Actions>
@@ -3333,7 +3230,6 @@
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
-                <Conditions />
               </Trigger>
               <Trigger Enabled="true" Source="FFXIVNetwork" Name="【监控】地雷大爆炸" Id="665cecca-6b53-49eb-b2ff-ce9c46a0a9ab" RegularExpression="^2[12]\|[^|]{1,33}\|40[^|]{6}\|[^|]+\|4853\|" PeriodRefire="Deny" RefirePeriodExpression="100">
                 <Actions>
@@ -3345,7 +3241,6 @@
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
-                <Conditions />
               </Trigger>
               <Trigger Enabled="true" Source="FFXIVNetwork" Name="【监控】排水" Id="b5567f40-6ee3-41bd-a10b-bc0004cf19a0" RegularExpression="^2[12]\|[^|]{1,33}\|40[^|]{6}\|[^|]+\|4844\|[^|]+\|10[^|]{6}\|(?&lt;tname&gt;[^|]+)\|">
                 <Actions>
@@ -3357,7 +3252,6 @@
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
-                <Conditions />
               </Trigger>
             </Triggers>
           </Folder>
@@ -3375,7 +3269,6 @@
                           </Action>
                         </Actions>
                         <Condition Enabled="false" Grouping="Or" />
-                        <Conditions />
                       </Trigger>
                       <Trigger Enabled="true" Source="FFXIVNetwork" Name="上buff" Id="4ab34c54-fba7-4120-900e-0947d8b7ed2f" RegularExpression="^26\|[^|]{1,33}\|[^|]+\|(?&lt;buff&gt;[^|]+)\|[^|]+\|(?&lt;sid&gt;[^|]+)\|(?&lt;sname&gt;[^|]*)\|(?&lt;tid&gt;40[^|]{6})\|狩猎人偶\|">
                         <Actions>
@@ -3399,7 +3292,6 @@
                           </Action>
                         </Actions>
                         <Condition Enabled="false" Grouping="Or" />
-                        <Conditions />
                       </Trigger>
                       <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="小怪承伤记录（只有技能名）" Id="efdbec20-1d79-4d6c-8f1f-28d4819e587e" RegularExpression="^2[12]\|[^|]{1,33}\|(?&lt;sid&gt;[14]0[^|]{6})\|(?&lt;sname&gt;[^|]+)\|[\dA-F]+\|(?&lt;jname&gt;[^|]+)\|(?&lt;tid&gt;40[^|]{6})\|狩猎人偶\|(?&lt;jstate&gt;[\dA-F]+)\|.+\|(?&lt;i&gt;[\dA-F]+)\|[^|]+\|[^|]+$">
                         <Actions>
@@ -3448,7 +3340,6 @@
                         <Condition Enabled="true" Grouping="Or">
                           <ConditionSingle Enabled="true" ExpressionL="${jstate}" ExpressionTypeL="String" ExpressionR="[0123]\d{2}$" ExpressionTypeR="String" ConditionType="RegexMatch" />
                         </Condition>
-                        <Conditions />
                       </Trigger>
                       <Trigger Enabled="true" Source="FFXIVNetwork" Name="召唤物" Id="2c217496-a216-4dfd-a6c9-dae5296de95c" RegularExpression="^(?&lt;type&gt;0[34])\|[^|]{1,33}\|(?&lt;sid&gt;40[^|]{6})\|[^|]+\|[^|]+\|[^|]+\|(?&lt;tid&gt;10[^|]{6})\|(?&lt;tname&gt;[^|]+)\|">
                         <Actions>
@@ -3466,7 +3357,6 @@
                         <Condition Enabled="true" Grouping="Or">
                           <ConditionSingle Enabled="true" ExpressionL="${tid}" ExpressionTypeL="String" ExpressionR="${_ffxivparty[1].id}" ExpressionTypeR="String" ConditionType="StringNotEqualNocase" />
                         </Condition>
-                        <Conditions />
                       </Trigger>
                     </Triggers>
                   </Folder>
@@ -3499,7 +3389,6 @@
                         <Condition Enabled="true" Grouping="Or">
                           <ConditionSingle Enabled="true" ExpressionL="${numeric:${_ffxiventity[${sid}].currenthp}/${_ffxiventity[${sid}].maxhp}}" ExpressionTypeL="Numeric" ExpressionR="0.25" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
                         </Condition>
-                        <Conditions />
                       </Trigger>
                       <Trigger Enabled="true" Source="FFXIVNetwork" Name="小怪被打炸（哥哥直爆打我）" Id="57572f49-f585-48c6-9a78-2436ace6e03a" RegularExpression="^2[12]\|[^|]{1,33}\|(?&lt;sid&gt;40[^|]{6})\|[^|]+\|4821\|" PeriodRefire="Deny" RefirePeriodExpression="100">
                         <Actions>
@@ -3511,7 +3400,6 @@
                           </Action>
                         </Actions>
                         <Condition Enabled="false" Grouping="And" />
-                        <Conditions />
                       </Trigger>
                       <Trigger Enabled="true" Source="None" Name="小怪喂掉&amp;炸掉输出" Id="d456f1b9-a9b6-4eb9-9e09-867d9895fa71" RegularExpression="^(?&lt;tid&gt;40[^|]{6})·(?&lt;index&gt;\d+)·(?&lt;string&gt;.+)$">
                         <Actions>
@@ -3588,7 +3476,6 @@
                         <Condition Enabled="true" Grouping="And">
                           <ConditionSingle Enabled="true" ExpressionL="${elvar:绝亚jc_P1_小怪_${tid}_承伤}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                         </Condition>
-                        <Conditions />
                       </Trigger>
                       <Trigger Enabled="true" Source="FFXIVNetwork" Name="连线到玩家" Id="c9cdb79a-755c-40f2-9682-2f3a74f129ac" RegularExpression="^35\|[^|]{1,33}\|(?&lt;sid&gt;40[^|]{6})\|狩猎人偶\|(?&lt;tid&gt;10[^|]{6})\|(?&lt;tname&gt;[^|]+)\|">
                         <Actions>
@@ -3600,7 +3487,6 @@
                           </Action>
                         </Actions>
                         <Condition Enabled="false" Grouping="Or" />
-                        <Conditions />
                       </Trigger>
                     </Triggers>
                   </Folder>
@@ -3621,7 +3507,6 @@
                               </Action>
                             </Actions>
                             <Condition Enabled="false" Grouping="Or" />
-                            <Conditions />
                           </Trigger>
                           <Trigger Enabled="true" Source="None" Name="add" Id="7eff25ed-dc11-47ff-9978-91f00787493c" RegularExpression="" PrevActions="Interrupt">
                             <Actions>
@@ -3630,7 +3515,6 @@
                               </Action>
                             </Actions>
                             <Condition Enabled="false" Grouping="Or" />
-                            <Conditions />
                           </Trigger>
                         </Triggers>
                       </Folder>
@@ -3675,7 +3559,6 @@
                           </Action>
                         </Actions>
                         <Condition Enabled="false" Grouping="Or" />
-                        <Conditions />
                       </Trigger>
                       <Trigger Enabled="true" Source="None" Name="有人被呲了两次" Id="e6999c6f-7b13-4c1c-b273-ba41f351492d" RegularExpression="" PeriodRefire="Deny" RefirePeriodExpression="1000">
                         <Actions>
@@ -3684,7 +3567,6 @@
                           </Action>
                         </Actions>
                         <Condition Enabled="false" Grouping="Or" />
-                        <Conditions />
                       </Trigger>
                       <Trigger Enabled="true" Source="None" Sequential="True" Name="add承伤" Id="6955f406-b074-4fdc-99ea-ccf7e13ba3e3" RegularExpression="^(?&lt;index&gt;\d+)$">
                         <Actions>
@@ -3708,7 +3590,6 @@
                         <Condition Enabled="true" Grouping="Or">
                           <ConditionSingle Enabled="true" ExpressionL="${lvar:绝亚jc_P1_水上乐园.size}" ExpressionTypeL="Numeric" ExpressionR="${numeric:${index}}" ExpressionTypeR="Numeric" ConditionType="NumericGreaterEqual" />
                         </Condition>
-                        <Conditions />
                       </Trigger>
                       <Trigger Enabled="true" Source="None" Sequential="True" Name="合并输出" Id="02c569cd-bf8a-446d-91d2-adfab0591d8f" RegularExpression="" PrevActions="Interrupt">
                         <Actions>
@@ -3723,7 +3604,6 @@
                           </Action>
                         </Actions>
                         <Condition Enabled="false" Grouping="Or" />
-                        <Conditions />
                       </Trigger>
                     </Triggers>
                   </Folder>
@@ -3736,7 +3616,6 @@
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Trigger>
                 </Triggers>
               </Folder>
@@ -3777,7 +3656,6 @@
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="true" Source="FFXIVNetwork" Name="水基佬ID记录" Id="6a6e1358-5ae6-46e7-8a7f-cfe90c7dffab" RegularExpression="^2[12]\|[^|]{1,33}\|(?&lt;sid&gt;40[^|]{6})\|[^|]+\|4826\|" PeriodRefire="Deny" RefirePeriodExpression="100">
                     <Actions>
@@ -3816,7 +3694,6 @@
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Trigger>
                 </Triggers>
               </Folder>
@@ -3922,7 +3799,6 @@
                             <ConditionSingle Enabled="true" ExpressionL="${Damage}" ExpressionTypeL="String" ExpressionR="4\d{3}$" ExpressionTypeR="String" ConditionType="StringNotEqualNocase" />
                           </ConditionGroup>
                         </Condition>
-                        <Conditions />
                       </Trigger>
                       <Trigger Enabled="true" Source="FFXIVNetwork" Name="召唤物" Id="9aa9032c-886e-4adf-a39b-d72e4391291d" RegularExpression="^(?&lt;type&gt;0[34])\|[^|]{1,33}\|(?&lt;sid&gt;40[^|]{6})\|[^|]+\|[^|]+\|[^|]+\|(?&lt;tid&gt;10[^|]{6})\|">
                         <Actions>
@@ -3938,7 +3814,6 @@
                           </Action>
                         </Actions>
                         <Condition Enabled="false" Grouping="Or" />
-                        <Conditions />
                       </Trigger>
                       <Trigger Enabled="true" Source="FFXIVNetwork" Name="伤害记录" Id="02e57122-8115-47e3-bda8-f2e27bfe7f33" RegularExpression="^2[12]\|[^\|]{1,33}\|(?&lt;sid&gt;[14]0[^|]{6})\|[^\|]+\|[\dA-F]+\|[^\|]+\|(?&lt;tid&gt;40[^|]{6})\|[^\|]+\|(?&lt;DamageState&gt;[\dA-F]+)\|(?&lt;Damage&gt;[\dA-F]{1,8})\|">
                         <Actions>
@@ -3998,7 +3873,6 @@
                           <ConditionSingle Enabled="true" ExpressionL="${evar:绝亚jc_P1_本体_ID}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                           <ConditionSingle Enabled="true" ExpressionL="${evar:绝亚jc_P1_手_ID}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                         </Condition>
-                        <Conditions />
                       </Trigger>
                     </Triggers>
                   </Folder>
@@ -4102,7 +3976,6 @@
                             <ConditionSingle Enabled="true" ExpressionL="${Damage}" ExpressionTypeL="String" ExpressionR="4\d{3}$" ExpressionTypeR="String" ConditionType="StringNotEqualNocase" />
                           </ConditionGroup>
                         </Condition>
-                        <Conditions />
                       </Trigger>
                       <Trigger Enabled="true" Source="FFXIVNetwork" Name="召唤物" Id="b5fb042e-94c4-4d2b-bcc9-dc0eba01d5ca" RegularExpression="^(?&lt;type&gt;0[34])\|[^|]{1,33}\|(?&lt;sid&gt;40[^|]{6})\|[^|]+\|[^|]+\|[^|]+\|(?&lt;tid&gt;10[^|]{6})\|">
                         <Actions>
@@ -4118,7 +3991,6 @@
                           </Action>
                         </Actions>
                         <Condition Enabled="false" Grouping="Or" />
-                        <Conditions />
                       </Trigger>
                       <Trigger Enabled="true" Source="FFXIVNetwork" Name="伤害记录" Id="82e31220-2430-41ef-85a9-64a35426d3ec" RegularExpression="^2[12]\|[^\|]{1,33}\|(?&lt;sid&gt;[14]0[^|]{6})\|[^\|]+\|[\dA-F]+\|[^\|]+\|(?&lt;tid&gt;40[^|]{6})\|[^\|]+\|(?&lt;DamageState&gt;[\dA-F]+)\|(?&lt;Damage&gt;[\dA-F]{1,8})\|">
                         <Actions>
@@ -4165,7 +4037,6 @@
                           <ConditionSingle Enabled="true" ExpressionL="${evar:绝亚jc_P1_本体_ID}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                           <ConditionSingle Enabled="true" ExpressionL="${evar:绝亚jc_P1_手_ID}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                         </Condition>
-                        <Conditions />
                       </Trigger>
                     </Triggers>
                   </Folder>
@@ -4187,7 +4058,6 @@
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Trigger>
                 </Triggers>
               </Folder>
@@ -4210,7 +4080,6 @@
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="true" Source="FFXIVNetwork" Name="离别之手（布）" Id="d3baf5e2-b1f5-4c57-8f3b-7302a9861259" RegularExpression="^2[12]\|[^|]{1,33}\|40[^|]{6}\|[^|]+\|482C\|[^|]+\|(?&lt;tid&gt;10[^|]{6})\|[^|]+\|[\dA-F]+\|(?&lt;Damage&gt;[\dA-F]{1,8})\|" PeriodRefire="Deny" RefirePeriodExpression="100">
                     <Actions>
@@ -4228,7 +4097,6 @@
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Trigger>
                 </Triggers>
               </Folder>
@@ -4259,7 +4127,6 @@
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="true" Source="None" Sequential="True" Name="合并1" Id="d7886185-25c5-40b4-85f3-85427dd068c2" RegularExpression="^(?&lt;i&gt;\d)$">
                     <Actions>
@@ -4303,7 +4170,6 @@
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="true" Source="None" Sequential="True" Name="合并2" Id="6ec9ff93-b5bb-4095-bd3b-0f26209a72c7" RegularExpression="^(?&lt;i&gt;\d)$">
                     <Actions>
@@ -4329,7 +4195,6 @@
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Trigger>
                 </Triggers>
               </Folder>
@@ -4342,7 +4207,6 @@
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
-                <Conditions />
               </Trigger>
               <Trigger Enabled="true" Source="FFXIVNetwork" Name="【监控】P1麻将被击退" Id="792c97c2-1d97-41e4-b92b-549aaf3791b7" RegularExpression="^2[12]\|[^|]{1,33}\|40[^|]{6}\|[^|]+\|(4834|49C3)\|[^|]+\|10[^|]{6}\|(?&lt;tname&gt;[^|]+)\|">
                 <Actions>
@@ -4354,7 +4218,6 @@
                   <ConditionSingle Enabled="true" ExpressionL="${_event}" ExpressionTypeL="String" ExpressionR="\|20\|30000\|" ExpressionTypeR="String" ConditionType="RegexMatch" />
                   <ConditionSingle Enabled="true" ExpressionL="${evar:绝亚jc_P3_2运_麻将_序号}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
                 </Condition>
-                <Conditions />
               </Trigger>
               <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="【监控】顺劈" Id="ff320e09-39a5-4659-9ee2-a5dd30bae25e" RegularExpression="^2[12]\|[^|]{1,33}\|40[^|]{6}\|(?&lt;sname&gt;[^|]+)\|(49B0|49B7)\|[^|]+\|(?&lt;tid&gt;10[^|]{6})\|(?&lt;tname&gt;[^|]+)\|">
                 <Actions>
@@ -4405,7 +4268,6 @@
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
-                <Conditions />
               </Trigger>
             </Triggers>
           </Folder>
@@ -4451,7 +4313,6 @@
                           </Action>
                         </Actions>
                         <Condition Enabled="false" Grouping="Or" />
-                        <Conditions />
                       </Trigger>
                       <Trigger Enabled="true" Source="FFXIVNetwork" Name="麻将点名记录" Id="082084ab-07a3-49d5-a82c-b0348d1a73d1" RegularExpression="^27\|[^|]{1,33}\|10[^|]{6}\|(?&lt;tname&gt;[^|]+)\|.{4}\|.{4}\|00(?&lt;type&gt;4F|50|51|52|53|54|55|56)\|">
                         <Actions>
@@ -4469,7 +4330,6 @@
                           </Action>
                         </Actions>
                         <Condition Enabled="false" Grouping="Or" />
-                        <Conditions />
                       </Trigger>
                       <Trigger Enabled="true" Source="FFXIVNetwork" Name="麻将" Id="f1d381c9-0fcb-4416-9afe-aa72fc7f03ec" RegularExpression="^2[12]\|[^|]{1,33}\|40[^|]{6}\|[^|]+\|(4834|4B4F|49C3)\|[^|]+\|E0000000\|">
                         <Actions>
@@ -4491,7 +4351,6 @@
                           </Action>
                         </Actions>
                         <Condition Enabled="false" Grouping="Or" />
-                        <Conditions />
                       </Trigger>
                     </Triggers>
                   </Folder>
@@ -4507,7 +4366,6 @@
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Trigger>
                 </Triggers>
               </Folder>
@@ -4570,7 +4428,6 @@
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="true" Source="FFXIVNetwork" Name="点名" Id="266fc84f-19d2-446a-9e5f-08363f594a96" RegularExpression="^27\|[^|]{1,33}\|10[^|]{6}\|(?&lt;tname&gt;[^|]+)\|[\dA-F]{4}\|[\dA-F]{4}\|0041\|">
                     <Actions>
@@ -4582,7 +4439,6 @@
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Trigger>
                 </Triggers>
               </Folder>
@@ -4595,7 +4451,6 @@
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
-                <Conditions />
               </Trigger>
               <Trigger Enabled="true" Source="FFXIVNetwork" Name="【监控】末世宣言" Id="b679fa71-69a6-48a4-9c7f-bdf3dd76ade7" RegularExpression="^2[12]\|[^|]{1,33}\|40[^|]{6}\|[^|]+\|484C\|(?&lt;jname&gt;[^|]+)\|10[^|]{6}\|(?&lt;tname&gt;[^|]+)\|">
                 <Actions>
@@ -4604,7 +4459,6 @@
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
-                <Conditions />
               </Trigger>
               <Trigger Enabled="true" Source="FFXIVNetwork" Name="【监控】苏帕酱噗" Id="7ab01d6d-6393-4ab8-aeea-78a3906d975d" RegularExpression="^2[12]\|[^|]{1,33}\|(?&lt;sid&gt;40[^|]{6})\|[^|]+\|(484A|4885)\|[^|]+\|(?&lt;tid&gt;10[^|]{6})\|(?&lt;tname&gt;[^|]+)\|">
                 <Actions>
@@ -4724,7 +4578,6 @@
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
-                <Conditions />
               </Trigger>
               <Trigger Enabled="true" Source="FFXIVNetwork" Name="【监控】地火" Id="01135faf-94cb-4e96-b457-93ab80f2c0be" RegularExpression="^2[12]\|[^|]{1,33}\|40[^|]{6}\|[^|]+\|483[01]\|[^|]+\|10[^|]{6}\|(?&lt;tname&gt;[^|]+)\|">
                 <Actions>
@@ -4733,7 +4586,6 @@
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
-                <Conditions />
               </Trigger>
               <Trigger Enabled="true" Source="FFXIVNetwork" Name="【监控】十字圣礼" Id="3a80092e-ce88-4507-9a34-72070305642a" RegularExpression="^2[12]\|[^|]{1,33}\|40[^|]{6}\|[^|]+\|(485F|4857|4889)\|(?&lt;jname&gt;[^|]+)\|10[^|]{6}\|(?&lt;tname&gt;[^|]+)\|">
                 <Actions>
@@ -4742,7 +4594,6 @@
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
-                <Conditions />
               </Trigger>
               <Trigger Enabled="true" Source="FFXIVNetwork" Name="【监控】远近线" Id="93ba1d48-2a05-4095-9612-0b810f6d2875" RegularExpression="^2[12]\|[^|]{1,33}\|40[^|]{6}\|[^|]+\|4863\|[^|]+\|(?&lt;tid&gt;10[^|]{6})\|(?&lt;tname&gt;[^|]+)\|[\dA-F]+\|(?&lt;Damage&gt;[\dA-F]{1,8})\|">
                 <Actions>
@@ -4760,7 +4611,6 @@
                     <ConditionSingle Enabled="true" ExpressionL="${Damage}" ExpressionTypeL="String" ExpressionR="4\d{3}$" ExpressionTypeR="String" ConditionType="StringNotEqualNocase" />
                   </ConditionGroup>
                 </Condition>
-                <Conditions />
               </Trigger>
             </Triggers>
           </Folder>
@@ -4788,7 +4638,6 @@
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
-                <Conditions />
               </Trigger>
               <Trigger Enabled="true" Source="FFXIVNetwork" Name="团灭后自动重置+结束战斗" Id="67e53e02-044a-4388-afd6-8b6c4a00710f" RegularExpression="^33\|[^|]{1,33}\|[\dA-F]{8}\|400000(0[13]|1[026])">
                 <Actions>
@@ -4941,7 +4790,6 @@
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
-                <Conditions />
               </Trigger>
               <Trigger Enabled="true" Source="FFXIVNetwork" Name="记录小队列表" Id="52027ebb-36a0-4ee1-81cd-90c96230345e" RegularExpression="^00\|[^|]{1,33}\|0038\|\|party_绝亚:(?&lt;name1&gt;.+?)(海猫茶屋|延夏|摩杜纳|柔风海湾|琥珀原|静语庄园|紫水栈桥|白银乡|白金幻象|神拳痕|潮风亭|旅人栈桥|拂晓之间|龙巢神殿|梦羽宝境|红玉海|神意之地|拉诺西亚|幻影群岛|萌芽池|宇宙和音|沃仙曦染|晨曦王座|水晶塔|银泪湖|太阳海岸|伊修加德)?:(?&lt;name2&gt;.+?)(海猫茶屋|延夏|摩杜纳|柔风海湾|琥珀原|静语庄园|紫水栈桥|白银乡|白金幻象|神拳痕|潮风亭|旅人栈桥|拂晓之间|龙巢神殿|梦羽宝境|红玉海|神意之地|拉诺西亚|幻影群岛|萌芽池|宇宙和音|沃仙曦染|晨曦王座|水晶塔|银泪湖|太阳海岸|伊修加德)?:(?&lt;name3&gt;.+?)(海猫茶屋|延夏|摩杜纳|柔风海湾|琥珀原|静语庄园|紫水栈桥|白银乡|白金幻象|神拳痕|潮风亭|旅人栈桥|拂晓之间|龙巢神殿|梦羽宝境|红玉海|神意之地|拉诺西亚|幻影群岛|萌芽池|宇宙和音|沃仙曦染|晨曦王座|水晶塔|银泪湖|太阳海岸|伊修加德)?:(?&lt;name4&gt;.+?)(海猫茶屋|延夏|摩杜纳|柔风海湾|琥珀原|静语庄园|紫水栈桥|白银乡|白金幻象|神拳痕|潮风亭|旅人栈桥|拂晓之间|龙巢神殿|梦羽宝境|红玉海|神意之地|拉诺西亚|幻影群岛|萌芽池|宇宙和音|沃仙曦染|晨曦王座|水晶塔|银泪湖|太阳海岸|伊修加德)?:(?&lt;name5&gt;.+?)(海猫茶屋|延夏|摩杜纳|柔风海湾|琥珀原|静语庄园|紫水栈桥|白银乡|白金幻象|神拳痕|潮风亭|旅人栈桥|拂晓之间|龙巢神殿|梦羽宝境|红玉海|神意之地|拉诺西亚|幻影群岛|萌芽池|宇宙和音|沃仙曦染|晨曦王座|水晶塔|银泪湖|太阳海岸|伊修加德)?:(?&lt;name6&gt;.+?)(海猫茶屋|延夏|摩杜纳|柔风海湾|琥珀原|静语庄园|紫水栈桥|白银乡|白金幻象|神拳痕|潮风亭|旅人栈桥|拂晓之间|龙巢神殿|梦羽宝境|红玉海|神意之地|拉诺西亚|幻影群岛|萌芽池|宇宙和音|沃仙曦染|晨曦王座|水晶塔|银泪湖|太阳海岸|伊修加德)?:(?&lt;name7&gt;.+?)(海猫茶屋|延夏|摩杜纳|柔风海湾|琥珀原|静语庄园|紫水栈桥|白银乡|白金幻象|神拳痕|潮风亭|旅人栈桥|拂晓之间|龙巢神殿|梦羽宝境|红玉海|神意之地|拉诺西亚|幻影群岛|萌芽池|宇宙和音|沃仙曦染|晨曦王座|水晶塔|银泪湖|太阳海岸|伊修加德)?:(?&lt;name8&gt;.+?)(海猫茶屋|延夏|摩杜纳|柔风海湾|琥珀原|静语庄园|紫水栈桥|白银乡|白金幻象|神拳痕|潮风亭|旅人栈桥|拂晓之间|龙巢神殿|梦羽宝境|红玉海|神意之地|拉诺西亚|幻影群岛|萌芽池|宇宙和音|沃仙曦染|晨曦王座|水晶塔|银泪湖|太阳海岸|伊修加德)?:">
                 <Actions>
@@ -4971,7 +4819,6 @@
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
-                <Conditions />
               </Trigger>
               <Trigger Enabled="true" Source="FFXIVNetwork" Name="小队列表初始化" Id="5f5c4f29-0820-4042-9b63-0009f1129fd2" RegularExpression="^00\|[^|]{1,33}\|0038\|\|绝亚警察小队列表初始化$">
                 <Actions>
@@ -4980,7 +4827,6 @@
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
-                <Conditions />
               </Trigger>
               <Trigger Enabled="true" Source="None" Sequential="True" Name="初始化职业" Id="9c411eb6-263d-44c5-9c47-82c5f2ce5b4f" RegularExpression="">
                 <Actions>
@@ -5165,7 +5011,6 @@
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
-                <Conditions />
               </Trigger>
             </Triggers>
           </Folder>
@@ -5195,7 +5040,6 @@
                         </ConditionGroup>
                       </ConditionGroup>
                     </Condition>
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="true" Source="FFXIVNetwork" Name="小怪承伤记录（只有技能名）【输出频道：/e】" Id="ca4f9ad6-9a85-4e56-b321-cc274efce731" RegularExpression="^2[12]\|[^|]{1,33}\|(?&lt;sid&gt;[14]0[^|]{6})\|(?&lt;sname&gt;[^|]+)\|[\dA-F]+\|(?&lt;jname&gt;[^|]+)\|(?&lt;tid&gt;40[^|]{6})\|狩猎人偶\|(?&lt;jstate&gt;[\dA-F]+)\|">
                     <Actions>
@@ -5236,7 +5080,6 @@
                         </ConditionGroup>
                       </ConditionGroup>
                     </Condition>
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="true" Source="FFXIVNetwork" Name="召唤物" Id="719f7cd2-974d-4d2c-ae23-be03f69f8206" RegularExpression="^(?&lt;type&gt;0[34])\|[^|]{1,33}\|(?&lt;sid&gt;40[^|]{6})\|[^|]+\|[^|]+\|[^|]+\|(?&lt;tid&gt;10[^|]{6})\|(?&lt;tname&gt;[^|]+)\|">
                     <Actions>
@@ -5254,7 +5097,6 @@
                     <Condition Enabled="true" Grouping="Or">
                       <ConditionSingle Enabled="true" ExpressionL="${tid}" ExpressionTypeL="String" ExpressionR="${_ffxivparty[1].id}" ExpressionTypeR="String" ConditionType="StringNotEqualNocase" />
                     </Condition>
-                    <Conditions />
                   </Trigger>
                 </Triggers>
               </Folder>
@@ -5268,7 +5110,6 @@
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="And" />
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="true" Source="FFXIVNetwork" Name="【监控】复活【输出频道：/e】" Id="8006b041-5932-46f2-b5ee-86507540498b" RegularExpression="^21\|[^|]{1,33}\|10[^|]{6}\|(?&lt;sname&gt;[^|]+)\|(?:7D|1D63|AD|E13|5EDF)\|(?&lt;acname&gt;[^|]+)\|10[^|]{6}\|(?&lt;tname&gt;[^|]+)\|">
                     <Actions>
@@ -5280,7 +5121,6 @@
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="And" />
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="true" Source="FFXIVNetwork" Name="【监控】读复活【输出频道：/e】" Id="e07c835d-7dd7-4a39-8fcc-83f88285a90c" RegularExpression="^20\|[^|]{1,33}\|10[^|]{6}\|(?&lt;sname&gt;[^|]+)\|(?:7D|1D63|AD|E13|5EDF)\|(?&lt;acname&gt;[^|]+)\|10[^|]{6}\|(?&lt;tname&gt;[^|]+)\|">
                     <Actions>
@@ -5292,7 +5132,6 @@
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="And" />
-                    <Conditions />
                   </Trigger>
                 </Triggers>
               </Folder>
@@ -5334,7 +5173,6 @@
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="true" Source="FFXIVNetwork" Name="无敌CD播报【输出频道：/e】" Id="d42df161-5e6d-4c95-8ee5-728a423bb3b6" RegularExpression="^21\|[^|]{1,33}\|40[^|]{6}\|[^|]+\|485A\|">
                     <Actions>
@@ -5396,7 +5234,6 @@
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Trigger>
                 </Triggers>
               </Folder>
@@ -5410,7 +5247,6 @@
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="true" Source="FFXIVNetwork" Name="地火L标点" Id="e6cf08d3-6395-4c42-a663-1cba5d7bc639" RegularExpression="^21\|[^|]{1,33}\|40[^|]{6}\|[^|]+\|4B14\|">
                     <Actions>
@@ -5419,7 +5255,6 @@
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="true" Source="None" Name="初始化标点（请自行核对标点是否为自己使用的标点，使用推荐：猫区）" Id="746d477a-87ce-436a-b78b-52754ef94042" RegularExpression="">
                     <Actions>
@@ -5428,7 +5263,6 @@
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Trigger>
                 </Triggers>
               </Folder>
@@ -5455,7 +5289,6 @@
                     <Condition Enabled="true" Grouping="And">
                       <ConditionSingle Enabled="true" ExpressionL="${_ffxivparty[${sid}].role}" ExpressionTypeL="String" ExpressionR="Healer" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                     </Condition>
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="true" Source="FFXIVNetwork" Name="即刻CD播报【输出频道：/e】" Id="382fb2ed-5e66-4476-b067-3a72ea235940" RegularExpression="^25\|[^|]{1,33}\|10[^|]{6}\|" PeriodRefire="Deny" RefirePeriodExpression="10000">
                     <Actions>
@@ -5517,7 +5350,6 @@
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Trigger>
                 </Triggers>
               </Folder>
@@ -5530,7 +5362,6 @@
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
-                <Conditions />
               </Trigger>
               <Trigger Enabled="true" Source="FFXIVNetwork" Name="【按需启用】NPC语音" Id="1ac445f2-5563-4579-ae24-7ad21840e6f9" RegularExpression="^00\|[^|]{1,33}\|0044\|(?&lt;name&gt;[^|]+)\|(?&lt;str&gt;.+)$" MutexToCapture="绝亚警察_TTS">
                 <Actions>
@@ -5546,7 +5377,6 @@
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
-                <Conditions />
               </Trigger>
             </Triggers>
           </Folder>
@@ -5568,7 +5398,6 @@
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
-                <Conditions />
               </Trigger>
             </Triggers>
           </Folder>
@@ -5675,7 +5504,6 @@
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="true" Source="None" Name="别碰0" Id="472d52f8-3bef-45bb-99f7-99206f551b0a" RegularExpression="^.+$">
                     <Actions>
@@ -5687,7 +5515,6 @@
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Trigger>
                 </Triggers>
               </Folder>
@@ -5700,7 +5527,6 @@
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
-                <Conditions />
               </Trigger>
               <Trigger Enabled="true" Source="None" Name="【切换《小队频道/p》、《默语/e》请修改此触发器】监控文本输出频道&lt;输出人名&gt;" Id="72685b5a-3458-4f02-a20d-c10acbd70962" RegularExpression="^(?&lt;str&gt;.+)$">
                 <Actions>
@@ -5724,7 +5550,6 @@
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
-                <Conditions />
               </Trigger>
               <Trigger Enabled="false" Source="None" Name="【切换《小队频道/p》、《默语/e》请修改此触发器】监控文本输出频道&lt;输出职业名&gt;" Id="46cd169d-9fc7-4700-b2a7-d1ee369934ce" RegularExpression="^(?&lt;str&gt;.+)$">
                 <Actions>
@@ -5748,7 +5573,6 @@
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
-                <Conditions />
               </Trigger>
             </Triggers>
           </Folder>
@@ -5767,7 +5591,6 @@
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="true" Source="None" Name="别碰" Id="cc470ce2-e418-44fb-8c9c-3a75da869206" RegularExpression="" PrevActions="Interrupt">
                     <Actions>
@@ -5776,7 +5599,6 @@
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Trigger>
                   <Trigger Enabled="true" Source="None" Name="别碰" Id="70e9aacb-416c-4ef2-93c4-ea772a62a43f" RegularExpression="^(?&lt;s&gt;.+)…(?&lt;str&gt;.+)$">
                     <Actions>
@@ -5876,7 +5698,6 @@
                       </Action>
                     </Actions>
                     <Condition Enabled="false" Grouping="Or" />
-                    <Conditions />
                   </Trigger>
                 </Triggers>
               </Folder>
@@ -5889,7 +5710,6 @@
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
-                <Conditions />
               </Trigger>
               <Trigger Enabled="true" Source="None" Name="[按需启用]轮椅TTS输出" Id="77b505cb-a840-49a2-82a7-0c8b3535303d" RegularExpression="^(?&lt;string&gt;.+?)…(?&lt;str&gt;.+)$" MutexToCapture="绝亚警察_TTS">
                 <Actions>
@@ -5901,7 +5721,6 @@
                   <ConditionSingle Enabled="true" ExpressionL="${string}" ExpressionTypeL="String" ExpressionR="${_ffxivparty[1].name}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                   <ConditionSingle Enabled="true" ExpressionL="${string}" ExpressionTypeL="String" ExpressionR="NULL" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
                 </Condition>
-                <Conditions />
               </Trigger>
               <Trigger Enabled="true" Source="None" Sequential="True" Name="【切换《小队频道/p》、《默语/e》请修改此触发器】轮椅文本输出频道&lt;输出人名&gt;：" Id="d120ce54-7b80-437e-b316-a5f3506053b5" RegularExpression="^(?&lt;string&gt;.+?)…(?&lt;str&gt;.+)$">
                 <Actions>
@@ -5911,48 +5730,29 @@
                   <Action OrderNumber="2" NamedCallbackName="command" NamedCallbackParam="/p ${str}" TextAuraFontSize="9" TextAuraFontName="宋体" Enabled="False" ActionType="NamedCallback" Description="使用小队频道(/party、/p)输出请勾选本行">
                     <Condition Enabled="false" Grouping="Or" />
                   </Action>
-                  <Action OrderNumber="3" NamedCallbackName="command" NamedCallbackParam="/e ${str}" TextAuraFontSize="9" TextAuraFontName="宋体" Enabled="False" ActionType="NamedCallback" Description="使用默语频道(/echo、/e)输出请勾选本行">
+                  <Action OrderNumber="3" NamedCallbackName="command" NamedCallbackParam="/e ${str}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="NamedCallback" Description="使用默语频道(/echo、/e)输出请勾选本行">
                     <Condition Enabled="false" Grouping="Or" />
                   </Action>
-                  <Action OrderNumber="4" NamedCallbackName="command" NamedCallbackParam="/p ${str}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="NamedCallback">
-                    <Condition Enabled="true" Grouping="And">
-                      <ConditionGroup Enabled="true" Grouping="Or">
-                        <ConditionSingle Enabled="true" ExpressionL="${string}" ExpressionTypeL="String" ExpressionR="NULL" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
-                        <ConditionSingle Enabled="true" ExpressionL="${string}" ExpressionTypeL="String" ExpressionR="${func:substring(${numeric:${func:indexof(：):${_triggername}}+1}):${_triggername}}" ExpressionTypeR="String" ConditionType="RegexMatch" />
-                      </ConditionGroup>
-                      <ConditionSingle Enabled="true" ExpressionL="${func:substring(${numeric:${func:indexof(：):${_triggername}}+1}):${_triggername}}" ExpressionTypeL="String" ExpressionR=".+" ExpressionTypeR="String" ConditionType="RegexMatch" />
-                    </Condition>
-                  </Action>
-                  <Action OrderNumber="5" NamedCallbackName="command" NamedCallbackParam="/e ${str}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="NamedCallback" Description="使用默语频道(/echo、/e)输出请勾选本行">
-                    <Condition Enabled="true" Grouping="Or">
-                      <ConditionGroup Enabled="true" Grouping="Not">
-                        <ConditionSingle Enabled="true" ExpressionL="${string}" ExpressionTypeL="String" ExpressionR="NULL" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
-                        <ConditionSingle Enabled="true" ExpressionL="${string}" ExpressionTypeL="String" ExpressionR="${func:substring(${numeric:${func:indexof(：):${_triggername}}+1}):${_triggername}}" ExpressionTypeR="String" ConditionType="RegexMatch" />
-                      </ConditionGroup>
-                      <ConditionSingle Enabled="true" ExpressionL="${_triggername}" ExpressionTypeL="String" ExpressionR="：.+" ExpressionTypeR="String" ConditionType="RegexNotMatch" />
-                    </Condition>
-                  </Action>
-                  <Action OrderNumber="6" JsonEndpointExpression="http://127.0.0.1:(请在括号内填写端口号并删除括号)/command" JsonPayloadExpression="/e ${str}" TextAuraFontSize="9" TextAuraFontName="宋体" Enabled="False" ActionType="GenericJson" Description="使用鲶鱼精的HTTP调用方式请勾选并 根据鲶鱼精使用的端口修改本行！！！ （鲶鱼精作者不推荐该使用方式）" DescriptionOverride="True">
+                  <Action OrderNumber="4" JsonEndpointExpression="http://127.0.0.1:(请在括号内填写端口号并删除括号)/command" JsonPayloadExpression="/e ${str}" TextAuraFontSize="9" TextAuraFontName="宋体" Enabled="False" ActionType="GenericJson" Description="使用鲶鱼精的HTTP调用方式请勾选并 根据鲶鱼精使用的端口修改本行！！！ （鲶鱼精作者不推荐该使用方式）" DescriptionOverride="True">
                     <Condition Enabled="false" Grouping="Or" />
                   </Action>
-                  <Action OrderNumber="7" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Placeholder" Description="=====================↑↑↑自助修改范围↑↑↑=====================" DescriptionOverride="True">
+                  <Action OrderNumber="5" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Placeholder" Description="=====================↑↑↑自助修改范围↑↑↑=====================" DescriptionOverride="True">
                     <Condition Enabled="false" Grouping="Or" />
                   </Action>
-                  <Action OrderNumber="8" ListVariableOp="Push" ListVariableName="绝亚提示输出" ListVariableExpression="${str}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="ListVariable">
+                  <Action OrderNumber="6" ListVariableOp="Push" ListVariableName="绝亚提示输出" ListVariableExpression="${str}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="ListVariable">
                     <Condition Enabled="false" Grouping="Or" />
                   </Action>
-                  <Action OrderNumber="9" ListVariableOp="Join" ListVariableName="绝亚提示输出" ListVariableExpression="　　" ListVariableTarget="绝亚提示输出" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="ListVariable">
+                  <Action OrderNumber="7" ListVariableOp="Join" ListVariableName="绝亚提示输出" ListVariableExpression="　　" ListVariableTarget="绝亚提示输出" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="ListVariable">
                     <Condition Enabled="false" Grouping="Or" />
                   </Action>
-                  <Action OrderNumber="10" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerId="177c6aaa-8bf5-4c57-a633-17401d433b2c" TriggerText="${var:绝亚提示输出}" TriggerZone="${_zone}" ActionType="Trigger">
+                  <Action OrderNumber="8" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerId="177c6aaa-8bf5-4c57-a633-17401d433b2c" TriggerText="${var:绝亚提示输出}" TriggerZone="${_zone}" ActionType="Trigger">
                     <Condition Enabled="false" Grouping="Or" />
                   </Action>
-                  <Action OrderNumber="11" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerId="cc470ce2-e418-44fb-8c9c-3a75da869206" TriggerZone="${_zone}" TriggerForce="regexp" ActionType="Trigger">
+                  <Action OrderNumber="9" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerId="cc470ce2-e418-44fb-8c9c-3a75da869206" TriggerZone="${_zone}" TriggerForce="regexp" ActionType="Trigger">
                     <Condition Enabled="false" Grouping="Or" />
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
-                <Conditions />
               </Trigger>
               <Trigger Enabled="false" Source="None" Sequential="True" Name="【切换《小队频道/p》、《默语/e》请修改此触发器】轮椅文本输出频道&lt;输出职业名&gt;：" Id="38178024-18b0-4db1-8c6a-36c4ebda2903" RegularExpression="^(?&lt;string&gt;.+?)…(?&lt;str&gt;.+)$">
                 <Actions>
@@ -5965,45 +5765,26 @@
                   <Action OrderNumber="3" NamedCallbackName="command" NamedCallbackParam="/e ${str}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="NamedCallback" Description="使用默语频道(/echo、/e)输出请勾选本行">
                     <Condition Enabled="false" Grouping="Or" />
                   </Action>
-                  <Action OrderNumber="4" NamedCallbackName="command" NamedCallbackParam="/p ${str}" TextAuraFontSize="9" TextAuraFontName="宋体" Enabled="False" ActionType="NamedCallback">
-                    <Condition Enabled="true" Grouping="And">
-                      <ConditionGroup Enabled="true" Grouping="Or">
-                        <ConditionSingle Enabled="true" ExpressionL="${string}" ExpressionTypeL="String" ExpressionR="NULL" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
-                        <ConditionSingle Enabled="true" ExpressionL="${string}" ExpressionTypeL="String" ExpressionR="${func:substring(${numeric:${func:indexof(：):${_triggername}}+1}):${_triggername}}" ExpressionTypeR="String" ConditionType="RegexMatch" />
-                      </ConditionGroup>
-                      <ConditionSingle Enabled="true" ExpressionL="${func:substring(${numeric:${func:indexof(：):${_triggername}}+1}):${_triggername}}" ExpressionTypeL="String" ExpressionR=".+" ExpressionTypeR="String" ConditionType="RegexMatch" />
-                    </Condition>
-                  </Action>
-                  <Action OrderNumber="5" NamedCallbackName="command" NamedCallbackParam="/e ${str}" TextAuraFontSize="9" TextAuraFontName="宋体" Enabled="False" ActionType="NamedCallback" Description="使用默语频道(/echo、/e)输出请勾选本行">
-                    <Condition Enabled="true" Grouping="Or">
-                      <ConditionGroup Enabled="true" Grouping="Not">
-                        <ConditionSingle Enabled="true" ExpressionL="${string}" ExpressionTypeL="String" ExpressionR="NULL" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
-                        <ConditionSingle Enabled="true" ExpressionL="${string}" ExpressionTypeL="String" ExpressionR="${func:substring(${numeric:${func:indexof(：):${_triggername}}+1}):${_triggername}}" ExpressionTypeR="String" ConditionType="RegexMatch" />
-                      </ConditionGroup>
-                      <ConditionSingle Enabled="true" ExpressionL="${_triggername}" ExpressionTypeL="String" ExpressionR="：.+" ExpressionTypeR="String" ConditionType="RegexNotMatch" />
-                    </Condition>
-                  </Action>
-                  <Action OrderNumber="6" JsonEndpointExpression="http://127.0.0.1:(请在括号内填写端口号并删除括号)/command" JsonPayloadExpression="/e ${str}" TextAuraFontSize="9" TextAuraFontName="宋体" Enabled="False" ActionType="GenericJson" Description="使用鲶鱼精的HTTP调用方式请勾选并 根据鲶鱼精使用的端口修改本行！！！ （鲶鱼精作者不推荐该使用方式）" DescriptionOverride="True">
+                  <Action OrderNumber="4" JsonEndpointExpression="http://127.0.0.1:(请在括号内填写端口号并删除括号)/command" JsonPayloadExpression="/e ${str}" TextAuraFontSize="9" TextAuraFontName="宋体" Enabled="False" ActionType="GenericJson" Description="使用鲶鱼精的HTTP调用方式请勾选并 根据鲶鱼精使用的端口修改本行！！！ （鲶鱼精作者不推荐该使用方式）" DescriptionOverride="True">
                     <Condition Enabled="false" Grouping="Or" />
                   </Action>
-                  <Action OrderNumber="7" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Placeholder" Description="=====================↑↑↑自助修改范围↑↑↑=====================" DescriptionOverride="True">
+                  <Action OrderNumber="5" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Placeholder" Description="=====================↑↑↑自助修改范围↑↑↑=====================" DescriptionOverride="True">
                     <Condition Enabled="false" Grouping="Or" />
                   </Action>
-                  <Action OrderNumber="8" ListVariableOp="Push" ListVariableName="绝亚提示输出" ListVariableExpression="${str}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="ListVariable">
+                  <Action OrderNumber="6" ListVariableOp="Push" ListVariableName="绝亚提示输出" ListVariableExpression="${str}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="ListVariable">
                     <Condition Enabled="false" Grouping="Or" />
                   </Action>
-                  <Action OrderNumber="9" ListVariableOp="Join" ListVariableName="绝亚提示输出" ListVariableExpression="　　" ListVariableTarget="绝亚提示输出" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="ListVariable">
+                  <Action OrderNumber="7" ListVariableOp="Join" ListVariableName="绝亚提示输出" ListVariableExpression="　　" ListVariableTarget="绝亚提示输出" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="ListVariable">
                     <Condition Enabled="false" Grouping="Or" />
                   </Action>
-                  <Action OrderNumber="10" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerId="177c6aaa-8bf5-4c57-a633-17401d433b2c" TriggerText="${var:绝亚提示输出}" TriggerZone="${_zone}" ActionType="Trigger">
+                  <Action OrderNumber="8" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerId="177c6aaa-8bf5-4c57-a633-17401d433b2c" TriggerText="${var:绝亚提示输出}" TriggerZone="${_zone}" ActionType="Trigger">
                     <Condition Enabled="false" Grouping="Or" />
                   </Action>
-                  <Action OrderNumber="11" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerId="cc470ce2-e418-44fb-8c9c-3a75da869206" TriggerZone="${_zone}" TriggerForce="regexp" ActionType="Trigger">
+                  <Action OrderNumber="9" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerId="cc470ce2-e418-44fb-8c9c-3a75da869206" TriggerZone="${_zone}" TriggerForce="regexp" ActionType="Trigger">
                     <Condition Enabled="false" Grouping="Or" />
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
-                <Conditions />
               </Trigger>
             </Triggers>
           </Folder>
@@ -6029,7 +5810,6 @@
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
-                <Conditions />
               </Trigger>
               <Trigger Enabled="true" Source="None" Name="TTS" Id="53d0d176-2520-4022-9a6b-18d65d4f7a60" RegularExpression="^(?&lt;str&gt;.+)$" MutexToCapture="绝亚警察_TTS">
                 <Actions>
@@ -6038,7 +5818,6 @@
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
-                <Conditions />
               </Trigger>
               <Trigger Enabled="true" Source="None" Name="【标点】" Id="2f47ed28-d386-43fb-bae9-47814d0a07ff" RegularExpression="^(?&lt;str&gt;.+)$">
                 <Actions>
@@ -6047,7 +5826,6 @@
                   </Action>
                 </Actions>
                 <Condition Enabled="false" Grouping="Or" />
-                <Conditions />
               </Trigger>
             </Triggers>
           </Folder>
@@ -6108,7 +5886,6 @@
           </Action>
         </Actions>
         <Condition Enabled="false" Grouping="Or" />
-        <Conditions />
       </Trigger>
     </Triggers>
   </ExportedFolder>
