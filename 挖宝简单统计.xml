@@ -1,0 +1,186 @@
+<?xml version="1.0"?>
+<TriggernometryExport Version="1">
+  <ExportedFolder Id="71474704-c7c7-4ced-b8cf-23a7f385b7a9" Name="挖宝（统计图数洞数+掉落物+系统金）" Enabled="true">
+    <Folders>
+      <Folder Id="c2411d8f-6f06-4cff-9501-0ff34edb25f7" Name="初始化" Enabled="true">
+        <Folders />
+        <Triggers>
+          <Trigger Enabled="true" Name="0.手动修正挖宝图数（/e wb &lt;图数量&gt;-&lt;洞数量&gt;）" Id="06e7d4a0-9eb8-434a-b933-2dd6cd6bb83e" RegularExpression="^.{14} \w+ 00:0038::wb( *)(?&lt;tu&gt;\d+)\-(?&lt;dong&gt;\d+)( *)">
+            <Actions>
+              <Action OrderNumber="1" PlaySpeechMyself="True" UseTTSTextExpression="手动调整挖宝记录" TextAuraFontSize="9.07563" TextAuraFontName="宋体" ActionType="UseTTS">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="2" VariableOp="SetNumeric" VariableName="挖宝_图数" VariableExpression="${tu}" TextAuraFontSize="9.07563" TextAuraFontName="宋体" ActionType="Variable">
+                <Condition Enabled="false" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${evar:挖宝_图数}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                </Condition>
+              </Action>
+              <Action OrderNumber="3" VariableOp="SetNumeric" VariableName="挖宝_洞数" VariableExpression="${dong}" TextAuraFontSize="9.07563" TextAuraFontName="宋体" ActionType="Variable">
+                <Condition Enabled="false" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${evar:挖宝_图数}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                </Condition>
+              </Action>
+            </Actions>
+            <Condition Enabled="false" Grouping="Or" />
+          </Trigger>
+          <Trigger Enabled="true" Sequential="True" Name="挖宝结束（/e wb end）" Id="501be37c-3faf-46eb-8c57-8edc1934d739" RegularExpression="^.{14} \w+ 00:0038::wb *end *$">
+            <Actions>
+              <Action OrderNumber="1" UseTTSTextExpression="输出" VariableOp="SetString" VariableName="挖宝_输出" VariableExpression="${var:挖宝_图数}/${var:挖宝_目标}图${var:挖宝_洞数}洞，系统金：${var:挖宝_金币}，战利品：${var:挖宝_战利品}" TextAuraFontSize="9.07563" TextAuraFontName="宋体" ActionType="Variable">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="2" NamedCallbackName="command" NamedCallbackParam="/cwl1 ${var:挖宝_输出}" TextAuraFontSize="9.07563" TextAuraFontName="宋体" ActionType="NamedCallback">
+                <Condition Enabled="false" Grouping="And">
+                  <ConditionSingle Enabled="true" ExpressionL="${func:length:R点情况}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
+                </Condition>
+              </Action>
+              <Action OrderNumber="3" UseTTSTextExpression="输出" VariableOp="UnsetRegex" VariableName="挖宝_.+?" VariableExpression="${var:挖宝_图数}-${var:挖宝_洞数}，" TextAuraFontSize="9.07563" TextAuraFontName="宋体" ActionType="Variable">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="4" UseTTSTextExpression="输出" VariableOp="UnsetRegex" VariableName="挖宝_.+?" VariableExpression="${var:挖宝_图数}-${var:挖宝_洞数}，" TableVariableOp="UnsetRegex" TableVariableName="挖宝_.+?" TextAuraFontSize="9.07563" TextAuraFontName="宋体" ActionType="TableVariable">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="5" TextAuraOp="DeactivateAuraRegex" TextAuraFontSize="9.07563" TextAuraName="挖宝_.+?" TextAuraFontName="宋体" ActionType="TextAura">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="6" FolderOp="DisableFolder" FolderId="322ae0a2-5b26-49db-9604-9f29cdcfdf96" TextAuraFontSize="9.07563" TextAuraFontName="宋体" ActionType="Folder" Asynchronous="False">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+            </Actions>
+            <Condition Enabled="false" Grouping="Or" />
+          </Trigger>
+          <Trigger Enabled="true" Name="0.设定挖宝目标（/e wb &lt;图的数量&gt;）" Id="1b39d4b0-71c0-4b7c-99d8-65b6e26a87ec" RegularExpression="^.{14} \w+ 00:0038::wb( *)(?&lt;tu&gt;\d+)( *)$">
+            <Actions>
+              <Action OrderNumber="1" FolderId="322ae0a2-5b26-49db-9604-9f29cdcfdf96" TextAuraFontSize="9.07563" TextAuraFontName="宋体" ActionType="Folder" Asynchronous="False">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="2" PlaySpeechMyself="True" UseTTSTextExpression="设置挖宝目标" TextAuraFontSize="9.07563" TextAuraFontName="宋体" ActionType="UseTTS">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="3" VariableOp="SetNumeric" VariableName="挖宝_目标" VariableExpression="${tu}" TextAuraFontSize="9.07563" TextAuraFontName="宋体" ActionType="Variable">
+                <Condition Enabled="false" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${evar:挖宝_图数}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                </Condition>
+              </Action>
+              <Action OrderNumber="4" VariableOp="SetNumeric" VariableName="挖宝_图数" VariableExpression="0" TextAuraFontSize="9.07563" TextAuraFontName="宋体" ActionType="Variable">
+                <Condition Enabled="false" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${evar:挖宝_图数}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                </Condition>
+              </Action>
+              <Action OrderNumber="5" VariableOp="SetNumeric" VariableName="挖宝_洞数" VariableExpression="0" TextAuraFontSize="9.07563" TextAuraFontName="宋体" ActionType="Variable">
+                <Condition Enabled="false" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${evar:挖宝_图数}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                </Condition>
+              </Action>
+              <Action OrderNumber="6" VariableOp="SetNumeric" VariableName="挖宝_金币" VariableExpression="0" TextAuraFontSize="9.07563" TextAuraFontName="宋体" ActionType="Variable">
+                <Condition Enabled="false" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${evar:挖宝_图数}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                </Condition>
+              </Action>
+              <Action OrderNumber="7" TextAuraFontSize="12.10084" TextAuraForeground="White" TextAuraBackground="Black" TextAuraName="挖宝_背景板" TextAuraXIniExpression="260" TextAuraYIniExpression="0" TextAuraWIniExpression="300" TextAuraHIniExpression="30" TextAuraOIniExpression="60" TextAuraFontName="微软雅黑" ActionType="TextAura" Asynchronous="False">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="8" TextAuraFontSize="12.10084" TextAuraForeground="White" TextAuraName="挖宝_计数" TextAuraExpression="图：${var:挖宝_图数}/${var:挖宝_目标}　洞：${var:挖宝_洞数}　金：${var:挖宝_金币}" TextAuraXIniExpression="260" TextAuraYIniExpression="0" TextAuraWIniExpression="300" TextAuraHIniExpression="30" TextAuraOIniExpression="100" TextAuraFontName="微软雅黑" ActionType="TextAura">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+            </Actions>
+            <Condition Enabled="false" Grouping="Or" />
+          </Trigger>
+          <Trigger Enabled="true" Sequential="True" Name="输出(/e wb)" Id="b1bb7421-85a8-4702-a2dd-7db60dcb7a88" RegularExpression="^.{14} \w+ 00:0038::wb *$">
+            <Actions>
+              <Action OrderNumber="1" UseTTSTextExpression="输出" VariableOp="SetString" VariableName="挖宝_输出" VariableExpression="${var:挖宝_图数}/${var:挖宝_目标}图${var:挖宝_洞数}洞，系统金：${var:挖宝_金币}，战利品：${var:挖宝_战利品}" TextAuraFontSize="9.07563" TextAuraFontName="宋体" ActionType="Variable">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+              <Action OrderNumber="2" NamedCallbackName="command" NamedCallbackParam="/p ${var:挖宝_输出}" TextAuraFontSize="9.07563" TextAuraFontName="宋体" ActionType="NamedCallback">
+                <Condition Enabled="false" Grouping="And">
+                  <ConditionSingle Enabled="true" ExpressionL="${func:length:R点情况}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
+                </Condition>
+              </Action>
+              <Action OrderNumber="3" NamedCallbackName="command" NamedCallbackParam="/cwl1 ${var:挖宝_输出}" TextAuraFontSize="9.07563" TextAuraFontName="宋体" ActionType="NamedCallback">
+                <Condition Enabled="false" Grouping="And">
+                  <ConditionSingle Enabled="true" ExpressionL="${func:length:R点情况}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
+                </Condition>
+              </Action>
+            </Actions>
+            <Condition Enabled="false" Grouping="Or" />
+          </Trigger>
+        </Triggers>
+      </Folder>
+      <Folder Id="322ae0a2-5b26-49db-9604-9f29cdcfdf96" Name="监听" Enabled="false">
+        <Folders>
+          <Folder Id="578bc5fa-1f34-43ec-82ae-b2e308a5f7b4" Name="基础记录" Enabled="true">
+            <Folders />
+            <Triggers>
+              <Trigger Enabled="true" Name="发现宝箱" Id="73dae4e8-69ee-4f76-bb68-c981e083a7c9" RegularExpression="^.{14} \w+ 00:0839::发现隐藏的宝箱！">
+                <Actions>
+                  <Action OrderNumber="1" VariableOp="SetNumeric" VariableName="挖宝_图数" VariableExpression="${var:挖宝_图数}+1" TextAuraFontSize="9.07563" TextAuraFontName="宋体" ActionType="Variable">
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="${evar:挖宝_图数}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                    </Condition>
+                  </Action>
+                  <Action OrderNumber="2" VariableOp="SetNumeric" VariableName="挖宝_图数" VariableExpression="1" TextAuraFontSize="9.07563" TextAuraFontName="宋体" ActionType="Variable">
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="${evar:挖宝_图数}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                    </Condition>
+                  </Action>
+                </Actions>
+                <Condition Enabled="false" Grouping="Or" />
+              </Trigger>
+              <Trigger Enabled="true" Name="获得金币" Id="8996e73e-e00b-49e2-a219-bf1fc06f69d7" RegularExpression="^.{14} \w+ 00:003E::获得了(?&lt;j&gt;[\d,]+)金币。" Description="[15:00:38.000] 00:003e:获得了1,000金币。">
+                <Actions>
+                  <Action OrderNumber="1" VariableOp="SetNumeric" VariableName="挖宝_金币" VariableExpression="${var:挖宝_金币}+${j}" TextAuraFontSize="9.07563" TextAuraFontName="宋体" ActionType="Variable">
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="${func:indexof(&quot;,&quot;):${j}}" ExpressionTypeL="Numeric" ExpressionR="-1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                    </Condition>
+                  </Action>
+                  <Action OrderNumber="2" VariableOp="SetNumeric" VariableName="挖宝_金币" VariableExpression="${var:挖宝_金币}+(${func:substring(0,${numeric:${func:indexof(&quot;,&quot;):${j}}}):${j}})*1000+${func:substring(${numeric:${func:indexof(&quot;,&quot;):${j}}+1}):${j}}" TextAuraFontSize="9.07563" TextAuraFontName="宋体" ActionType="Variable">
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="${func:indexof(&quot;,&quot;):${j}}" ExpressionTypeL="Numeric" ExpressionR="-1" ExpressionTypeR="Numeric" ConditionType="NumericNotEqual" />
+                    </Condition>
+                  </Action>
+                </Actions>
+                <Condition Enabled="false" Grouping="Or" />
+              </Trigger>
+              <Trigger Enabled="true" Name="获得了新的战利品" Id="a27fbcd7-a768-495a-8b83-d5283d7a1c23" RegularExpression="^.{14} \w+ 00:0039::获得了新的战利品(?&lt;thing&gt;.+?)。">
+                <Actions>
+                  <Action OrderNumber="1" UseTTSTextExpression="新战利品${thing}" TextAuraFontSize="9.07563" TextAuraFontName="宋体" ActionType="UseTTS">
+                    <Condition Enabled="false" Grouping="Or" />
+                  </Action>
+                  <Action OrderNumber="2" VariableOp="SetString" VariableName="挖宝_战利品" VariableExpression="${var:挖宝_战利品}${var:挖宝_图数}-${thing}|" TextAuraFontSize="9.07563" TextAuraFontName="宋体" ActionType="Variable">
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="${evar:挖宝_战利品}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                    </Condition>
+                  </Action>
+                  <Action OrderNumber="3" VariableOp="SetString" VariableName="挖宝_战利品" VariableExpression="${var:挖宝_图数}-${thing}|" TextAuraFontSize="9.07563" TextAuraFontName="宋体" ActionType="Variable">
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="${evar:挖宝_战利品}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                    </Condition>
+                  </Action>
+                </Actions>
+                <Condition Enabled="true" Grouping="Or">
+                  <ConditionSingle Enabled="true" ExpressionL="${evar:挖宝_图数}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                </Condition>
+              </Trigger>
+              <Trigger Enabled="true" Name="通往宝物库的传送魔纹出现了！" Id="2f5d913e-c7f1-4f36-a6b9-e478de6c77f8" RegularExpression="^.{14} \w+ 00:0839::通往宝物库的传送魔纹出现了！">
+                <Actions>
+                  <Action OrderNumber="1" VariableOp="SetNumeric" VariableName="挖宝_洞数" VariableExpression="1" TextAuraFontSize="9.07563" TextAuraFontName="宋体" ActionType="Variable">
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="${evar:挖宝_洞数}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                    </Condition>
+                  </Action>
+                  <Action OrderNumber="2" VariableOp="SetNumeric" VariableName="挖宝_洞数" VariableExpression="${var:挖宝_洞数}+1" TextAuraFontSize="9.07563" TextAuraFontName="宋体" ActionType="Variable">
+                    <Condition Enabled="true" Grouping="Or">
+                      <ConditionSingle Enabled="true" ExpressionL="${evar:挖宝_洞数}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+                    </Condition>
+                  </Action>
+                </Actions>
+                <Condition Enabled="false" Grouping="Or" />
+              </Trigger>
+            </Triggers>
+          </Folder>
+        </Folders>
+        <Triggers />
+      </Folder>
+    </Folders>
+    <Triggers />
+  </ExportedFolder>
+</TriggernometryExport>
