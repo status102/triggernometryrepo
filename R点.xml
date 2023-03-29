@@ -1,145 +1,136 @@
 <?xml version="1.0"?>
 <TriggernometryExport Version="1">
-  <ExportedFolder Id="541f01c0-cecb-4121-b865-65c676a026c0" Name="R点" Enabled="true">
+  <ExportedFolder Id="d14b810d-4cd9-46cf-9769-2bd7080959c1" Name="R点" Enabled="true">
     <Folders />
     <Triggers>
-      <Trigger Enabled="true" Name="R点" Id="3e5b9124-724f-4bf2-996c-7393e498028d" RegularExpression="^.{14} \w+ 00:(08|10)41::(?&lt;name&gt;.{1,20}?)(海猫茶屋|延夏|摩杜纳|琥珀原|静语庄园|柔风海湾|紫水栈桥)?在(?&lt;type&gt;(需求|贪婪))条件下对“(?&lt;thing&gt;.+?)”掷出了(?&lt;roll&gt;\d{1,2})点。" MutexToCapture="R点情况_${thing}">
+      <Trigger Enabled="true" Source="FFXIVNetwork" Name="1.记录" Id="49e7fb3f-27af-4070-98a4-b500a7eff686" RegularExpression="^00\|[^|]+\|(10|20|08)41\|\|(?&lt;sname&gt;.+?)(海猫茶屋|延夏|摩杜纳|琥珀原|静语庄园|柔风海湾|紫水栈桥)?在(?&lt;type&gt;..)条件下对“(?&lt;item&gt;.+?)”掷出了(?&lt;roll&gt;\d+)点。" MutexToCapture="R点_${item}">
         <Actions>
-          <Action OrderNumber="1" MessageBoxText="${_timestampms}：${_triggername}触发《${_event}》" TextAuraFontSize="9" TextAuraFontName="宋体" Enabled="False" ActionType="MessageBox">
+          <Action OrderNumber="1" OBSEndPoint="ws://${_const[OBSWebsocketEndpoint]}:${_const[OBSWebsocketPort]}" OBSPassword="${_const[OBSWebsocketPassword]}" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerId="a6ec291a-556a-4470-9bf4-8af0b2354e3b" TriggerForce="regexp" ActionType="Trigger">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
-          <Action OrderNumber="2" VariableOp="SetNumeric" VariableName="Roll_${thing}_${name}" VariableExpression="${roll}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
+          <Action OrderNumber="2" ListVariableOp="Push" ListVariableExpressionType="Numeric" ListVariableName="R点_${item}" ListVariableExpression="${roll}" OBSEndPoint="ws://${_const[OBSWebsocketEndpoint]}:${_const[OBSWebsocketPort]}" OBSPassword="${_const[OBSWebsocketPassword]}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="ListVariable">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
-          <Action OrderNumber="3" VariableOp="SetString" VariableName="Roll_${thing}_${func:padleft(48,2):${roll}}" VariableExpression="${name}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
+          <Action OrderNumber="3" OBSEndPoint="ws://${_const[OBSWebsocketEndpoint]}:${_const[OBSWebsocketPort]}" OBSPassword="${_const[OBSWebsocketPassword]}" VariableOp="SetString" VariableName="R点_${item}_R点数_${roll}" VariableExpression="${sname}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
-          <Action OrderNumber="4" ListVariableOp="Push" ListVariableName="Roll_${thing}" ListVariableExpression="${func:padleft(48,2):${roll}}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="ListVariable">
+          <Action OrderNumber="4" OBSEndPoint="ws://${_const[OBSWebsocketEndpoint]}:${_const[OBSWebsocketPort]}" OBSPassword="${_const[OBSWebsocketPassword]}" VariableOp="SetNumeric" VariableName="R点_${item}_${sname}" VariableExpression="${roll}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="5" OBSEndPoint="ws://${_const[OBSWebsocketEndpoint]}:${_const[OBSWebsocketPort]}" OBSPassword="${_const[OBSWebsocketPassword]}" VariableOp="SetString" VariableName="R点_${item}_type" VariableExpression="${type}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
         </Actions>
         <Condition Enabled="false" Grouping="Or" />
       </Trigger>
-      <Trigger Enabled="true" Sequential="True" Name="R点结束" Id="88858b7a-3302-4ba1-af5c-f09afdfafbb0" RegularExpression="^.{14} \w+ 00:(08|10)3E::(?&lt;name&gt;.{1,20}?)(海猫茶屋|延夏|摩杜纳|琥珀原|静语庄园|柔风海湾|紫水栈桥)?获得了“(?&lt;thing&gt;.+?)”(?&lt;num&gt;×\d+)?。" MutexToCapture="R点情况_${thing}">
+      <Trigger Enabled="true" Source="FFXIVNetwork" Sequential="True" Name="2.计算输出" Id="41d07ea2-444a-453a-8612-2fa0affb3365" RegularExpression="^00\|[^|]+\|(20|10|08)3E\|\|(?&lt;sname&gt;.+?)(海猫茶屋|延夏|摩杜纳|琥珀原|静语庄园|柔风海湾|紫水栈桥)?获得了“(?&lt;item&gt;.+?)”。" MutexToCapture="R点_${item}">
         <Actions>
-          <Action OrderNumber="1" UseTTSExclusive="False" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerId="1bd4ea81-8758-4c7a-986f-a0e1cd8584a6" TriggerText="${name}对${thing} Roll出了${var:Roll_${thing}_${name}}点，你Roll了${var:Roll_${thing}_${_ffxivparty[1].name}}" TriggerZone="${_zone}" ActionType="Trigger">
-            <Condition Enabled="true" Grouping="And">
-              <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${_ffxivparty[1].name}" ExpressionTypeR="String" ConditionType="StringNotEqualNocase" />
-              <ConditionSingle Enabled="true" ExpressionL="${evar:Roll_${thing}_${_ffxivparty[1].name}}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
-            </Condition>
-          </Action>
-          <Action OrderNumber="2" UseTTSExclusive="False" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerId="1bd4ea81-8758-4c7a-986f-a0e1cd8584a6" TriggerText="${name}对${thing} Roll出了${var:Roll_${thing}_${name}}点" TriggerZone="${_zone}" ActionType="Trigger">
-            <Condition Enabled="true" Grouping="Or">
-              <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${_ffxivparty[1].name}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
-              <ConditionSingle Enabled="true" ExpressionL="${evar:Roll_${thing}_${_ffxivparty[1].name}}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
-            </Condition>
-          </Action>
-          <Action OrderNumber="3" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Placeholder" Description="按降序排序" DescriptionOverride="True">
+          <Action OrderNumber="1" ListVariableOp="SortNumericDesc" ListVariableExpressionType="Numeric" ListVariableName="R点_${item}" OBSEndPoint="ws://${_const[OBSWebsocketEndpoint]}:${_const[OBSWebsocketPort]}" OBSPassword="${_const[OBSWebsocketPassword]}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="ListVariable" Description="把Roll点进行降序排序，Roll点不会重复" DescriptionOverride="True">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
-          <Action OrderNumber="4" ListVariableOp="SortAlphaDesc" ListVariableName="Roll_${thing}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="ListVariable">
+          <Action OrderNumber="2" LoopDelayExpression="1" LoopInitExpression="1" OBSEndPoint="ws://${_const[OBSWebsocketEndpoint]}:${_const[OBSWebsocketPort]}" OBSPassword="${_const[OBSWebsocketPassword]}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Loop" Description="排序后遍历列表&#xD;&#xA;[R点数]&#xD;&#xA; ↓ &#xD;&#xA;ID[R点数]" DescriptionOverride="True">
+            <LoopCondition Enabled="true" Grouping="And">
+              <ConditionSingle Enabled="true" ExpressionL="${_loopiterator}" ExpressionTypeL="Numeric" ExpressionR="${lvar:R点_${item}.size}" ExpressionTypeR="Numeric" ConditionType="NumericLessEqual" />
+              <ConditionSingle Enabled="true" ExpressionL="${_loopiterator}" ExpressionTypeL="Numeric" ExpressionR="72" ExpressionTypeR="Numeric" ConditionType="NumericLessEqual" />
+            </LoopCondition>
+            <LoopActions>
+              <Action OrderNumber="1" ListVariableOp="Push" ListVariableName="R点_${item}_输出" ListVariableExpression="${var:R点_${item}_R点数_${lvar:R点_${item}[${_loopiterator}]}}[${lvar:R点_${item}[${_loopiterator}]}]" OBSEndPoint="ws://${_const[OBSWebsocketEndpoint]}:${_const[OBSWebsocketPort]}" OBSPassword="${_const[OBSWebsocketPassword]}" VariableOp="SetString" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="ListVariable">
+                <Condition Enabled="false" Grouping="Or" />
+              </Action>
+            </LoopActions>
             <Condition Enabled="false" Grouping="Or" />
           </Action>
-          <Action OrderNumber="5" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Placeholder" Description="添加对应玩家ID" DescriptionOverride="True">
+          <Action OrderNumber="3" ListVariableOp="Join" ListVariableName="R点_${item}_输出" ListVariableExpression="、" ListVariableTarget="R点_${item}_输出" OBSEndPoint="ws://${_const[OBSWebsocketEndpoint]}:${_const[OBSWebsocketPort]}" OBSPassword="${_const[OBSWebsocketPassword]}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="ListVariable" Description="列表转str + 间隔符" DescriptionOverride="True">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
-          <Action OrderNumber="6" ListVariableOp="Set" ListVariableName="Roll_${thing}" ListVariableExpression="${var:Roll_${thing}_${lvar:Roll_${thing}[1]}}[${var:Roll_${thing}_${var:Roll_${thing}_${lvar:Roll_${thing}[1]}}}]" ListVariableIndex="1" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="ListVariable">
-            <Condition Enabled="true" Grouping="Or">
-              <ConditionSingle Enabled="true" ExpressionL="${lvar:Roll_${thing}.size}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericGreaterEqual" />
-            </Condition>
-          </Action>
-          <Action OrderNumber="7" ListVariableOp="Set" ListVariableName="Roll_${thing}" ListVariableExpression="${var:Roll_${thing}_${lvar:Roll_${thing}[2]}}[${var:Roll_${thing}_${var:Roll_${thing}_${lvar:Roll_${thing}[2]}}}]" ListVariableIndex="2" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="ListVariable">
-            <Condition Enabled="true" Grouping="Or">
-              <ConditionSingle Enabled="true" ExpressionL="${lvar:Roll_${thing}.size}" ExpressionTypeL="Numeric" ExpressionR="2" ExpressionTypeR="Numeric" ConditionType="NumericGreaterEqual" />
-            </Condition>
-          </Action>
-          <Action OrderNumber="8" ListVariableOp="Set" ListVariableName="Roll_${thing}" ListVariableExpression="${var:Roll_${thing}_${lvar:Roll_${thing}[3]}}[${var:Roll_${thing}_${var:Roll_${thing}_${lvar:Roll_${thing}[3]}}}]" ListVariableIndex="3" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="ListVariable">
-            <Condition Enabled="true" Grouping="Or">
-              <ConditionSingle Enabled="true" ExpressionL="${lvar:Roll_${thing}.size}" ExpressionTypeL="Numeric" ExpressionR="3" ExpressionTypeR="Numeric" ConditionType="NumericGreaterEqual" />
-            </Condition>
-          </Action>
-          <Action OrderNumber="9" ListVariableOp="Set" ListVariableName="Roll_${thing}" ListVariableExpression="${var:Roll_${thing}_${lvar:Roll_${thing}[4]}}[${var:Roll_${thing}_${var:Roll_${thing}_${lvar:Roll_${thing}[4]}}}]" ListVariableIndex="4" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="ListVariable">
-            <Condition Enabled="true" Grouping="Or">
-              <ConditionSingle Enabled="true" ExpressionL="${lvar:Roll_${thing}.size}" ExpressionTypeL="Numeric" ExpressionR="4" ExpressionTypeR="Numeric" ConditionType="NumericGreaterEqual" />
-            </Condition>
-          </Action>
-          <Action OrderNumber="10" ListVariableOp="Set" ListVariableName="Roll_${thing}" ListVariableExpression="${var:Roll_${thing}_${lvar:Roll_${thing}[5]}}[${var:Roll_${thing}_${var:Roll_${thing}_${lvar:Roll_${thing}[5]}}}]" ListVariableIndex="5" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="ListVariable">
-            <Condition Enabled="true" Grouping="Or">
-              <ConditionSingle Enabled="true" ExpressionL="${lvar:Roll_${thing}.size}" ExpressionTypeL="Numeric" ExpressionR="5" ExpressionTypeR="Numeric" ConditionType="NumericGreaterEqual" />
-            </Condition>
-          </Action>
-          <Action OrderNumber="11" ListVariableOp="Set" ListVariableName="Roll_${thing}" ListVariableExpression="${var:Roll_${thing}_${lvar:Roll_${thing}[6]}}[${var:Roll_${thing}_${var:Roll_${thing}_${lvar:Roll_${thing}[6]}}}]" ListVariableIndex="6" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="ListVariable">
-            <Condition Enabled="true" Grouping="Or">
-              <ConditionSingle Enabled="true" ExpressionL="${lvar:Roll_${thing}.size}" ExpressionTypeL="Numeric" ExpressionR="6" ExpressionTypeR="Numeric" ConditionType="NumericGreaterEqual" />
-            </Condition>
-          </Action>
-          <Action OrderNumber="12" ListVariableOp="Set" ListVariableName="Roll_${thing}" ListVariableExpression="${var:Roll_${thing}_${lvar:Roll_${thing}[7]}}[${var:Roll_${thing}_${var:Roll_${thing}_${lvar:Roll_${thing}[7]}}}]" ListVariableIndex="7" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="ListVariable">
-            <Condition Enabled="true" Grouping="Or">
-              <ConditionSingle Enabled="true" ExpressionL="${lvar:Roll_${thing}.size}" ExpressionTypeL="Numeric" ExpressionR="7" ExpressionTypeR="Numeric" ConditionType="NumericGreaterEqual" />
-            </Condition>
-          </Action>
-          <Action OrderNumber="13" ListVariableOp="Set" ListVariableName="Roll_${thing}" ListVariableExpression="${var:Roll_${thing}_${lvar:Roll_${thing}[8]}}[${var:Roll_${thing}_${var:Roll_${thing}_${lvar:Roll_${thing}[8]}}}]" ListVariableIndex="8" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="ListVariable">
-            <Condition Enabled="true" Grouping="Or">
-              <ConditionSingle Enabled="true" ExpressionL="${lvar:Roll_${thing}.size}" ExpressionTypeL="Numeric" ExpressionR="8" ExpressionTypeR="Numeric" ConditionType="NumericGreaterEqual" />
-            </Condition>
-          </Action>
-          <Action OrderNumber="14" ListVariableOp="Join" ListVariableName="Roll_${thing}" ListVariableExpression="、" ListVariableTarget="Roll_${thing}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="ListVariable">
+          <Action OrderNumber="4" OBSEndPoint="ws://${_const[OBSWebsocketEndpoint]}:${_const[OBSWebsocketPort]}" OBSPassword="${_const[OBSWebsocketPassword]}" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerId="ca0067ab-7830-4df0-a320-8132ae75eec8" TriggerText="${var:R点_${item}_R点数_${lvar:R点_${item}[1]}}-${lvar:R点_${item}[1]}-${numeric:${var:R点_${item}_${_ffxivparty[1].name}}}-${var:R点_${item}_type}-${item}-${var:R点_${item}_输出}" TriggerZone="${_zone}" ActionType="Trigger">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
-          <Action OrderNumber="15" NamedCallbackName="command" NamedCallbackParam="/e ${name}[${var:Roll_${thing}_${name}}]/${_ffxivparty[1].name}[${var:Roll_${thing}_${_ffxivparty[1].name}}]获得《${thing}${num}》：${var:Roll_${thing}}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="NamedCallback">
-            <Condition Enabled="true" Grouping="And">
-              <ConditionSingle Enabled="true" ExpressionL="${evar:Roll_${thing}_${_ffxivparty[1].name}}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
-              <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${_ffxivparty[1].name}" ExpressionTypeR="String" ConditionType="StringNotEqualNocase" />
-            </Condition>
-          </Action>
-          <Action OrderNumber="16" NamedCallbackName="command" NamedCallbackParam="/e ${name}[${var:Roll_${thing}_${name}}]获得《${thing}${num}》：${var:Roll_${thing}}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="NamedCallback">
-            <Condition Enabled="true" Grouping="Or">
-              <ConditionSingle Enabled="true" ExpressionL="${evar:Roll_${thing}_${_ffxivparty[1].name}}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
-              <ConditionSingle Enabled="true" ExpressionL="${name}" ExpressionTypeL="String" ExpressionR="${_ffxivparty[1].name}" ExpressionTypeR="String" ConditionType="StringEqualNocase" />
-            </Condition>
-          </Action>
-          <Action OrderNumber="17" ListVariableName="Roll_${thing}" VariableOp="SetString" TextAuraFontSize="9.07563" TextAuraFontName="宋体" ActionType="ListVariable">
+          <Action OrderNumber="5" ListVariableName="R点_${item}" OBSEndPoint="ws://${_const[OBSWebsocketEndpoint]}:${_const[OBSWebsocketPort]}" OBSPassword="${_const[OBSWebsocketPassword]}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="ListVariable">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
-          <Action OrderNumber="18" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerId="1f204e23-69bd-42a3-a9f0-38719d2bf3f1" TriggerForce="regexp" ActionType="Trigger">
+          <Action OrderNumber="6" ListVariableName="R点_${item}_输出" OBSEndPoint="ws://${_const[OBSWebsocketEndpoint]}:${_const[OBSWebsocketPort]}" OBSPassword="${_const[OBSWebsocketPassword]}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="ListVariable">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
         </Actions>
         <Condition Enabled="true" Grouping="Or">
-          <ConditionSingle Enabled="true" ExpressionL="${elvar:Roll_${thing}}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+          <ConditionSingle Enabled="true" ExpressionL="${elvar:R点_${item}}" ExpressionTypeL="Numeric" ExpressionR="1" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
         </Condition>
       </Trigger>
-      <Trigger Enabled="true" Source="None" Name="Roll点TTS" Id="1bd4ea81-8758-4c7a-986f-a0e1cd8584a6" RegularExpression="^(?&lt;str&gt;.+)$" MutexToCapture="Roll点TTS">
+      <Trigger Enabled="false" Name="重置" Id="44527bfa-64a0-48f5-85d3-28d390aa899a" RegularExpression="">
         <Actions>
-          <Action OrderNumber="1" UseTTSTextExpression="${str}" UseTTSExclusive="False" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
+          <Action OrderNumber="1" ListVariableOp="UnsetRegex" ListVariableName="R点" OBSEndPoint="ws://${_const[OBSWebsocketEndpoint]}:${_const[OBSWebsocketPort]}" OBSPassword="${_const[OBSWebsocketPassword]}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="ListVariable">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
-          <Action OrderNumber="2" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Placeholder" ExecutionDelayExpression="4000">
+          <Action OrderNumber="2" OBSEndPoint="ws://${_const[OBSWebsocketEndpoint]}:${_const[OBSWebsocketPort]}" OBSPassword="${_const[OBSWebsocketPassword]}" VariableOp="UnsetRegex" VariableName="R点" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="3" MessageBoxText="${numeric:${var:test}}" OBSEndPoint="ws://${_const[OBSWebsocketEndpoint]}:${_const[OBSWebsocketPort]}" OBSPassword="${_const[OBSWebsocketPassword]}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="MessageBox">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
         </Actions>
         <Condition Enabled="false" Grouping="Or" />
       </Trigger>
-      <Trigger Enabled="true" Source="FFXIVNetwork" Name="新的战利品" Id="8645f84b-23e4-4b5a-8dec-03474713b987" RegularExpression="^00\|[^|]+\|0039\|\|获得了新的战利品(?&lt;item&gt;[^。]+)。">
+      <Trigger Enabled="true" Source="None" Name="3.综合输出" Id="ca0067ab-7830-4df0-a320-8132ae75eec8" RegularExpression="^(?&lt;winner&gt;.+?)-(?&lt;winner_roll&gt;\d+)-(?&lt;my_roll&gt;\d+)-(?&lt;type&gt;.+?)-(?&lt;item&gt;.+?)-(?&lt;all&gt;.+)$">
         <Actions>
-          <Action OrderNumber="1" ListVariableOp="Push" ListVariableName="战利品" ListVariableExpression="${item}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="ListVariable">
+          <Action OrderNumber="1" OBSEndPoint="ws://${_const[OBSWebsocketEndpoint]}:${_const[OBSWebsocketPort]}" OBSPassword="${_const[OBSWebsocketPassword]}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Placeholder" Description="别人Roll，我没得Roll" DescriptionOverride="True">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
-          <Action OrderNumber="2" ListVariableOp="Join" ListVariableName="战利品" ListVariableExpression="、" ListVariableTarget="战利品" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="ListVariable" ExecutionDelayExpression="200" RefireRequeue="False">
+          <Action OrderNumber="2" NamedCallbackName="command" NamedCallbackParam="/e ${winner}[${winner_roll}]${type}了${item}：${all}" OBSEndPoint="ws://${_const[OBSWebsocketEndpoint]}:${_const[OBSWebsocketPort]}" OBSPassword="${_const[OBSWebsocketPassword]}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="NamedCallback">
+            <Condition Enabled="true" Grouping="Or">
+              <ConditionSingle Enabled="true" ExpressionL="${my_roll}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+            </Condition>
+          </Action>
+          <Action OrderNumber="3" OBSEndPoint="ws://${_const[OBSWebsocketEndpoint]}:${_const[OBSWebsocketPort]}" OBSPassword="${_const[OBSWebsocketPassword]}" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerId="1d506f66-d0ee-4887-b943-0c8d46a85598" TriggerText="${winner}对${item}${type}了${winner_roll}点" TriggerZone="${_zone}" ActionType="Trigger">
+            <Condition Enabled="true" Grouping="Or">
+              <ConditionSingle Enabled="true" ExpressionL="${my_roll}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+            </Condition>
+          </Action>
+          <Action OrderNumber="4" OBSEndPoint="ws://${_const[OBSWebsocketEndpoint]}:${_const[OBSWebsocketPort]}" OBSPassword="${_const[OBSWebsocketPassword]}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Placeholder" Description="都Roll没Roll到" DescriptionOverride="True">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
-          <Action OrderNumber="3" ListVariableOp="Join" NamedCallbackName="command" NamedCallbackParam="/e 新战利品《${var:战利品}》" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="NamedCallback" ExecutionDelayExpression="200" RefireRequeue="False">
+          <Action OrderNumber="5" NamedCallbackName="command" NamedCallbackParam="/e ${winner}[${winner_roll}]/${_ffxivparty[1].name}[${my_roll}]${type}了${item}：${all}" OBSEndPoint="ws://${_const[OBSWebsocketEndpoint]}:${_const[OBSWebsocketPort]}" OBSPassword="${_const[OBSWebsocketPassword]}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="NamedCallback">
+            <Condition Enabled="true" Grouping="And">
+              <ConditionSingle Enabled="true" ExpressionL="${my_roll}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
+              <ConditionSingle Enabled="true" ExpressionL="${my_roll}" ExpressionTypeL="Numeric" ExpressionR="${winner_roll}" ExpressionTypeR="Numeric" ConditionType="NumericNotEqual" />
+            </Condition>
+          </Action>
+          <Action OrderNumber="6" OBSEndPoint="ws://${_const[OBSWebsocketEndpoint]}:${_const[OBSWebsocketPort]}" OBSPassword="${_const[OBSWebsocketPassword]}" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerId="1d506f66-d0ee-4887-b943-0c8d46a85598" TriggerText="${winner}对${item}${type}了${winner_roll}点，你Roll了${my_roll}" TriggerZone="${_zone}" ActionType="Trigger">
+            <Condition Enabled="true" Grouping="And">
+              <ConditionSingle Enabled="true" ExpressionL="${my_roll}" ExpressionTypeL="Numeric" ExpressionR="0" ExpressionTypeR="Numeric" ConditionType="NumericGreater" />
+              <ConditionSingle Enabled="true" ExpressionL="${my_roll}" ExpressionTypeL="Numeric" ExpressionR="${winner_roll}" ExpressionTypeR="Numeric" ConditionType="NumericNotEqual" />
+            </Condition>
+          </Action>
+          <Action OrderNumber="7" OBSEndPoint="ws://${_const[OBSWebsocketEndpoint]}:${_const[OBSWebsocketPort]}" OBSPassword="${_const[OBSWebsocketPassword]}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Placeholder" Description="Roll到" DescriptionOverride="True">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
-          <Action OrderNumber="4" ListVariableName="战利品" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="ListVariable" RefireRequeue="False">
+          <Action OrderNumber="8" NamedCallbackName="command" NamedCallbackParam="${_ffxivparty[1].name}[${my_roll}]${type}了${item}：${all}" OBSEndPoint="ws://${_const[OBSWebsocketEndpoint]}:${_const[OBSWebsocketPort]}" OBSPassword="${_const[OBSWebsocketPassword]}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="NamedCallback">
+            <Condition Enabled="true" Grouping="And">
+              <ConditionSingle Enabled="true" ExpressionL="${my_roll}" ExpressionTypeL="Numeric" ExpressionR="${winner_roll}" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+            </Condition>
+          </Action>
+          <Action OrderNumber="9" OBSEndPoint="ws://${_const[OBSWebsocketEndpoint]}:${_const[OBSWebsocketPort]}" OBSPassword="${_const[OBSWebsocketPassword]}" TextAuraFontSize="9" TextAuraFontName="宋体" TriggerId="1d506f66-d0ee-4887-b943-0c8d46a85598" TriggerText="你对${item}${type}了${my_roll}点" TriggerZone="${_zone}" ActionType="Trigger">
+            <Condition Enabled="true" Grouping="And">
+              <ConditionSingle Enabled="true" ExpressionL="${my_roll}" ExpressionTypeL="Numeric" ExpressionR="${winner_roll}" ExpressionTypeR="Numeric" ConditionType="NumericEqual" />
+            </Condition>
+          </Action>
+        </Actions>
+        <Condition Enabled="false" Grouping="Or" />
+      </Trigger>
+      <Trigger Enabled="true" Source="None" Name="4.TTS" Id="1d506f66-d0ee-4887-b943-0c8d46a85598" RegularExpression=".+" MutexToCapture="R点_TTS">
+        <Actions>
+          <Action OrderNumber="1" OBSEndPoint="ws://${_const[OBSWebsocketEndpoint]}:${_const[OBSWebsocketPort]}" OBSPassword="${_const[OBSWebsocketPassword]}" UseTTSTextExpression="${_event}" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="2" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Placeholder" ExecutionDelayExpression="${numeric:${func:length:${_event}}}*180+400">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
         </Actions>
         <Condition Enabled="false" Grouping="Or" />
       </Trigger>
-      <Trigger Enabled="true" Source="None" Name="清理数据" Id="1f204e23-69bd-42a3-a9f0-38719d2bf3f1" RegularExpression="" PrevActions="Interrupt">
+      <Trigger Enabled="true" Source="None" Name="5.清理数据" Id="a6ec291a-556a-4470-9bf4-8af0b2354e3b" RegularExpression="" PrevActions="Interrupt">
         <Actions>
-          <Action OrderNumber="1" VariableOp="UnsetRegex" VariableName="Roll" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable" ExecutionDelayExpression="3000" RefireInterrupt="True">
+          <Action OrderNumber="1" OBSEndPoint="ws://${_const[OBSWebsocketEndpoint]}:${_const[OBSWebsocketPort]}" OBSPassword="${_const[OBSWebsocketPassword]}" VariableOp="UnsetRegex" VariableName="R点_" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="Variable" ExecutionDelayExpression="10000">
             <Condition Enabled="false" Grouping="Or" />
           </Action>
         </Actions>
